@@ -1,0 +1,45 @@
+<pb-navbar
+    [title]="navbarSettings.title"
+    [icon]="navbarSettings.icon"
+    [bgColor]="navbarSettings.backgroundColor"
+    [isAdmin]="navbarSettings.isAdmin"
+    [indexRoute]="navbarSettings.indexRoute"
+    [logoUrl]="navbarSettings.logoUrl"
+    [titleRoute]="navbarSettings.titleRoute"
+    [isUserLoggedIn]="isUserLoggedIn()"
+    [username]="getUsername()"
+    (onhelp)="doHelp($event)"
+    (onLogout)="doLogout($event)"
+>
+
+    <pb-menu>
+        <pb-menu-item value="welcome" [routerLink]="['Welcome']">
+            <label>Home</label>
+        </pb-menu-item>
+        <!-- <pb-menu-item value="sample-setup" [routerLink]="['SampleSetup']">
+            <label>Sample Setup</label>
+        </pb-menu-item> -->
+        <pb-menu-item value="run-design" [routerLink]="['RunDesign']">
+            <label>Run Design</label>
+        </pb-menu-item>
+        <pb-menu-item value="run-qc" [routerLink]="['RunQC']">
+            <label>Run QC</label>
+        </pb-menu-item>
+        <pb-menu-item value="data-management" [routerLink]="['DataManagement']">
+            <label>Data Management</label>
+        </pb-menu-item>
+        <pb-menu-item value="analysis/jobs" [routerLink]="['Analysis']">
+            <label>SMRT Analysis</label>
+        </pb-menu-item>
+        <pb-menu-item value="about" [routerLink]="navbarSettings.aboutRoute">
+            <label>About</label>
+        </pb-menu-item>
+    </pb-menu>
+
+</pb-navbar>
+
+<div class="main" [class.welcome]="isWelcome">
+    <router-outlet></router-outlet>
+</div>
+
+<pb-modal-underlay></pb-modal-underlay>

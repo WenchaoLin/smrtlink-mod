@@ -1,0 +1,16 @@
+<!-- @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc. -->
+
+<ng-content select=".title"></ng-content>
+
+<img *ngIf="pbArgs.icon" class="pb-lobby-icon" src="{{pbArgs.icon}}">
+<div *ngIf="pbArgs.sections" class="pb-lobby-section-container">
+    <div *ngFor="#section of pbArgs.sections">
+        <h4>{{section.title}}</h4>
+        <ul>
+            <li *ngFor="#shortcut of section.shortcuts"><a [routerLink]="shortcut.route" title="{{shortcut.label}}" class="shortcut">{{shortcut.label}} &gt;</a></li>
+        </ul>
+    </div>
+</div>
+<div *ngIf="showButton" class="pb-bottom-btn-container">
+    <a [routerLink]="pbArgs.button.route" class="pb-bottom-btn"><span class="glyphicon glyphicon-play" aria-hidden="true"></span>{{pbArgs.button.label}}</a>
+</div>

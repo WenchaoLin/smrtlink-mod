@@ -1,0 +1,38 @@
+<!-- @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc. -->
+
+<h2 *ngIf="pbArgs.title">{{pbArgs.title}}</h2>
+
+<div class="table-controls clearfix"
+     *ngIf="hasControls">
+    <div class="table-controls-left">
+        <pb-filterbar *ngIf="pbArgs.filterBarArgs"
+                    [pbArgs]="pbArgs.filterBarArgs"
+                    (filterChange)="onFilterBarChange($event)"></pb-filterbar>
+    </div>
+
+    <div class="table-controls-right">
+        <input type="text"
+            class="searchbox"
+            *ngIf="pbArgs.show.searchBox"
+            #inputFilterText
+            (keyup)="setFilterText(inputFilterText, $event)"
+            placeholder="Search...">
+
+        <button class="btn customize-table" *ngIf="pbArgs.show.customizeButton" (click)="customizeTable()"><span class="glyphicon glyphicon-th-list"></span></button>
+    </div>
+</div>
+
+<div (click)="onGridClick($event)" class="grid" #grid></div>
+
+<!-- SPINNER: "Loading..."
+<div [hidden]="!show.spinner"
+      smrt-kit-spinner="loading..."
+      class="floating-indicator spinner"></div>
+  -->
+<div [hidden]="!pbArgs.show.spinner" class="floating-indicator spinner">Loading&hellip;</div>
+<!-- ERROR MESSAGE
+<div [hidden]="!show.error"
+      smrt-kit-error="{{errorMessage}}"
+      class="floating-indicator error"></div>
+-->
+<div [hidden]="!pbArgs.show.error" class="floating-indicator error">{{errorMessage}}</div>

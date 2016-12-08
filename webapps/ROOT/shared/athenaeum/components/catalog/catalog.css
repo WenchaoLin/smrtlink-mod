@@ -1,0 +1,143 @@
+/**
+ * @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc.
+ * @author <a href="mailto:bskinner@pacificbiosciences.com">Brian Skinner</a>
+ */
+
+pb-catalog {
+  display: block;
+  position: relative;
+}
+
+pb-catalog h2 {
+  line-height: 1.1875rem;
+}
+
+pb-catalog .table-controls {
+  display: flex;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+pb-catalog .table-controls-left {
+    flex-grow: 1;
+}
+
+pb-catalog .table-controls-right {
+    flex-shrink: 1;
+}
+
+pb-catalog .searchbox {
+  display: inline-block;
+}
+
+pb-catalog .grid {
+  height: calc(100%);
+  overflow: hidden;
+}
+
+pb-catalog.with-title .grid {
+  height: calc(100% - 10px - 1.1875rem);
+}
+
+pb-catalog.with-controls .grid {
+  height: calc(100% - 40px);
+}
+
+pb-catalog.with-title.with-controls .grid {
+  height: calc(100% - 50px - 1.1875rem);
+}
+
+pb-catalog .ag-root {
+  border: 0 none;
+}
+
+pb-catalog .ag-scrolls .ag-header-container {
+  background: transparent;
+}
+
+pb-catalog .ag-scrolls .ag-header,
+pb-catalog .ag-no-scrolls .ag-header-container {
+  background-color: #5b6770;
+}
+
+
+pb-catalog .ag-header-cell {
+  color: #fff;
+  border-right: 1px solid #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+pb-catalog .ag-cell,
+pb-catalog .ag-group-cell-entire-row {
+  color: #5b6770;
+  font-size: 0.8125rem;
+  line-height: 40px;
+}
+
+pb-catalog .ag-cell {
+  text-align: center;
+}
+
+pb-catalog .ag-group-cell-entire-row {
+  padding-left: 20px;
+}
+
+pb-catalog .ag-group-expand {
+  margin-right: 20px;
+}
+
+pb-catalog .ag-row {
+  border-bottom: 1px solid #b1b8bd;
+}
+
+pb-catalog .ag-row-odd {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MTI2NzE5MDdGODBDMTFFNDk4RDNDNjk1NkU4OTRBNjQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MTI2NzE5MDhGODBDMTFFNDk4RDNDNjk1NkU4OTRBNjQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxMjY3MTkwNUY4MEMxMUU0OThEM0M2OTU2RTg5NEE2NCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxMjY3MTkwNkY4MEMxMUU0OThEM0M2OTU2RTg5NEE2NCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvRt9QQAAAAeSURBVHjaYvj//78UCCfFxxsywBggmgHGAGGAAAMAv6UWfiKNK+wAAAAASUVORK5CYII=');
+}
+
+/**
+ * NOTE: All widths and heights for rows and cells are part of
+ * the JavaScript because ag-grid uses those numbers to do calculations
+ * and overriding the style attributes with !important would throw
+ * off the calculations.
+ */
+
+pb-catalog .ag-tool-panel-container {
+    background-color: #e8ebee;
+    border: 2px solid #fff;
+    border-right: 0 none;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.2);
+    color: #5b6770;
+    font-size: 0.8125rem;
+    left: calc(100% + 5px);
+    padding: 0.9375rem;
+    position: absolute;
+    transition: left .5s ease-out;
+    z-index: 1;
+}
+
+pb-catalog .ag-tool-panel-container #north {
+    font-weight: bold;
+}
+
+pb-catalog .no-grid-warning {
+  color: red;
+}
+
+pb-catalog .floating-indicator {
+  left: 10rem;
+  position: absolute;
+  top: 10rem;
+  z-index: 5;
+}
+
+pb-catalog .spinner {
+  color: darkgreen;
+  font-size: xx-large;
+  text-align: center;
+}
+
+pb-catalog .error {
+  font-size: x-large;
+}

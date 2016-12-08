@@ -1,0 +1,25 @@
+<pb-modal-dialog #dialog [(hidden)]="isHidden">
+    <div class="modal-body">
+        <pb-file-chooser #chooser
+                         [rootPath]="rootPath"
+                         [title]="title"
+                         [file-filter-fn]="fileFilterFn"
+                         (selected)="fileSelected($event)"
+                         (error)="errorEvent.emit($event)"></pb-file-chooser>
+        <div class="pull-right buttons-container">
+            <div class="pull-right buttons">
+                <button class="btn cancel"
+                        style="margin-right: 10px;"
+                        (click)="onCancel($event);">
+                    <i class="fa" style="margin-right: 4px;"></i>{{cancelButtonText}}
+                </button>
+                <button class="btn btn-primary ok"
+                        (click)="onOK($event)"
+                        [disabled]="!canGo">
+                    <i class="fa" style="margin-right: 4px;"></i>{{okButtonText}}
+                </button>
+            </div>
+        </div>
+    </div>
+</pb-modal-dialog>
+

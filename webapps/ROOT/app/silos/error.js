@@ -1,0 +1,5 @@
+"use strict";
+var index_1 = require("./error/index");
+exports.Error = index_1.ErrorIndex;
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9zaWxvcy9lcnJvci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsc0JBQWtDLGVBQWUsQ0FBQztBQUExQyxtQ0FBMEMiLCJmaWxlIjoiYXBwL3NpbG9zL2Vycm9yLmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IHtFcnJvckluZGV4IGFzIEVycm9yfSBmcm9tIFwiLi9lcnJvci9pbmRleFwiO1xuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9

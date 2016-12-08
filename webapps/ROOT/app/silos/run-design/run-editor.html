@@ -1,0 +1,173 @@
+<form *ngIf="run" class="form-container sidebar-layout__container" role="form" [ngFormModel]="form">
+    <div class="sidebar-layout__sidebar outset-container">
+        <div class="outset-container__header">Run Information</div>
+        <div class="outset-container__control-container">
+            <div class="outset-container__control-group">
+                <label for="runName">Run Name</label>
+                <input id="runName" type="text" placeholder="" class="form-control" [ngFormControl]="form.controls.runName" [disabled]="formDisabled">
+            </div>
+            <div class="outset-container__control-group">
+                <label for="runDescription">Run Comments</label>
+                <input id="runDescription" type="text" placeholder="" class="form-control" [ngFormControl]="form.controls.runDescription" [disabled]="formDisabled">
+            </div>
+            <div class="outset-container__control-group">
+                <label for="experimentName">Experiment Name</label>
+                <input id="experimentName" type="text" placeholder="" class="form-control" [ngFormControl]="form.controls.experimentName" [disabled]="formDisabled">
+            </div>
+            <div class="outset-container__control-group">
+                <label for="experimentId">Experiment Id</label>
+                <input id="experimentId" type="text" placeholder="" class="form-control" [ngFormControl]="form.controls.experimentId" [disabled]="formDisabled">
+            </div>
+        </div>
+        <div class="outset-container__header">Run Reagents / Consumables</div>
+        <div class="outset-container__control-container">
+            <ul>
+                <li>{{cellsRequired}} SMRT {{ "Cell" | pluralize: cellsRequired }}</li>
+                <li>{{reagentPlatesRequired}} {{ "plate" | pluralize: reagentPlatesRequired }} Sequencing reagent</li>
+                <li>{{reagentPlatesRequired}} {{ "tube" | pluralize: reagentPlatesRequired }} OS enzyme</li>
+                <li>{{reagentPlatesRequired}} {{ "tube" | pluralize: reagentPlatesRequired }} mineral oil</li>
+                <li>3 boxes of tips</li>
+                <li>1 mixing plate</li>
+                <li>1 sample plate</li>
+            </ul>
+            <div style="display:none"  class="pb-faux-ul">
+                <div class="row row-clr">
+                    <div class="pull-left col-bullet" style="min-height: 4rem;">&#8224;</div><div class="col-description">Click the Barcode link to scan your a barcode then click OK to continue.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-layout__content outset-container">
+        <div class="outset-container__header">Sample Information</div>
+        <div class="outset-container__control-container" ngControlGroup="samples">
+            <pb-accordion-pane *ngFor="#group of sampleGroups.controls; #i = index" [expanded]="i === 0" #pane>
+                <header [class.invalid]="!group.valid">
+                    <span class="glyphicon"
+                          [class.glyphicon-menu-right]="!pane.expanded"
+                          [class.glyphicon-menu-down]="pane.expanded"></span>
+                    SAMPLE {{i + 1}}: {{group.value.sampleName}}, {{group.value.wellName}}, {{group.value.movieTime}}mins movie, {{group.value.insertSize}}bp insert
+                </header>
+                <section ngControlGroup="{{i}}">
+                    <div class="form-field">
+                        <label>Sample Name</label>
+                        <div class="field-control">
+                            <input type="text"
+                                   class="form-control"
+                                   [disabled]="formDisabled"
+                                   ngControl="sampleName">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label>Sample Comment</label>
+                        <div class="field-control">
+                            <input type="text"
+                                   class="form-control"
+                                   [disabled]="formDisabled"
+                                   ngControl="sampleDescription">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label>Sample Well</label>
+                        <div class="field-control">
+                            <pb-well [disabled]="formDisabled" ngControl="wellName"></pb-well>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label>Mag Bead Loading</label>
+                        <div class="field-control">
+                            <pb-square-toggle [disabled]="formDisabled"
+                                              ngControl="magBead">
+                                <div class="pb-on">On</div>
+                                <div class="pb-off">Off</div>
+                            </pb-square-toggle>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label>DNA Control Complex</label>
+                        <div class="field-control">
+                            <pb-lookup-input [disabled]="formDisabled"
+                                             ngControl="controlKit">
+                            </pb-lookup-input>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label>Template Prep Kit</label>
+                        <div class="field-control">
+                            <pb-lookup-input [disabled]="formDisabled"
+                                             ngControl="templatePrepKit">
+                            </pb-lookup-input>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label>Binding Kit</label>
+                        <div class="field-control">
+                            <pb-lookup-input [disabled]="formDisabled"
+                                             ngControl="bindingKit">
+                            </pb-lookup-input>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label>Sequencing Kit</label>
+                        <div class="field-control">
+                            <pb-lookup-input [disabled]="formDisabled"
+                                             ngControl="sequencingKit">
+                            </pb-lookup-input>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label>Insert Size (bp)</label>
+                        <div class="field-control">
+                            <select [disabled]="formDisabled" ngControl="insertSize">
+                                <option *ngFor="#size of insertSizes" [value]="size">{{size}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label>Movie Time per SMRT Cell (mins)</label>
+                        <div class="field-control">
+                            <select [disabled]="formDisabled" ngControl="movieTime">
+                                <option *ngFor="#time of movieTimes" [value]="time">{{time}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <details>
+                        <summary>Advanced Options</summary>
+                        <div class="form-field">
+                            <label>Immobilization Time (mins)</label>
+                            <div class="field-control">
+                                <select [disabled]="formDisabled" ngControl="immobilizationTime">
+                                    <option *ngFor="#time of immobilizationTimes" [value]="time">{{time}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </details>
+                </section>
+                <footer [hidden]="formDisabled">
+                    <button type="button" class="btn btn-primary"
+                            [disabled]="!group.valid || sampleGroups.length >= maxSamples"
+                            (click)="copySample(group.value, i)">
+                        Copy
+                    </button>
+                    <button type="button" class="btn btn-primary"
+                            [disabled]="sampleGroups.length >= maxSamples"
+                            (click)="createSample(group.value, i)">
+                        Create
+                    </button>
+                    <button type="button" class="btn btn-primary"
+                            [disabled]="sampleGroups.length < 2"
+                            (click)="deleteSample(group.value, i)">
+                        Delete
+                    </button>
+                </footer>
+            </pb-accordion-pane>
+        </div>
+    </div>
+</form>
+
+<pb-modal-dialog #confirmDelete>
+    <h1>Are you sure you wish to delete this run design?</h1>
+    <div class="buttons">
+        <button type="button" class="btn btn-primary" (click)="confirmDelete.hide()">Cancel</button>
+        <button type="button" class="btn btn-danger" (click)="onDelete()">Delete</button>
+    </div>
+</pb-modal-dialog>

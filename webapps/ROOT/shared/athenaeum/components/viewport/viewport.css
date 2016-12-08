@@ -1,0 +1,12 @@
+#viewport-div::before {
+    content: "xs";
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    padding: 0px 4px;
+}
+
+@media (min-width : 768px) { #viewport-div::before { content: "sm"; }}
+@media (min-width : 992px) { #viewport-div::before { content: "md"; }}
+@media (min-width : 1200px) { #viewport-div::before { content: "lg"; }}

@@ -1,0 +1,48 @@
+pb-accordion-pane /deep/ .pb-accordion-pane__header {
+    padding: 5px 12px;
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(255,255,255);
+    border: 1px solid #cccccc;
+}
+
+pb-accordion-pane /deep/ .pb-accordion-pane__header.invalid {
+    background: #cf2828;
+    box-shadow: 0 0 0.375rem #ce8483;
+}
+pb-accordion-pane /deep/ .pb-accordion-pane__content {
+    background: rgb(255,255,255);
+}
+pb-accordion-pane /deep/ .pb-accordion-pane__body {
+    padding: 12px 38px;
+}
+pb-accordion-pane /deep/ .pb-accordion-pane__footer {
+    padding: 5px 12px;
+    text-align: center;
+}
+pb-accordion-pane /deep/ .pb-accordion-pane__footer button {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    box-shadow: none;
+}
+pb-accordion-pane /deep/ .form-field {
+    padding: 8px;
+    display: flex;
+}
+
+pb-accordion-pane /deep/ .form-field label,
+pb-accordion-pane /deep/ details summary {
+    width: 35%;
+    padding-top: 8px;
+    padding-right: 8px;
+    text-align: right;
+}
+
+pb-accordion-pane /deep/ details summary {
+    font: normal 500 0.9375rem/0.9375rem 'HelveticaNeue', sans-serif;
+    color: #0c2848;
+}
+
+pb-accordion-pane /deep/ .form-field .field-control {
+    width: 45%;
+}

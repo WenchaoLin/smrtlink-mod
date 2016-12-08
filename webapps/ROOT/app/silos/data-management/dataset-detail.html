@@ -1,0 +1,191 @@
+<div class="titlebar-layout__titlebar">
+    <div class="container titlebar-layout__titlebar-container">
+        <h1 class="titlebar-layout__titlebar-title" >{{ TEXT.DATASET }} - {{title}}</h1>
+        <div class="titlebar-layout__titlebar-buttons">
+            <button class="btn btn-lg"
+                    (click)="doCancel()"
+                    [pbImprint]="STAMP.CANCEL"></button>
+            <button class="btn btn-lg"
+                    (click)="doCreateAnalysis()"
+                    [pbImprint]="STAMP.ANALYZE"></button>
+        </div>
+    </div>
+</div>
+
+<div class="titlebar-layout__container">
+    <div class="container sidebar-layout__container">
+        <!-- LEFT SIDE: MENU OF DISCLOSURE ITEMS -->
+        <div class="sidebar-layout__sidebar smrt-job-navbar">
+            <details [open]="vm.isOpen['overview']">
+                <summary (click)="toggleMenu('overview', $event)">Dataset Overview</summary>
+                <ul class="nav nav-pills nav-stacked">
+                    <li [class.active]="vm.show.jobStatus" [class.passive]="!vm.show.jobStatus">
+                        <a (click)="goJobStatus()">Status</a>
+                    </li>
+                    <li [class.active]="vm.show.thumbnails" [class.passive]="!vm.show.thumbnails">
+                        <a (click)="goThumbnails()">Thumbnails</a>
+                    </li>
+                    <li [class.active]="vm.show.everything" [class.passive]="!vm.show.everything">
+                        <a (click)="goEverything()">Display All</a>
+                    </li>
+                </ul>
+            </details>
+
+            <details *ngFor="#report of reports" [open]="vm.isOpen[report.name]">
+                <summary (click)="toggleMenu(report, $event)">{{report.name}}</summary>
+                <ul class="nav nav-pills nav-stacked">
+                    <li [class.active]="isShowingAttributes(report.id)" [class.passive]="!isShowingAttributes(report.id)">
+                        <a (click)="goAttributes(report.id)">Attributes</a>
+                    </li>
+                    <li *ngFor="#table of report.tables"
+                        [class.active]="isShowingTable(table.id + report.id)" [class.passive]="!isShowingTable(table.id + report.id)">
+                        <a (click)="goTable(table.id + report.id)">{{table.title}}</a>
+                    </li>
+                    <li *ngFor="#plot of report.plots"
+                        [class.active]="isShowingPlot(plot.id)" [class.passive]="!isShowingPlot(plot.id)">
+                        <a (click)="goPlot(plot.id)">{{plot.caption}}</a>
+                    </li>
+
+                </ul>
+            </details>
+
+            <details [open]="vm.isOpen['data']">
+                <summary (click)="toggleMenu('data', $event)">Data</summary>
+                <ul class="nav nav-pills nav-stacked">
+                    <li [class.active]="vm.show.downloads" [class.passive]="!vm.show.downloads">
+                        <a (click)="goDownloads()">File Downloads</a>
+                    </li>
+                    <li [class.active]="vm.show.log" [class.passive]="!vm.show.log">
+                        <a (click)="goLog()">Analysis Log</a>
+                    </li>
+                    <!--
+                    <li [class.active]="vm.showSmrtView" [class.passive]="!vm.showSmrtView">
+                    <a (click)="goSmrtView()">SMRT View</a>
+                    </li>
+                    -->
+                </ul>
+            </details>
+        </div>
+
+        <!-- RIGHT SIDE: CONTENT -->
+        <div class="sidebar-layout__content">
+            <div [hidden]="!vm.show.jobStatus" class="smrt-report">
+                <table>
+                    <tr> <th>Dataset</th> <td>{{vm.dataset.name}}</td> </tr>
+                    <tr> <th>Dataset Id</th> <td>{{vm.dataset.id}}</td> </tr>
+                    <tr> <th>Description</th> <td>{{vm.dataset.comments}}</td> </tr>
+                    <tr> <th>Number of Records</th> <td>{{vm.dataset.numRecords}}</td> </tr>
+                    <tr> <th>Total Length</th> <td>{{vm.dataset.totalLength}}</td> </tr>
+
+<!--
+                    <tr> <th>Import Analysis</th> <td>{{vm.job.name}}</td> </tr>
+                    <tr> <th>Import Analysis Id</th> <td>{{vm.job.id}}</td> </tr>
+-->
+                    <tr>
+                        <th>Status</th>
+                        <td>{{vm.job.state}}</td>
+                    </tr>
+                    <tr> <th>Created At</th> <td>{{vm.jobCreatedAt}}</td> </tr>
+                    <tr> <th>Updated At</th> <td>{{vm.jobUpdatedAt}}</td> </tr>
+                    <tr> <th>Application</th> <td>{{vm.jobApplicationName}}</td> </tr>
+                    <tr >
+                        <th>Inputs</th>
+                        <td>
+                            <div *ngFor="#entryPoint of entryPoints">
+                                <a [routerLink]="entryPoint.route">{{entryPoint.title}}</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr> <th>Path</th> <td>{{vm.job.path}}</td> </tr>
+                </table>
+                <details>
+                    <summary style="font-size: large">Parameters</summary>
+                    <table>
+                        <tr *ngFor="#taskOption of vm.taskOptions">
+                            <td>{{taskOption.name}}</td> <td>{{taskOption.value | rules: (taskOption.id | lookup: reportRules)}}</td>
+                        </tr>
+                    </table>
+                </details>
+
+                <hr [hidden]="!vm.show.everything">
+            </div>
+
+            <div class="smrt-thumbnails" [hidden]="!vm.show.thumbnails">
+                <figure *ngFor="#thumbnail of thumbnails">
+                    <a>
+                        <figcaption (click)="goPlot(thumbnail.id)">{{thumbnail.caption}}</figcaption>
+                        <img (click)="goPlot(thumbnail.id)" alt="{{thumbnail.caption}}" height="180" [src]="thumbnail.imageUrl">
+                    </a>
+                </figure>
+                <div style="clear: left;"></div>
+                <hr [hidden]="!vm.show.everything">
+            </div>
+
+            <template ngFor #report [ngForOf]="reports">
+                <div [hidden]="!isShowingAttributes(report.id)" class="smrt-report">
+                    <h2>{{report.name}}</h2>
+                    <table>
+                        <tr> <th>Value</th> <th>Analysis Metric</th> </tr>
+                        <tr *ngFor="#attribute of report.attributes">
+                            <td>{{attribute.value | rules: (attribute.id | lookup: reportRules)}}</td> <td>{{attribute.name}}</td>
+                        </tr>
+                    </table>
+                    <hr [hidden]="!vm.show.everything">
+                </div>
+                <div *ngFor="#table of report.tables"
+                     [hidden]="!isShowingTable(table.id + report.id)"
+                     class="smrt-report">
+                    <h2>{{table.title}}</h2>
+                    <table>
+                        <tr>
+                            <th *ngFor="#column of table.columns">{{column.header}}</th>
+                        </tr>
+                        <tr *ngFor="#row of table.rows">
+                            <td *ngFor="#column of row">{{column.value | rules: (column.id | lookup: reportRules)}}</td>
+                        </tr>
+                    </table>
+                    <hr [hidden]="!vm.show.everything">
+                </div>
+                <div *ngFor="#plot of report.plots"
+                     [hidden]="!isShowingPlot(plot.id)"
+                     class="smrt-report">
+                    <figure>
+                        <figcaption>{{plot.caption}}</figcaption>
+                        <table *ngIf="report.metrics"
+                               style="margin-left:auto; margin-right:auto;">
+                            <tr *ngFor="#metric of report.metrics">
+                                <td>{{metric.value}}</td><td>{{metric.name}}</td>
+                            </tr>
+                        </table>
+                        <img alt="{{plot.caption}}" height="550" [src]="plot.imageUrl">
+                    </figure>
+                    <hr [hidden]="!vm.show.everything">
+                </div>
+            </template>
+
+            <div [hidden]="!vm.show.downloads" class="smrt-report">
+                <table>
+                    <tr>
+                        <th>File</th>
+                        <th>Size</th>
+                        <th>Type</th>
+                    </tr>
+                    <tr *ngFor="#file of vm.fileDownloadList">
+                        <td><a href="{{file.downloadUrl}}" download="{{file.sourceId}}">{{file.sourceId}}</a></td>
+                        <td style="text-align: right; padding-right: 2rem;">{{file.fileSize | number}} <span style="color: #aaaaaa;">bytes</span></td>
+                        <td style="color: black;">{{fileTypeNameFromId(file.fileTypeId)}}</td>
+                    </tr>
+                </table>
+                <hr [hidden]="!vm.show.everything">
+            </div>
+
+            <div [hidden]="!vm.show.log" class="smrt-report">
+                <h2 *ngIf="null === vm.log">
+                    No log available.
+                </h2>
+                <textarea rows="80" cols="120" *ngIf="null !== vm.log"
+                          style="font-family: monospace; height: 40rem;">{{vm.log}}</textarea>
+            </div>
+        </div>
+    </div>
+</div>

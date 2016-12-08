@@ -1,0 +1,8 @@
+<div class="pb-square-toggle-container">
+    <div class="pull-left btn btn-square-toggle" [class.btn-square-toggle-active]="toggled" (click)="toggle($event)">
+        <ng-content select=".pb-on"></ng-content>
+    </div>
+    <div class="pull-right btn btn-square-toggle" [class.btn-square-toggle-active]="!toggled" (click)="toggle($event)">
+        <ng-content select=".pb-off"></ng-content>
+    </div>
+</div>

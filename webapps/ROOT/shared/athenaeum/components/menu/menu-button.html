@@ -1,0 +1,13 @@
+<button type="button"
+        (click)="onButtonClick($event)"
+        (keydown)="onButtonKeyDown($event)"
+        [disabled]="disabled">
+    <ng-content select="label"></ng-content>
+    <div class="select-button">
+        <span class="glyphicon glyphicon-menu-down"></span>
+    </div>
+</button>
+<div (click)="onMenuClick($event)"
+     (keydown)="onMenuKeyDown($event)">
+    <ng-content></ng-content>
+</div>

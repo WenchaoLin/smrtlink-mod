@@ -1,0 +1,106 @@
+/**
+ * @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc.
+ * @author <a href="mailto:bskinner@pacificbiosciences.com">Brian Skinner</a>
+ */
+
+pb-lobby {
+    color: #fff;
+    border: .75rem solid #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    height: 43rem;
+    justify-content: flex-end;
+    padding: 2rem 2rem 2rem 2rem;
+    position: relative;
+    width: calc(100% / 6);
+}
+
+pb-lobby p {
+    font: 200 1.75rem/1.75rem 'HelveticaNeue', sans-serif;
+    margin: 0;
+}
+
+pb-lobby h1 {
+    font: 100 3rem/3rem 'HelveticaNeue', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+pb-lobby sup {
+    font-size: 50%;
+    top: .5em;
+    vertical-align: top;
+}
+
+pb-lobby h2 {
+    font: 1.6rem 'HelveticaNeue', sans-serif;
+    margin-bottom: 0;
+}
+
+pb-lobby h2.enabled {
+    cursor: pointer;
+}
+
+pb-lobby h2.enabled:hover {
+    text-decoration: underline;
+}
+
+pb-lobby h4 {
+    font: bold 1.1875rem/1.1875rem 'HelveticaNeue-Cond', sans-serif;
+    margin-bottom: 0.3125rem;
+}
+
+pb-lobby .title {
+    flex: 0 0 6.25rem;
+}
+
+pb-lobby ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+pb-lobby li {
+    font: normal 0.875rem/0.875rem 'HelveticaNeue-Condensed', sans-serif;
+    list-style: none;
+    padding-bottom: 0.2rem;
+}
+
+pb-lobby .shortcut {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+pb-lobby .shortcut:hover {
+    color: inherit;
+}
+
+pb-lobby .pb-lobby-icon {
+    height: 5rem;
+    opacity: 0.5;
+    position: absolute;
+    right: 1rem;
+    top: 10rem;
+    width: 5rem;
+}
+
+pb-lobby .pb-lobby-section-container {
+    flex-grow: 2;
+}
+
+pb-lobby .pb-bottom-btn {
+    background: #ffffff;
+    border-radius: 0.3rem;
+    display: inline-block;
+    font: bold 0.8125rem/0.8125rem 'HelveticaNeue', sans-serif;
+    padding: 0.6rem 1rem;
+}
+
+pb-lobby .pb-bottom-btn .glyphicon {
+    padding-right: 0.5rem;
+    line-height: inherit;
+}

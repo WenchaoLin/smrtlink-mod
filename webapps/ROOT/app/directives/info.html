@@ -1,0 +1,7 @@
+<span class="pb-info__icon" [tabIndex]="tabIndex"
+      (click)="onClick()"
+      (keydown.enter)="onClick()"
+      (keydown.space)="onClick($event)"
+      (keydown.escape)="onBlur()"
+      (blur)="onBlur($event)"></span>
+<div class="pb-info__info pb-info__info_hidden" #infoElement></div>

@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Reports - Terminology</title>
+<link rel="StyleSheet" href="PacBio.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body page-style="x-size: Letter;"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("SL_Home.htm", "", "&gt;", "Home", "SL_Home_1.htm");
+document.write("Reports - Terminology<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('SL_Home.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<h2 style="border-bottom-style: Solid; border-bottom-width: 1px; font-size: 14pt;"><span style="font-size: 14pt; "><font size="4" style="font-size:14pt;"><span style="font-family: Arial, sans-serif;">SMRT</span><span style="font-family: Arial, sans-serif; 
+	 font-size: 10pt; vertical-align: Super;"><font size="2" style="font-size:10pt;">®</font></span><span style="font-family: Arial, sans-serif;"> 
+ Link</span> 
+	 Help</font></span></h2>
+</div>
+<h1>Report Terminology &lt;EDIT/VERIFY PER SW&gt;</h1>
+<p>Following are definitions of the terms displayed in the reports generated 
+ by SMRT Link secondary analysis:</p>
+<h2><a name="General_-__Filtering_Report" id="General_-__Filtering_Report"></a>General 
+ - Filtering Report &#160;(2)</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Polymerase Read Bases</span>: 
+	 The number of bases in the polymerase read.</li>
+	<li><span style="font-weight: bold;">Polymerase Reads</span>: The number 
+	 of polymerases generating high quality reads. Polymerase reads are 
+	 trimmed to the high quality region and include bases from adaptors, 
+	 as well as potentially multiple passes around a circular template.</li>
+	<li><span style="font-weight: bold;">Polymerase Read N50</span>: 50% 
+	 of all polymerase reads are longer than this value.</li>
+	<li><span style="font-weight: bold;">Polymerase Read Length</span>: 
+	 The mean trimmed read length of all polymerase reads. The value includes 
+	 bases from adaptors as well as multiple passes around a circular template.</li>
+	<li><span style="font-weight: bold;">Polymerase Read Quality</span>: 
+	 The mean single-pass read quality of all polymerase reads.</li>
+	<li><span style="font-weight: bold;">Post-Filter Polymerase Read Bases</span>: 
+	 The number of bases in the polymerase reads after filtering, including 
+	 adaptors.</li>
+	<li><span style="font-weight: bold;">Post-Filter Polymerase Reads</span>: 
+	 The number of polymerases generating trimmed reads after filtering. 
+	 Polymerase reads include bases from adaptors and multiple passes around 
+	 a circular template.</li>
+	<li><span style="font-weight: bold;">Post-Filter Polymerase Read Length</span>: 
+	 The mean trimmed read length of all polymerase reads after filtering. 
+	 The value includes bases from adaptors as well as multiple passes 
+	 around a circular template.</li>
+	<li><span style="font-weight: bold;">Post-Filter Polymerase Read Quality</span>: 
+	 The mean single-pass read quality of all polymerase reads after filtering.</li>
+</ul>
+<h2><a name="General_-__Subread_Filtering_Report1" id="General_-__Subread_Filtering_Report1"></a>General 
+ - Subread Filtering Report (2)</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Mean Subread length</span>: The 
+	 mean length of the subreads that passed filtering.</li>
+	<li><span style="font-weight: bold;">Total Number of Bases</span>: 
+	 The total number of bases in the subreads that passed filtering.</li>
+	<li><span style="font-weight: bold;">N50</span>: 50% of all bases come 
+	 from subreads longer than this value.</li>
+	<li><span style="font-weight: bold;">Number of Reads</span>: The total 
+	 number of reads that passed filtering.</li>
+</ul>
+<h2><a name="Diagnostics_-_Adapters_Report" id="Diagnostics_-_Adapters_Report"></a>Diagnostic 
+ - Adapters Report (2)</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Adapter Dimers (0-10bp)</span>: 
+	 The % of pre-filter ZMWs which have observed inserts of 0-10bp. These 
+	 are likely adapter dimers.</li>
+	<li><span style="font-weight: bold;">Short Inserts (11-100bp)</span>: 
+	 The % of pre-filter ZMWs which have observed inserts of 11-100bp. 
+	 These are likely short fragment contamination.</li>
+</ul>
+<h2><a name="Diagnostics_-Loading_Report" id="Diagnostics_-Loading_Report"></a>Diagnostic 
+ - Loading Report (2)</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">SMRT Cell ID</span>: ID number 
+	 of the SMRT Cell(s) used in this run.</li>
+	<li><span style="font-weight: bold;">Productive ZMWs</span>: The number 
+	 of ZMWs for this SMRT Cell that produced results with Productivity 
+	 = 1.</li>
+	<li><span style="font-weight: bold;">ZMW Loading For Productivity 0</span>: 
+	 The percentage of ZMWs that are empty, with no polymerase.</li>
+	<li><span style="font-weight: bold;">ZMW Loading For Productivity 1</span>: 
+	 The percentage of ZMWs that are productive and sequencing.</li>
+	<li><span style="font-weight: bold;">ZMW Loading For Productivity 2</span>: 
+	 The percentage of ZMWs that are not P0 (empty) or P1 (productive). 
+	 This may occur for a variety of reasons - the sequence data is not 
+	 usable.</li>
+</ul>
+<h2 style="margin-left: 0px;"><a name="Resequencing_-_Mapping_Report" id="Resequencing_-_Mapping_Report"></a>Resequencing 
+ - Mapping Report (2)</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Post-Filter Reads</span>: The 
+	 number of reads that passed filtering.</li>
+	<li><span style="font-weight: bold;">Mapped Read</span>: The number 
+	 of post-filter reads that mapped to the reference sequence.</li>
+	<li><span style="font-weight: bold;">Mapped Subreads</span>: The number 
+	 of post-filter subreads that mapped to the reference sequence.</li>
+	<li><span style="font-weight: bold;">Mapped CCS Reads</span>: The number 
+	 of post-filter CCS reads that mapped to the reference sequence.</li>
+	<li><span style="font-weight: bold;">Mapped CCS Read Bases</span>: 
+	 The number of post-filter CCS read bases that mapped to the reference 
+	 sequence. This does not include adapters.</li>
+	<li><span style="font-weight: bold;">Mapped CCS Read Length</span>: 
+	 The mean read length of post-filter CCS reads that mapped to the reference 
+	 sequence.</li>
+	<li><span style="font-weight: bold;">Mapped CCS Read Accuracy</span>: 
+	 The mean accuracy of post-filter CCS reads that mapped to the reference 
+	 sequence.</li>
+	<li><span style="font-weight: bold;">Mapped Subread Bases</span>: The 
+	 number of post-filter bases from all subreads that mapped to the reference 
+	 sequence. This does not include adapters.</li>
+	<li><span style="font-weight: bold;">Mapped Subread Accuracy</span>: 
+	 The mean accuracy of post-filter subreads that mapped to the reference 
+	 sequence.</li>
+	<li><span style="font-weight: bold;">Mapped Read Length</span>: The 
+	 mean read length of post-filter subreads that mapped to the reference 
+	 sequence. This does not include adapters.</li>
+	<li><span style="font-weight: bold;">Mapped Read Length of Insert (bp)</span>: 
+	 The mean read length of all insert sequences, which includes only 
+	 mapped sequences. The read length of insert is approximately the longest 
+	 subread length per ZMW.</li>
+	<li><span style="font-weight: bold;">Mapped Read Length of Insert</span>: 
+	 The mean read length of all insert sequences, which includes only 
+	 mapped sequences. The read length of insert is approximately the longest 
+	 subread length per ZMW.</li>
+	<li><span style="font-weight: bold;">Mapped Polymerase Read Length</span>: 
+	 The mean read length of post-filter polymerase reads that mapped to 
+	 the reference sequence. This includes adapters.</li>
+	<li><span style="font-weight: bold;">Mapped Polymerase Read Length 
+	 95% (bp)</span><span>:</span> The 95th percentile of read length of 
+	 post-filter polymerase reads that mapped to the reference sequence.</li>
+	<li><span style="font-weight: bold;">Mapped Polymerase Read Length 
+	 Max (bp)</span>: The maximum read length of post-filter polymerase 
+	 reads that mapped to the reference sequence.</li>
+	<li><span style="font-weight: bold;">Mapped Polymerase Read Length 
+	 N50</span>: 50% of the read length of post-filter polymerase reads 
+	 that mapped to the reference sequence are longer than this value.</li>
+	<li><span style="font-weight: bold;">Mapped Subread Length N50 (bp)</span>: 
+	 50% of full subreads that mapped to the reference sequence are longer 
+	 than this value. Full subreads are subreads flanked by two adapters.</li>
+	<li><span style="font-weight: bold;">Mapped Subread Length Mean (bp)</span>: 
+	 The mean length of full subreads that mapped to the reference sequence. 
+	 Full subreads are subreads flanked by two adapters.</li>
+	<li><span style="font-weight: bold;">Mapped Subread Length</span>: 
+	 The mean length of post-filter subreads that mapped to the reference 
+	 sequence.</li>
+	<li><span style="font-weight: bold;">Mapped ROI</span>: The total number 
+	 of Reads of Insert that mapped to the reference for the job.</li>
+	<li><span style="font-weight: bold;">Mapped ROI Bases Mean</span>: 
+	 The mean length of the Reads of Insert bases that mapped to the reference.</li>
+	<li><span style="font-weight: bold;">Mapped ROI Bases N50</span>: 50% 
+	 of the Reads of Insert bases that mapped to the reference sequence 
+	 are longer than this value.</li>
+	<li><span style="font-weight: bold;">Mapped ROI Total</span>: The total 
+	 number of Reads of Insert base pairs that mapped to the reference 
+	 for the job.</li>
+	<li><span style="font-weight: bold;">Mapped ROI Concordance</span>: 
+	 The mean concordance of the mapped Reads of Inserts compared to the 
+	 reference sequence.</li>
+	<li><span style="font-weight: bold;">Mean Mapped Subread Concordance</span>: 
+	 The mean concordance of the subreads that mapped to the reference 
+	 sequence.</li>
+</ul>
+<h2><a name="Coverage_Report" id="Coverage_Report"></a>Resequencing - Coverage 
+ Report (2)</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Mean Coverage</span>: The mean 
+	 depth of coverage across the reference sequence.</li>
+	<li><span style="font-weight: bold;">Missing Bases (%)</span>: The 
+	 percentage of the reference sequence that has zero coverage.</li>
+	<li><span style="font-weight: bold;">Missing Bases</span>: The percentage 
+	 of the reference sequence that has zero coverage.</li>
+</ul>
+<h2><a name="Spike-in_Control_Report" id="Spike-in_Control_Report"></a>Diagnostic 
+ - Spike-In Control Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Control Sequence</span>: The name 
+	 of the control sequence.</li>
+	<li><span style="font-weight: bold;">Fraction Control Reads</span>: 
+	 The fraction of post-filter polymerase reads that align to the control 
+	 reference.</li>
+	<li><span style="font-weight: bold;">Control Polymerase Read Length 
+	 N50</span>: 50% of all polymerase reads from the control sample are 
+	 longer than this value.</li>
+	<li><span style="font-weight: bold;">Control Polymerase Read Length 
+	 Mean</span>: The mean mapped read length of the polymerase reads from 
+	 the control sample.</li>
+	<li><span style="font-weight: bold;">Number of Control Reads</span>: 
+	 The total number of polymerase reads from the control sample that 
+	 passed filtering.</li>
+	<li><span style="font-weight: bold;">Control Subread Accuracy</span>: 
+	 The mean single-pass accuracy of the mapped polymerase reads from 
+	 the control sample.</li>
+	<li><span style="font-weight: bold;">Control Polymerase Read Length 
+	 95%</span>: The 95th percentile of mapped read length of the polymerase 
+	 reads from the control sample.</li>
+</ul>
+<h2><a name="Barcodingt_Report1" id="Barcodingt_Report1"></a>General - 
+ Barcoding Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Barcode Name</span>: The name 
+	 of the barcode used.</li>
+	<li><span style="font-weight: bold;">Reads</span>: The number of reads 
+	 associated with the barcode.</li>
+	<li><span style="font-weight: bold;">Bases</span>: The number of bases 
+	 associated with the barcode.</li>
+</ul>
+<h2><a name="ReadofInsert_Report" id="ReadofInsert_Report"></a>General 
+ - Reads of Insert Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Movie</span>: The name of the 
+	 movie file containing the Reads of Insert.</li>
+	<li><span style="font-weight: bold;">Reads Of Insert</span>: The number 
+	 of Reads of Insert.</li>
+	<li><span style="font-weight: bold;">Read Bases Of Insert</span>: The 
+	 total number of bases.</li>
+	<li><span style="font-weight: bold;">Mean Read Length Of Insert</span>: 
+	 The mean read length of the Reads of Insert.</li>
+	<li><span style="font-weight: bold;">Read Accuracy Of Insert</span>: 
+	 The mean accuracy of the Reads of Insert.</li>
+	<li><span style="font-weight: bold;">Mean Read Quality Of Insert</span>: 
+	 The mean read quality of the Reads of Insert.</li>
+	<li><span style="font-weight: bold;">Mean Number Of Passes</span>: 
+	 The mean number of passes used to generate the Reads of Insert.</li>
+</ul>
+<h2 style="margin-left: 0px;"><a name="Analysis_-_Variants_Report" id="Analysis_-_Variants_Report"></a>Analysis 
+ - Variants Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Reference</span>: The name of 
+	 the reference sequence.</li>
+	<li><span style="font-weight: bold;">Reference Length</span>: The length 
+	 of the reference sequence.</li>
+	<li><span style="font-weight: bold;">Bases Called</span>: The percentage 
+	 of reference sequence that has ≥ 1x coverage. % Bases Called + % Missing 
+	 Bases should equal 100.</li>
+	<li><span style="font-weight: bold;">% Bases Called</span>: The percentage 
+	 of reference sequence that has ≥ 1x coverage. % Bases Called + % Missing 
+	 Bases should equal 100.</li>
+	<li><span style="font-weight: bold;">Consensus Accuracy</span>: The 
+	 accuracy of the consensus sequence compared to the reference.</li>
+	<li><span style="font-weight: bold;">Base Coverage</span>: The mean 
+	 depth of coverage across the reference sequence.</li>
+</ul>
+<h2 style="margin-left: 0px;"><a name="Analysis_-_Top_Variants_Report" 
+								 id="Analysis_-_Top_Variants_Report"></a>Analysis 
+ - Top Variants Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Sequence</span>: The name of the 
+	 reference sequence.</li>
+	<li><span style="font-weight: bold;">Position</span>: The position 
+	 of the variant along the reference sequence.</li>
+	<li><span style="font-weight: bold;">Variant</span>: The variant position, 
+	 type, and affected nucleotide.</li>
+	<li><span style="font-weight: bold;">Type</span>: The variant type: 
+	 Insertion, Deletion, or Substitution.</li>
+	<li><span style="font-weight: bold;">Coverage</span>: The coverage 
+	 at position.</li>
+	<li><span style="font-weight: bold;">Confidence</span>: The confidence 
+	 of the variant call.</li>
+	<li><span style="font-weight: bold;">Genotype</span>: Includes the 
+	 full number of chromosomes (diploid) or half the number (haploid).</li>
+</ul>
+<h2><a name="PreAssembler_Report11" id="PreAssembler_Report11"></a>Assembly 
+ - Pre-Assembly Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Seed Bases</span>: The number 
+	 of bases from seed reads.</li>
+	<li><span style="font-weight: bold;">Pre-Assembled Yield</span>: The 
+	 percentage of seed read bases that were successfully aligned to generate 
+	 pre-assembled reads.</li>
+	<li><span style="font-weight: bold;">Pre-Assembled Reads Length</span>: 
+	 The average length of the pre-assembled reads.</li>
+	<li><span style="font-weight: bold;">Length Cutoff</span>: Reads with 
+	 lengths greater than the length cutoff are used as seed reads for 
+	 pre-assembly.</li>
+	<li><span style="font-weight: bold;">Pre-Assembled Bases</span>: The 
+	 number of bases in the pre-assembled reads.</li>
+	<li><span style="font-weight: bold;">Pre-Assembled Reads</span>: The 
+	 number of reads output by the pre-assembler. Pre-assembled reads are 
+	 very long, highly accurate reads that can be used as input to a de 
+	 novo assembler.</li>
+	<li><span style="font-weight: bold;">Pre-Assembled N50</span>: 50% 
+	 of the pre-assembled reads are longer than this value.</li>
+	<li><span style="font-weight: bold;">Draft Contigs</span>: The number 
+	 of contigs output by Celera Assembler, which may include singleton 
+	 and degenerate contigs. After assembly polishing with Quiver, the 
+	 final number of contigs may be smaller.</li>
+	<li><span style="font-weight: bold;">Reads Assembled (%)</span>: The 
+	 fraction of all reads that are assembled into contigs in the final 
+	 assembly.</li>
+</ul>
+<h2><a name="Assembly_-_Polished_Assembly_Report1" id="Assembly_-_Polished_Assembly_Report1"></a>Assembly 
+ - Polished Assembly Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Polished Contigs</span>: The set 
+	 of contigs from the de novo assembly that were corrected by Quiver.</li>
+	<li><span style="font-weight: bold;">Max Contig Length</span>: The 
+	 length of the longest contig in the final assembly.</li>
+	<li><span style="font-weight: bold;">Sum of Contig Lengths</span>: 
+	 The sum of the lengths of all contigs in the final assembly.</li>
+	<li><span style="font-weight: bold;">N50 Contig Length</span>: 50% 
+	 of the bases in the final contig are longer than this value.</li>
+</ul>
+<h2><a name="Assembly_-_Iterations_Report" id="Assembly_-_Iterations_Report"></a>Assembly 
+ - Iterations Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Assembly Iterations</span>: The 
+	 number of iterations of overlap-layout-consensus performed by the 
+	 de novo or hybrid assembly algorithm.</li>
+</ul>
+<h2><a name="Assembly_-_Top_Corrections_Report11" id="Assembly_-_Top_Corrections_Report11"></a>Assembly 
+ - Top Corrections Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Correction</span>: The location 
+	 and type of correction.</li>
+</ul>
+<h2><a name="Assembly_-Correction_Report111" id="Assembly_-Correction_Report111"></a>Assembly 
+ - Correction Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Consensus Concordance</span>: 
+	 The percent identity between the original and the corrected contig.</li>
+</ul>
+<h2><a name="Hybrid_Assembly_-_Final_Report" id="Hybrid_Assembly_-_Final_Report"></a>Hybrid 
+ Assembly - Final Assembly Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Number</span>: The number of scaffolds, 
+	 contigs, or gaps in the initial or final assembly.</li>
+	<li><span style="font-weight: bold;">Max Length</span>: The length 
+	 of the longest scaffold, contig, or gap in the initial or final assembly.</li>
+	<li><span style="font-weight: bold;">N50 Length</span>: 50% of all 
+	 bases in the initial or final scaffold/contig/gap are longer than 
+	 this value.</li>
+	<li><span style="font-weight: bold;">Sum Length</span>: The sum of 
+	 the lengths of all scaffolds, contigs, or gaps in the initial or final 
+	 assembly.</li>
+	<li><span style="font-weight: bold;">Initial Scaffolds</span>: The 
+	 distribution of the lengths of the scaffold sequences before completing 
+	 the AHA algorithm. Scaffolds are composed of contigs optionally separated 
+	 by gap sequences.</li>
+	<li><span style="font-weight: bold;">Final Scaffolds</span>: The distribution 
+	 of the lengths of the scaffold sequences after completing the AHA 
+	 algorithm. Scaffolds are composed of contigs optionally separated 
+	 by gap sequences.</li>
+	<li><span style="font-weight: bold;">Initial Contigs</span>: The distribution 
+	 of the lengths of the contig sequences before completing the AHA algorithm. 
+	 Contigs are stretches of continuous sequence that do not contain gaps.</li>
+	<li><span style="font-weight: bold;">Final Contigs</span>: The distribution 
+	 of the lengths of the contig sequences after completing the AHA algorithm. 
+	 Contigs are stretches of continuous sequence that do not contain gaps.</li>
+	<li><span style="font-weight: bold;">Initial Gaps</span>: The distribution 
+	 of the lengths of the gaps between contig sequences before completing 
+	 the AHA algorithm.</li>
+	<li><span style="font-weight: bold;">Final Gaps</span>: The distribution 
+	 of the lengths of the gaps between contig sequences after completing 
+	 the AHA algorithm.</li>
+</ul>
+<h2><a name="Hybrid_Assembly_-_Iterations_Report" id="Hybrid_Assembly_-_Iterations_Report"></a>Hybrid 
+ Assembly - Assembly Iterations Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Input Contigs</span>: The number 
+	 of contigs used as input to the AHA algorithm.</li>
+	<li><span style="font-weight: bold;">Min Align Score</span>: The minimum 
+	 alignment score between a read and a contig to use the alignment for 
+	 scaffolding.</li>
+	<li><span style="font-weight: bold;">Min Link Redundancy</span>: The 
+	 minimum number of reads that must link two contigs for those contigs 
+	 to be connected in a scaffold.</li>
+	<li><span style="font-weight: bold;">Min Subread Length</span>: The 
+	 minimum length required for a subread to be used by the AHA algorithm.</li>
+	<li><span style="font-weight: bold;">Min Contig Length</span>: The 
+	 minimum length required for a contig to be used by the AHA algorithm.</li>
+	<li><span style="font-weight: bold;">Scaffolds Across Assembly Iterations</span>: 
+	 The number of scaffolds at a particular iteration of the AHA algorithm.</li>
+	<li><span style="font-weight: bold;">Linking Reads Across Assembly 
+	 Iterations</span>: The number of linking reads at a particular iteration 
+	 of the AHA algorithm.</li>
+</ul>
+<h2><a name="Motifs_Report1" id="Motifs_Report1"></a>Modifications - Motifs 
+ Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Motifs</span>: The nucleotide 
+	 sequence of the methyltransferase recognition motif, using the standard 
+	 IUPAC nucleotide alphabet.</li>
+	<li><span style="font-weight: bold;">Modified Position</span>: The 
+	 position within the motif that is modified. The first base is 1. Example: 
+	 The modified adenine in GATC is at position 2.</li>
+	<li><span style="font-weight: bold;">Modification Type</span>: The 
+	 type of chemical modification most commonly identified at that motif. 
+	 These are: 6mA, 4mC, 5mC, or modified_base (modification not recognized 
+	 by the software.)</li>
+	<li><span style="font-weight: bold;">% Motifs Detected</span>: The 
+	 percentage of times that this motif was detected as modified across 
+	 the entire genome.</li>
+	<li><span style="font-weight: bold;"># Of Motifs Detected</span>: The 
+	 number of times that this motif was detected as modified across the 
+	 entire genome.</li>
+	<li><span style="font-weight: bold;"># Of Motifs In Genome</span>: 
+	 The number of times this motif occurs in the genome.</li>
+	<li><span style="font-weight: bold;">Mean Modification QV</span>: The 
+	 mean modification QV for all instances where this motif was detected 
+	 as modified.</li>
+	<li><span style="font-weight: bold;">Mean Motif Coverage</span>: The 
+	 mean coverage for all instances where this motif was detected as modified.</li>
+	<li><span style="font-weight: bold;">Partner Motif</span>: For motifs 
+	 that are not self-palindromic, this is the complementary sequence.</li>
+</ul>
+<h2><a name="Amplicons_Input_Report111" id="Amplicons_Input_Report111"></a>Amplicons 
+ - Input Metrics Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Sample</span>: The number of the 
+	 sample.</li>
+	<li><span style="font-weight: bold;">Chimeric</span>: The number of 
+	 consensus sequences flagged as likely coming from PCR cross-over events.</li>
+	<li><span style="font-weight: bold;">Chimeric (%)</span>: The percentage 
+	 of consensus sequences flagged as likely coming from PCR cross-over 
+	 events.</li>
+	<li><span style="font-weight: bold;">Noise</span>: The number of consensus 
+	 sequences that have a very low predicted accuracy (&lt;95%) despite 
+	 sufficient coverage (&gt;20 reads and &gt;10% all sequences in the 
+	 current bin) to be called an novel allele.</li>
+	<li><span style="font-weight: bold;">Noise (%)</span>: The percentage 
+	 of consensus sequences that have a very low predicted accuracy (&lt;95%) 
+	 despite sufficient coverage (&gt;20 reads and &gt;10% all sequences 
+	 in the current bin) to be called an novel allele.</li>
+	<li><span style="font-weight: bold;">Good</span>: The number of consensus 
+	 sequences not categorized as Chimeric or Noise.</li>
+	<li><span style="font-weight: bold;">Good (%)</span>: The percentage 
+	 of consensus sequences not categorized as Chimeric or Noise.</li>
+</ul>
+<h2><a name="Amplicons_Report11" id="Amplicons_Report11"></a>Amplicons 
+ - Consensus Summary Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Sequence Cluster</span>: A name 
+	 given to the cluster of sequences roughly corresponding to one amplicon.</li>
+	<li><span style="font-weight: bold;">Sequence Phase</span>: A name 
+	 given to each phased haplotype within a sequence cluster.</li>
+	<li><span style="font-weight: bold;">Length (Bp)</span>: The length 
+	 of the consensus amplicon sequence.</li>
+	<li><span style="font-weight: bold;">Estimated Accuracy</span>: The 
+	 estimated accuracy of the consensus amplicon sequence.</li>
+	<li><span style="font-weight: bold;">Subreads Coverage</span>: The 
+	 number of subreads used to call consensus for this sequence.</li>
+</ul>
+<h2><a name="Classify_Report111" id="Classify_Report111"></a>IsoSeq - Classify 
+ Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Number of reads of insert</span>: 
+	 The number of reads of insert.</li>
+	<li><span style="font-weight: bold;">Number of five prime reads</span>: 
+	 The number of reads of insert with 5 prime signal detected.</li>
+	<li><span style="font-weight: bold;">Number of three prime reads</span>: 
+	 The number of reads of insert with 3 prime signal detected.</li>
+	<li><span style="font-weight: bold;">Number of poly-A reads</span>: 
+	 The number of reads of insert with poly-A and 3 prime signals detected.</li>
+	<li><span style="font-weight: bold;">Number of filtered short reads</span>: 
+	 The number of reads whose read length is less than the specified Minimum 
+	 Sequence Length.</li>
+	<li><span style="font-weight: bold;">Number of full-length reads</span>: 
+	 The number of full-length reads of insert. (Full-length reads are 
+	 reads which have both prime signals and poly-A detected.)</li>
+	<li><span style="font-weight: bold;">Number of non-full-length reads</span>: 
+	 The number of non-full-length reads of insert. (Full-length reads 
+	 are reads which have both prime signals and poly-A detected.)</li>
+	<li><span style="font-weight: bold;">Number of full-length non-chimeric 
+	 reads</span>: The number of full-length non-artificial-concatemer 
+	 reads of insert. Full-length reads are reads which have both prime 
+	 signals and poly-A detected.</li>
+	<li><span style="font-weight: bold;">Average full-length non-chimeric 
+	 read length</span>: The average length of full-length, non-chimeric 
+	 reads of insert.</li>
+</ul>
+<h2><a name="Cluster_Report" id="Cluster_Report"></a>IsoSeq - Cluster Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Number of consensus isoforms</span>: 
+	 The number of consensus isoform reads.</li>
+	<li><span style="font-weight: bold;">Average consensus isoforms read 
+	 length</span>: The average length of isoform reads that match the 
+	 reference sequence.</li>
+	<li><span style="font-weight: bold;">Number of polished high-quality 
+	 isoforms</span>: The number of isoforms, polished using Quiver, whose 
+	 sum of base-calling error probability at each site is <span>less</span> 
+	 than or equal to a threshold value.</li>
+	<li><span style="font-weight: bold;">Number of polished low-quality 
+	 isoforms</span>: The number of isoforms, polished using Quiver, whose 
+	 sum of base-calling error probability at each site is more than or 
+	 equal to a threshold value.</li>
+</ul>
+<h2><a name="Site_Acceptance_Report1" id="Site_Acceptance_Report1"></a>Site 
+ Acceptance Test Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Instrument</span>: The name of 
+	 the instrument on which the Site Acceptance Test is running.</li>
+	<li><span style="font-weight: bold;">Genome Covered</span>: The percent 
+	 of genomes in the sample covered by the Site Acceptance Test.</li>
+	<li><span style="font-weight: bold;">Mean Mapped Read Length</span>: 
+	 The mean length of the post-filter reads that mapped to the reference 
+	 sequence.</li>
+	<li><span style="font-weight: bold;">Reads in Cell</span>: The total 
+	 number of reads generated from the SMRT Cell used in the Site Acceptance 
+	 Test.</li>
+</ul>
+<h2>Generic Overview Reports</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">SMRT Cells</span>: The number 
+	 of SMRT Cells used for the job.</li>
+	<li><span style="font-weight: bold;">Movies</span>: The number of movies 
+	 generated by the job.</li>
+	<li><span style="font-weight: bold;">Number of Bases</span>: The total 
+	 number of bases generated by the job.</li>
+	<li><span style="font-weight: bold;">N50 Read Length</span>: 50% of 
+	 all reads generated by this job are longer than this value.</li>
+	<li><span style="font-weight: bold;">Mean Read Length</span>: The mean 
+	 length of all the reads generated by the job.</li>
+	<li><span style="font-weight: bold;">Mean Read Score</span>: The mean 
+	 Read Score for the job. (The Read Score is a de novo prediction of 
+	 the mapped accuracy of subreads from a single ZMW.)</li>
+	<li><span style="font-weight: bold;">Mapped Reads</span>: The number 
+	 of post-filter reads that mapped to the reference sequence.</li>
+	<li><span style="font-weight: bold;">Average Reference Length</span>: 
+	 The average length of the reference used for the job.</li>
+	<li><span style="font-weight: bold;">Average Reference Bases Called</span>: 
+	 The percentage of the reference sequence that has ≥ 1x coverage.</li>
+	<li><span style="font-weight: bold;">Average Reference Consensus Concordance</span>: 
+	 The average accuracy of the consensus sequence compared to the reference 
+	 for the job.</li>
+	<li><span style="font-weight: bold;">Average Reference Coverage</span>: 
+	 The average depth of coverage across references.</li>
+	<li><span style="font-weight: bold;">Longest Reference Contig</span>: 
+	 The name of the longest contig in the reference sequence.</li>
+</ul>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 10pt; border-top-style: Solid; border-top-width: 1px;"><span style="font-size: 10pt; "><font size="2" style="font-size:10pt;"><a 
+	 href="SL_Legal.htm">Legal Information</a> &#160;&#160;&#160;&#160;&#160;02-Oct-15</font></span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

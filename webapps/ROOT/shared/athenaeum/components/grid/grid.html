@@ -1,0 +1,36 @@
+<div class="pb-grid__header" (click)="_onHeaderClick($event)">
+    <table class="pb-grid__row-table pb-grid__row-table_header">
+        <tr>
+            <th *ngFor="#col of columns" class="pb-grid__column pb-grid__column_{{col.field}}"
+                [class.pb-grid__sortable-column]="sortable"
+                [attr.data-column-field]="col.field">
+                {{col.label}}
+            </th>
+        </tr>
+    </table>
+</div>
+<div class="pb-grid__body">
+    <div class="pb-grid__content" (click)="_onContentClick($event)">
+        <div class="pb-grid__row"
+             *ngFor="#row of rows; #i=index"
+             [class.pb-grid__row_first]="i===0"
+             [class.pb-grid__row_selected]="row.selected"
+             [attr.data-object-id]="row.id"
+             [attr.data-object-index]="i">
+            <table class="pb-grid__row-table">
+                <tr>
+                    <td *ngFor="#col of columns" class="pb-grid__column pb-grid__column_{{col.field}}">{{format(row.object, col)}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="pb-grid__footer">
+    <table *ngIf="footerData" class="pb-grid__row-table pb-grid__row-table_footer">
+        <tr>
+            <th *ngFor="#col of columns" class="pb-grid__column pb-grid__column_{{col.field}}">{{format(footerData, col)}}</th>
+        </tr>
+    </table>
+</div>
+<div class="pb-grid__header pb-grid__header-scroll"></div>
+<div class="pb-grid__footer pb-grid__footer-scroll"></div>

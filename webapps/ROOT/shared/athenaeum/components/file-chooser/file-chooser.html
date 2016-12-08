@@ -1,0 +1,14 @@
+<div>
+    <div *ngIf="root" class="tree-container">
+        <label>{{title}}</label>
+        <pb-tree-view class="tv-chooser"
+                      [root]="true"
+                      [nodes]="root.nodes"
+                      [leaves]="root.leaves"
+                      (node-collapsed)="onChildNodeCollapsed($event)"
+                      (node-expanded)="onChildNodeExpanded($event)"
+                      (leaf-clicked)="onChildLeafClicked($event)">
+        </pb-tree-view>
+    </div>
+    <pre class="selected-value">{{selectedFileFullpath}}</pre>
+</div>

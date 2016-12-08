@@ -1,0 +1,2 @@
+<input type="text" class="form-control" #idNode (blur)="onIdBlur()" (input)="onIdInput($event.target.value)" [disabled]="disabled">
+<input type="text" class="form-control" #labelNode (focus)="onLabelFocus($event)" [value]="label" [disabled]="disabled">

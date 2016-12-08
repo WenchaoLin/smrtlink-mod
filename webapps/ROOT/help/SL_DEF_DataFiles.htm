@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Data Files</title>
+<link rel="StyleSheet" href="PacBio.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("SL_Home.htm", "", "&gt;", "Home", "SL_Home_1.htm");
+document.write("Data Files<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('SL_Home.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<h2 style="border-bottom-style: Solid; border-bottom-width: 1px; font-size: 14pt;"><span style="font-size: 14pt; "><font size="4" style="font-size:14pt;"><span style="font-family: Arial, sans-serif;">SMRT</span><span style="font-family: Arial, sans-serif; 
+	 font-size: 10pt; vertical-align: Super;"><font size="2" style="font-size:10pt;">®</font></span><span style="font-family: Arial, sans-serif;"> 
+ Link</span> 
+	 Help</font></span></h2>
+</div>
+<h1>Secondary analysis data files</h1>
+<p>SMRT Link generates a number of secondary analysis data files. You can 
+ download these data files and use them as input for further downstream 
+ processing, pass them on to collaborators, or upload to public genome 
+ sites.</p>
+<h1>Available file formats</h1>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">SAM: S</span><span>equence</span> 
+	 <span style="font-weight: bold;">A</span><span>lignment</span> <span 
+	 style="font-weight: bold;">M</span><span>ap</span> <span>is a</span> 
+	 generic nucleotide alignment format that describes the alignment of 
+	 query sequences or sequencing reads to a reference sequence or assembly. 
+	 (Click <a href="http://samtools.sourceforge.net/">here</a> for further 
+	 details.)</li>
+	<li><span style="font-weight: bold;">BAM</span>: 
+	 Binary version of the Sequence Alignment Map (SAM) format. (Click 
+	 <a href="http://genome.ucsc.edu/goldenPath/help/bam.html">here</a> 
+	 for further details.)</li>
+	<li><span style="font-weight: bold;">BAI</span>: The index file for 
+	 a file generated in the BAM format. (This is a non-standard file type.)</li>
+	<li><span style="font-weight: bold;">FASTA</span>: FASTA-formatted 
+	 sequence files contains either nucleic acid sequence (such as DNA) 
+	 or protein sequence information. FASTA files store multiple sequences 
+	 in a single file. (Click <a href="http://en.wikipedia.org/wiki/FASTA_format">here</a> 
+	 for further details.)</li>
+	<li><span style="font-weight: bold;">GFF</span>: 
+	 <span style="font-weight: bold;">G</span>eneral <span style="font-weight: bold;">F</span>eature 
+	 <span style="font-weight: bold;">F</span>ormat, used for describing 
+	 genes and other features associated with DNA, RNA and Protein sequences. 
+	 (Click <a href="http://genome.ucsc.edu/FAQ/FAQformat#format3">here</a> 
+	 for further details.)</li>
+	<li><span style="font-weight: bold;">VCF</span>: 
+	 <span style="font-weight: bold;">V</span>ariant <span style="font-weight: bold;">C</span>all 
+	 <span style="font-weight: bold;">F</span>ormat, for use with the molecular 
+	 visualization and analysis program VMD. 
+	 (Click <a href="http://en.wikipedia.org/wiki/Variant_Call_Format">here</a> 
+	 for further details.)</li>
+	<li><span style="font-weight: bold;">BED</span>: Format that defines 
+	 the data lines displayed in an annotation track. (Click <a href="http://genome.ucsc.edu/FAQ/FAQformat#format1">here</a> 
+	 for further details.)</li>
+	<li><span style="font-weight: bold;">CSV</span>: <span style="font-weight: bold;">C</span>omma-<span 
+	 style="font-weight: bold;">S</span>eparated <span style="font-weight: bold;">V</span>alues 
+	 file. Can be viewed using Microsoft Excel or a text editor.</li>
+</ul>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 10pt; border-top-style: Solid; border-top-width: 1px;"><span style="font-size: 10pt; "><font size="2" style="font-size:10pt;"><a 
+	 href="SL_Legal.htm">Legal Information</a> &#160;&#160;&#160;&#160;&#160;16-Oct-15</font></span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

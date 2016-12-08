@@ -1,0 +1,18 @@
+pb-modal-underlay {
+    background: #000;
+    bottom: 0;
+    display: block;
+    left: 0;
+    opacity: 0;
+    outline: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: opacity 0.15s linear;
+    z-index: 999;
+}
+
+pb-modal-underlay.in {
+    opacity: 0.5;
+}

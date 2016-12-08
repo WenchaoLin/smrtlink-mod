@@ -1,0 +1,17 @@
+<div class="titlebar-layout__titlebar">
+    <div class="container titlebar-layout__titlebar-container">
+        <h1 class="titlebar-layout__titlebar-title">{{ title }}</h1>
+        <div *ngIf="buttons" class="silo-buttons">
+            <template ngFor #button [ngForOf]="buttons">
+                <button [class]="button.className"
+                        (click)="button.onClick && button.onClick($event)"
+                        [disabled]="button.isDisabled && button.isDisabled()">{{button.label}}</button>
+            </template>
+        </div>
+    </div>
+</div>
+<div class="titlebar-layout__container">
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+</div>

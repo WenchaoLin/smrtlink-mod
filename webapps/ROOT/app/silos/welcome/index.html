@@ -1,0 +1,38 @@
+<!-- @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc. -->
+
+<div class="container">
+
+    <div *ngIf="!vm.user.isSignedIn"
+        (click)="doSignin()">
+        <p>Welcome to SMRT Link</p>
+        <h1>Sign in</h1>
+    </div>
+
+    <div *ngIf="vm.user.isSignedIn"
+        class="lobby-container">
+        <template ngFor #tile [ngForOf]="tiles">
+            
+            <pb-lobby class="{{tile.id}}" [pbArgs]="tile">
+                <div class="title">
+                    
+                    <template [ngIf]="tile.id === 'welcome'">
+                        <p>Welcome to</p>
+                        <h1>SMRT<sup>&reg;</sup> Link</h1>
+                    </template>
+                    
+                    <template [ngIf]="tile.id !== 'welcome'">
+                        <template [ngIf]="tile.disabled">
+                            <h2 class="disabled">{{tile.title}}</h2>
+                        </template>
+                        <template [ngIf]="!tile.disabled">
+                            <h2 class="enabled" [routerLink]="tile.route">{{tile.title}}</h2>    
+                        </template>
+                    </template>
+                    
+                </div>
+            </pb-lobby>
+            
+        </template>
+    </div>
+
+</div>

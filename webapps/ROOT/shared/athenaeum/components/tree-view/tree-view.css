@@ -1,0 +1,31 @@
+/**
+ * Copyright (c) 2015, Pacific Biosciences of California
+ *
+ * Created by Sal Sanfilippo <ssanfilippo@pacificbiosciences.com> on 3/28/16.
+ */
+
+pb-tree-view.tv-root {
+    background-color: white;
+    border: 1px solid #ECECEC;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    overflow: auto;
+}
+
+pb-tree-view ul {
+    list-style-type: none;
+}
+
+pb-tree-view li {
+    margin-left: -1.5rem;
+}
+
+pb-tree-view > div {
+    background-color: #fff;
+}
+
+pb-tree-view > div:first {
+    padding-top: 10px;
+    overflow: auto;
+}

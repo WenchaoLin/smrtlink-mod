@@ -1,0 +1,64 @@
+pb-accordion,
+pb-accordion-pane {
+    display: block;
+}
+
+.pb-accordion-pane__header::before,
+.pb-accordion-pane__header::after,
+.pb-accordion-pane__body::before,
+.pb-accordion-pane__body::after {
+    content: " ";
+    display: table;
+}
+
+.pb-accordion-pane__header::after,
+.pb-accordion-pane__body::after {
+    clear: both;
+}
+
+.pb-accordion-pane__header {
+    cursor: pointer;
+    background-color: #4C5763;
+}
+
+.pb-accordion-pane__header:hover,
+pb-accordion-pane[expanded] .pb-accordion-pane__header:hover {
+    background-color: #008EB9;
+}
+
+.pb-accordion-pane__header:active,
+pb-accordion-pane[expanded] .pb-accordion-pane__header:active {
+    background-color: #00789B;
+}
+
+.pb-accordion-pane__footer,
+pb-accordion-pane[expanded].exclusive .pb-accordion-pane__header,
+pb-accordion-pane[expanded] .pb-accordion-pane__header {
+    background-color: #768693;
+}
+
+pb-accordion-pane[expanded].exclusive .pb-accordion-pane__header {
+    cursor: default;
+}
+
+.pb-accordion-pane__content {
+    background-color: #FFF;
+    display: none;
+}
+
+.pb-accordion-pane__content_expanding {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: height .35s ease;
+}
+
+pb-accordion-pane[expanded] .pb-accordion-pane__content {
+    display: block;
+}
+
+.pb-accordion-pane__header,
+.pb-accordion-pane__content {
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
+}

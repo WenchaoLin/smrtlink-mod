@@ -1,0 +1,21 @@
+<!-- @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc. -->
+
+<span class="btn-group" data-toggle="buttons">
+  <button *ngIf="!pbArgs.radioMode"
+          class="btn btn-default btn-toggle btn-group-first"
+          [disabled]="pbArgs.disabled"
+          (click)="onClickAll()">
+    Show:
+  </button>
+  <label *ngIf="pbArgs.radioMode"
+         class="btn btn-default btn-toggle btn-group-first">Show Available:</label>
+  <button *ngFor="#item of pbArgs.items"
+          class="btn btn-default btn-toggle"
+          [disabled]="pbArgs.disabled"
+          (click)="onClickItem(item.field, $event)">
+    <span class="glyphicon"
+          [class.glyphicon-check]="item.checked"
+          [class.glyphicon-unchecked]="!item.checked"></span>
+    {{item.label}}
+  </button>
+</span>

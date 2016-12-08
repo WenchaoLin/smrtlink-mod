@@ -1,0 +1,5 @@
+"use strict";
+var index_1 = require("./about/index");
+exports.About = index_1.AboutIndex;
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9zaWxvcy9hYm91dC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsc0JBQWtDLGVBQWUsQ0FBQztBQUExQyxtQ0FBMEMiLCJmaWxlIjoiYXBwL3NpbG9zL2Fib3V0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IHtBYm91dEluZGV4IGFzIEFib3V0fSBmcm9tIFwiLi9hYm91dC9pbmRleFwiO1xuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9

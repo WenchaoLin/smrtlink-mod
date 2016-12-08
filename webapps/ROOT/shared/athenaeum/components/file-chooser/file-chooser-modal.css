@@ -1,0 +1,26 @@
+/**
+ * Copyright (c) 2015, Pacific Biosciences of California
+ *
+ * Created by Sal Sanfilippo <ssanfilippo@pacificbiosciences.com> on 3/28/16.
+ */
+
+pb-file-chooser-modal .modal-body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0;
+    width: 550px;
+    height: 400px;
+}
+
+pb-file-chooser-modal pb-file-chooser {
+    flex-grow: 1;
+}
+
+pb-file-chooser-modal div.buttons-container {
+    flex-grow: 0;
+    margin-top: 0px;
+}
+
+pb-file-chooser-modal div.buttons {
+}

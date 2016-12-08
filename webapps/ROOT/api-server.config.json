@@ -1,0 +1,8 @@
+{
+    "smrt-link": {
+        "default-server": "http://173.20.251.255:9091"
+    }, 
+    "smrt-view": {
+        "default-server": "http://173.20.251.255:9094"
+    }
+}

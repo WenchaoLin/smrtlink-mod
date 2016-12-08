@@ -1,0 +1,84 @@
+<div class="background" [style.background]="bgColor"></div>
+<div class="container">
+
+    <div class="sidebar-layout__sidebar">
+        <div class="pb-logo-container">
+            <a *ngIf="isUserLoggedIn && logoUrl" class="pb-logo" [href]="[logoUrl]"></a>
+            <a *ngIf="isUserLoggedIn && !logoUrl" class="pb-logo" [routerLink]="indexRoute"></a>
+            <span *ngIf="!isUserLoggedIn" class="pb-logo"></span>
+        </div>
+
+        <div class="pb-options">
+            <pb-menu-button [class.selectable]="selectableMenu" [class.hidden]="!isUserLoggedIn">
+                <label class="pb-link glyphicon glyphicon-align-justify"></label>
+                <ng-content select="pb-menu"></ng-content>
+            </pb-menu-button>
+            <span class="pb-link" (click)="onHelp()">?</span>
+            <span *ngIf="aboutRoute" class="pb-link" [routerLink]="aboutRoute">About</span>
+            <div class="pb-options-menu">
+                <ul>
+                    <li><a href="#">Binding Calculator</a></li>
+                    <li><a href="#">Run Design</a></li>
+                    <li><a href="#">Run Analysis</a></li>
+                    <li><a href="#">Data Management</a></li>
+                    <li><a href="#">Data Analysis</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="sidebar-layout__content">
+        <div class="title-container">
+            <h1 *ngIf="(!customTitle) && title">
+                <a *ngIf="titleRoute" [routerLink]="titleRoute">{{title}}</a>
+                <span *ngIf="!titleRoute">{{title}}</span>
+            </h1>
+            <div *ngIf="customTitle"><ng-content select=".pb-title"></ng-content></div>
+        </div>
+
+        <div class="icon-container">
+            <img *ngIf="icon && !titleRoute" src="{{icon}}" alt="" class="img-responsive">
+            <a *ngIf="icon && titleRoute" [routerLink]="titleRoute">
+                <img src="{{icon}}" alt="" class="img-responsive">
+            </a>
+
+            <span *ngIf="isAdmin" class="clearfix">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                <span>Admin Settings</span>
+            </span>
+        </div>
+
+        <div *ngIf="username" class="username-container">
+            
+            <div class="username clearfix" [class.username-padded]="username">
+                {{username}}
+            </div>
+            
+            <img [src]="(baseUrl + '/username-underline.png')">
+            
+            <div class="username-options pull-right">
+                <ul>
+                    <li>
+                        <a href="#" class="pb-action-icon" title="logout" (click)="logout($event)">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li style="display: none;">
+                        <span class="pb-action-icon">
+                            <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                        </span>
+                    </li>
+                    <li style="display: none;">
+                        <span class="pb-action-icon">
+                            <span class="glyphicon glyphicon-import" aria-hidden="true"></span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+
+    </div>
+
+</div>

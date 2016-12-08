@@ -1,0 +1,26 @@
+:host {
+    display: block;
+    position: relative;
+    width: 30rem;
+    margin: 0 auto;
+}
+
+.errors {
+    margin-bottom: 1rem;
+}
+
+.errors p {
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+}
+.errors button.close {
+    margin-top: -3px;
+}
+
+.buttons {
+    overflow: auto;
+}
+
+.buttons button {
+    float: right;
+}

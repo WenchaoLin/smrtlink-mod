@@ -1,0 +1,43 @@
+/**
+ * @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc.
+ * @author <a href="mailto:bskinner@pacificbiosciences.com">Brian Skinner</a>
+ * @author <a href="mailto:dbarreto@pacificbiosciences.com">David Barreto</a>
+ */
+
+/**
+ * NOTE: All widths and heights for rows and cells are part of
+ * the JavaScript because ag-grid uses those numbers to do calculations
+ * and overriding the style attributes with !important would throw
+ * off the calculations.
+ */
+
+explorer div.btn-group ul.dropdown-menu {
+    display: inline;
+    border: solid thin red;
+}
+
+explorer pb-catalog {
+    width: 100%;
+    height: calc(100% - 8rem);
+}
+
+pb-menu-button.btn {
+    padding: 0 !important;
+    background-color: #253746 !important;
+    color: white !important;
+}
+
+pb-menu-button.btn button {
+    background-color: transparent !important;
+}
+
+pb-menu-button.btn button > label {
+    min-width: 8.5rem;
+    text-align: center;
+    font: normal 700 0.875rem 'HelveticaNeue', sans-serif;
+}
+
+pb-menu-button > button {
+    background-color: transparent;
+}
+

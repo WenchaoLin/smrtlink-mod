@@ -1,0 +1,116 @@
+/*
+ * menu styles
+ */
+pb-menu {
+    background: #253746;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    color: #a4a9ae;
+    display: block;
+    font: normal bold 1rem/1rem "HelveticaNeue", sans-serif;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: calc(100% + 0.1875rem);
+    width: 100%;
+    z-index: 1000;
+}
+
+pb-menu.sub-menu {
+    top: 0;
+    left: calc(100% - 0.4375rem);
+}
+
+pb-menu.fixed {
+    left: initial;
+    position: fixed;
+    top: initial;
+}
+
+pb-menu.offscreen {
+    right: 9999px;
+    top: 0;
+}
+
+pb-menu.up {
+    bottom: calc(100% + 0.1875rem);
+    top: initial;
+}
+
+pb-menu-item {
+    display: block;
+    height: 2.75rem;
+    position: relative;
+    text-align: left;
+    padding: 0 1rem;
+}
+
+pb-menu-item.separator {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+pb-menu-item.separator-thick {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+pb-menu-item.separator-thick + pb-menu-item {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+pb-menu-item.separator:first-of-type {
+    border-top: 0 none;
+}
+
+pb-menu-item.separator:last-of-type {
+    border-bottom: 0 none;
+}
+
+pb-menu-item > label {
+    color: inherit;
+    cursor: inherit;
+    display: block;
+    font: inherit;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+pb-menu-item[aria-expanded=true] {
+    padding-bottom: 0;
+}
+
+pb-menu-item:focus {
+    outline: none;
+}
+
+pb-menu-item:hover,
+pb-menu-item:focus,
+pb-menu-item[aria-expanded=true] {
+    color: #fff;
+    background: #008eb9;
+}
+
+pb-menu-item:active {
+    background: #00789b;
+}
+
+pb-menu-item > label {
+    margin-bottom: 0px !important;
+}
+
+pb-menu.selectable pb-menu-item.selected {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+pb-menu.selectable pb-menu-item:hover,
+pb-menu.selectable pb-menu-item:focus,
+pb-menu.selectable pb-menu-item[aria-expanded=true] {
+    color: #fff;
+    background: #008eb9;
+}
+
+pb-menu.selectable pb-menu-item:active {
+    background: #00789b;
+}

@@ -1,0 +1,34 @@
+<div class="form-field" *ngFor="#definition of fields">
+    <label>{{ definition.label }}</label>
+    <div [ngSwitch]="definition.control.type" class="field-control">
+        <pb-well *ngSwitchWhen="'well'"
+            ngControl="{{definition.field}}"
+            [disabled]="disabled"></pb-well>
+
+        <pb-lookup-input *ngSwitchWhen="'lookup'"
+            ngControl="{{definition.field}}"
+            [disabled]="disabled"></pb-lookup-input>
+
+        <select *ngSwitchWhen="'dropdown'" ngControl="{{definition.field}}" [disabled]="disabled">
+            <option *ngIf="definition.control.top" value="">{{definition.control.top}}</option>
+            <template ngFor #controlValue [ngForOf]="definition.control.values">
+                <option *ngIf="controlValue !== value" value="{{controlValue}}">{{controlValue}}</option>
+                <option *ngIf="controlValue === value" value="{{controlValue}}" selected>{{controlValue}}</option>
+            </template>
+        </select>
+
+        <template [ngSwitchWhen]="'toggle'">
+            <pb-square-toggle ngControl="{{definition.field}}"
+                              [disabled]="disabled">
+                <div class="pb-on">{{ definition.control.onLabel || "on" }}</div>
+                <div class="pb-off">{{ definition.control.offLabel || "off" }}</div>
+            </pb-square-toggle>
+        </template>
+
+        <input *ngSwitchDefault
+            class="form-control"
+            [disabled]="disabled"
+            type="{{definition.control.type}}"
+            ngControl="{{definition.field}}">
+    </div>
+</div>

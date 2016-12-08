@@ -1,0 +1,53 @@
+<div class="titlebar-layout__titlebar">
+    <div class="container titlebar-layout__titlebar-container">
+        <h1 class="titlebar-layout__titlebar-title" >Details - {{vm.title}}</h1>
+        <div class="titlebar-layout__titlebar-buttons">
+            <button class="btn btn-lg"
+                    (click)="doCancel()"
+                    [pbImprint]="STAMP.CANCEL"></button>
+            <button class="btn btn-lg"
+                    *ngIf="vm.canAnalyze"
+                    (click)="doAnalyze()"
+                    [pbImprint]="STAMP.ANALYZE"></button>
+        </div>
+    </div>
+</div>
+
+<div class="titlebar-layout__container">
+    <div class="container">
+        <table>
+            <tr>
+                <td style="padding: 2rem; vertical-align: top; width: 70%;">
+                    <table style="width: 100%; font-size: large;">
+                        <tr *ngFor="#labeledValue of vm.labeledValues">
+                            <td style="text-align: right; color: #aaa;">{{labeledValue.label}}:</td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+                            <td>{{labeledValue.value | schemaProperty: labeledValue.schema}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <details style="">
+                                    <summary style="color: #aaa;">Additional Details</summary>
+                                    <table style="width: 100%; font-size: large;">
+                                        <tr *ngFor="#labeledValue of vm.advancedLabeledValues">
+                                            <td style="text-align: right; color: #aaa;">{{labeledValue.label}}:</td>
+                                            <td>&nbsp;&nbsp;&nbsp;</td>
+                                            <td>{{labeledValue.value | schemaProperty: labeledValue.schema}}</td>
+                                        </tr>
+                                    </table>
+                                </details>
+                            </td>
+
+                        </tr>
+                    </table>
+                </td>
+                <td style="padding: 2rem; vertical-align: top; width: 10%;">
+                    <div class="pull-right">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

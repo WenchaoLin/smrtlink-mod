@@ -1,0 +1,36 @@
+<div class="titlebar-layout__titlebar">
+    <div class="container titlebar-layout__titlebar-container">
+        <h1 class="titlebar-layout__titlebar-title">{{TEXT.CREATE_DATASET}} - {{TEXT.SETTINGS}}</h1>
+        <div class="final-controls-container">
+            <button class="btn btn-warning btn-lg smrt-home-button"
+                    (click)="doCancel()"
+                    [pbImprint]="STAMP.CANCEL"></button>
+            <button class="btn btn-primary btn-lg smrt-home-button"
+                    (click)="doStart()"
+                    [disabled]="!canStart()"
+                    [pbImprint]="STAMP.SAVE_DATASET"></button>
+        </div>
+    </div>
+</div>
+
+<div class="container titlebar-layout__container">
+    
+    <form [ngFormModel]="form" (ngSubmit)="onSubmit()" novalidate>
+        <div class="form-group">
+            <label for="name">Data Set Name *</label>
+            <input type="text" id="name" class="form-control" [ngFormControl]="nameField">
+        </div>
+    </form>
+    
+    <pb-catalog [pbArgs]="catalogArgs"></pb-catalog>
+
+</div>
+
+<pb-modal-dialog>
+    <div class="content">
+        Error: {{errorMessage}}
+    </div>
+    <div class="buttons">
+        <button type="button" class="btn" (click)="closeModal()">Ok</button>
+    </div>
+</pb-modal-dialog>

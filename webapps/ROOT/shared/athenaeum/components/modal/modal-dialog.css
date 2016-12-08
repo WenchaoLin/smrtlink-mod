@@ -1,0 +1,24 @@
+pb-modal-dialog {
+    background-color: #FFF;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    left: 50%;
+    opacity: 0;
+    outline: 0;
+    padding: 15px;
+    position: fixed;
+    top: 30px;
+    transition: opacity 0.15s linear, transform 0.3s ease-out;
+    transform: translate(-50%, -25%);
+}
+
+pb-modal-dialog.in {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+pb-modal-dialog > .modal-dialog-content {
+    position: relative;
+}

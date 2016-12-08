@@ -1,0 +1,50 @@
+<div class="titlebar-layout__titlebar">
+    <div class="container titlebar-layout__titlebar-container">
+        <h1 class="titlebar-layout__titlebar-title">{{TEXT.CREATE_DATASET}} - {{TEXT.SELECT_SEQUENCE_DATA}}</h1>
+        <div class="final-controls-container">
+            <button class="btn btn-warning btn-lg smrt-home-button"
+                    (click)="doCancel()"
+                    [pbImprint]="STAMP.CANCEL"></button>
+            <button class="btn btn-primary btn-lg smrt-home-button"
+                    (click)="doNext()"
+                    [disabled]="!canNext()"
+                    [pbImprint]="STAMP.CREATE_NEW_DATASET"></button>
+        </div>
+    </div>
+</div>
+
+<div class="container titlebar-layout__container">
+    
+    <form class="form-inline" id="dataset-type-selector">
+        <div class="form-group">
+            <label for="dataset-type">{{ TEXT.DATASET_TYPE }} </label>
+            <select id="dataset-type" class="form-control" [ngFormControl]="datasetTypeControl">
+                <option *ngFor="#datasetType of datasetTypes; #index=index" [value]="index">{{ datasetType.title }}</option>
+            </select>
+        </div>
+    </form>
+    
+    <div class="catalog-container">
+        
+        <pb-catalog id="pb-testable-left-catalog"
+                    [pbArgs]="leftCatalogArgs"
+                    class="select" #leftCatalog></pb-catalog>
+                    
+        <div class="catalog-buttons-container">
+            <div class="catalog-buttons">
+                <button class="btn btn-primary btn-lg btn-block smrt-home-button"
+                        (click)="doMoveRight()"
+                        [disabled]="!canMoveRight()"
+                        [pbImprint]="STAMP.ADD"></button>
+                <button class="btn btn-warning btn-lg btn-block smrt-home-button"
+                        (click)="doMoveLeft()"
+                        [disabled]="!canMoveLeft()"
+                        [pbImprint]="STAMP.REMOVE"></button>
+            </div>
+        </div>
+        
+        <pb-catalog id="pb-testable-right-catalog"
+                    [pbArgs]="rightCatalogArgs"
+                    class="data-set" #rightCatalog></pb-catalog>
+    </div>
+</div>

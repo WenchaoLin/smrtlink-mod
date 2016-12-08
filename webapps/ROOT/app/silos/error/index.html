@@ -1,0 +1,16 @@
+<!-- @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc. -->
+
+<div class="container">
+
+    <h1 style="margin: 2rem 0 1rem 0;">{{getHeader()}}</h1>
+    <div *ngIf="getUrl()">
+        <h2 style="margin: 2rem 0 1rem 0;">{{getUrl()}}</h2>
+    </div>
+    <div *ngIf="getDetails()">
+        <p>Details:</p>
+        <textarea class="form-control"
+                  style="background-color: #ffe8ee!important; font-size: medium; line-height: normal; height: 350px;"
+                  rows="15" columns="60">{{getDetails()}}</textarea>
+    </div>
+
+</div>

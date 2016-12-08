@@ -1,0 +1,39 @@
+<pb-accordion [exclusive]="exclusive">
+    <pb-accordion-pane *ngFor="#group of groups; #i = index" [expanded]="i === 0" #pane>
+        <header [class.invalid]="!group.valid">
+            <span class="glyphicon"
+                  [class.glyphicon-menu-right]="!pane.expanded"
+                  [class.glyphicon-menu-down]="pane.expanded"></span>
+            {{controller.afSummarize(group.value, i)}}
+        </header>
+        <section ngControlGroup="{{i}}">
+            <pb-entity-form [fields]="controller.afFields" [disabled]="disabled"></pb-entity-form>
+        </section>
+        <footer [hidden]="disabled">
+            <button type="button" *ngIf="actions.update"
+                    class="btn btn-primary"
+                    [disabled]="!group.valid"
+                    (click)="controller.afUpdate(group.value, i)">
+                {{ buttonLabels.update }}
+            </button>
+            <button type="button" *ngIf="actions.copy"
+                    class="btn btn-primary"
+                    [disabled]="!group.valid || groups.length >= maxItems"
+                    (click)="controller.afCopy(group.value, i)">
+                {{ buttonLabels.copy }}
+            </button>
+            <button type="button" *ngIf="actions.create"
+                    class="btn btn-primary"
+                    [disabled]="groups.length >= maxItems"
+                    (click)="controller.afCreate(group.value, i)">
+                {{ buttonLabels.create }}
+            </button>
+            <button type="button" *ngIf="actions.delete"
+                    class="btn btn-primary"
+                    [disabled]="groups.length < 2"
+                    (click)="controller.afDelete(group.value, i)">
+                {{ buttonLabels.delete }}
+            </button>
+        </footer>
+    </pb-accordion-pane>
+</pb-accordion>

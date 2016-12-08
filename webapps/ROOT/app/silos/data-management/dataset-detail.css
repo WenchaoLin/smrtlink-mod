@@ -1,0 +1,152 @@
+dataset-detail {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+dataset-detail .state-container {
+    float: right;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+dataset-detail .job-state {
+    float: right;
+    font-size: 1.1875rem;
+    font-weight: bold;
+    height: 100%;
+    line-height: 1.875rem;
+    text-transform: uppercase;
+}
+
+dataset-detail .job-state-created,
+dataset-detail .job-state-running,
+dataset-detail .job-state-submitted,
+dataset-detail .job-state-successful {
+    color: darkgreen;
+}
+
+dataset-detail .job-state-terminated,
+dataset-detail .job-state-failed {
+    color: red;
+}
+
+dataset-detail > .titlebar-layout__container {
+    overflow: auto;
+}
+
+dataset-detail .sidebar-layout__sidebar {
+    flex-basis: 18.125rem;
+    padding-right: 20px;
+}
+
+dataset-detail .sidebar-layout__sidebar summary {
+    background-color: #e3e6e8;
+    color: #0c2848;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+    margin-top: 0.4rem;
+}
+
+dataset-detail .sidebar-layout__sidebar li > a {
+    color: #666;
+    font-size: 0.9375rem;
+    margin-top: 0.4rem;
+    text-align: right;
+}
+
+dataset-detail .sidebar-layout__sidebar li > a,
+dataset-detail .sidebar-layout__sidebar li > a:hover,
+    /* The following three rules override Bootstrap's excessively specific
+     * styles */
+dataset-detail .sidebar-layout__sidebar li.active > a,
+dataset-detail .sidebar-layout__sidebar li.active > a:hover,
+dataset-detail .sidebar-layout__sidebar li.active > a:focus {
+    background-color: rgba(227, 231, 237, 0.33);
+}
+
+dataset-detail .sidebar-layout__sidebar li > a:hover,
+    /* The following three rules override Bootstrap's excessively specific
+     * styles */
+dataset-detail .sidebar-layout__sidebar li.active > a,
+dataset-detail .sidebar-layout__sidebar li.active > a:hover,
+dataset-detail .sidebar-layout__sidebar li.active > a:focus {
+    color: #0c2848;
+    font-weight: bold;
+}
+
+dataset-detail .sidebar-layout__sidebar li > a:hover {
+    cursor: pointer;
+}
+
+dataset-detail .smrt-report figure figcaption {
+    font-size: xx-large;
+    text-align: center;
+}
+
+dataset-detail .smrt-report a {
+    cursor: pointer;
+}
+
+dataset-detail .smrt-report table {
+    margin-top: 1rem;
+    font-size: large;
+}
+
+dataset-detail .smrt-report h1 {
+    margin-top: 1rem;
+    font-size: large;
+}
+
+dataset-detail .smrt-report h2 {
+    margin-top: 1rem;
+    font-size: x-large;
+}
+
+dataset-detail .smrt-report table th,
+dataset-detail .smrt-report table td {
+    padding: 0.4rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+dataset-detail hr {
+    height: 0.2rem;
+    background-color: #cecece;
+}
+
+dataset-detail .smrt-report table tr td table {
+    margin-top: 8rem;
+}
+
+dataset-detail .smrt-report table th:first-child,
+dataset-detail .smrt-report table td:first-child {
+    padding-right: 2rem;
+    text-align: right;
+}
+
+dataset-detail .smrt-report table td:last-child {
+    color: #666;
+}
+
+dataset-detail .smrt-thumbnails a {
+    cursor: pointer;
+}
+
+dataset-detail .smrt-thumbnails figure {
+    float: left;
+    background-color: #ddd !important;
+    border-radius: 2%;
+    margin: 1rem;
+}
+
+dataset-detail .smrt-thumbnails figure figcaption {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}

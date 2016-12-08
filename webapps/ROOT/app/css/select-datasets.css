@@ -1,0 +1,75 @@
+.select-datasets {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.select-datasets .data-radios {
+    font-size: large;
+    height: 1.75rem;
+    width: 55%;
+}
+
+.select-datasets .catalog-container {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: calc(100% - 4rem);
+    overflow: hidden;
+}
+
+.select-datasets pb-catalog {
+    flex: 1 0 0;
+    height: 100%;
+}
+
+.select-datasets pb-catalog.select.with-controls .grid,
+.select-datasets pb-catalog.data-set.with-title .grid {
+    height: calc(100% - 40px);
+}
+
+.select-datasets .catalog-buttons-container {
+    flex: none;
+    height: 100%;
+    padding: calc(50px + 1.1875rem) 10px 0 10px;
+    transform-style: preserve-3d;
+    width: 150px;
+}
+
+.select-datasets .catalog-buttons {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.select-datasets pb-catalog > h2 {
+    line-height: 1.875rem;
+}
+
+.select-datasets pb-catalog.select > h2 {
+    display: inline-block;
+    position: absolute;
+}
+
+.select-datasets pb-catalog .ag-header {
+    border-left: 1px solid #5b6770;
+    border-right: 1px solid #5b6770;
+}
+
+.select-datasets pb-catalog .ag-body {
+    border: 1px solid #b1b8bd;
+}
+
+.select-datasets #dataset-type-selector {
+  margin: 0.4rem 0 1rem; 
+}
+
+.select-datasets #dataset-type-selector label {
+  margin-right: 0.6rem;
+}
+
+.select-datasets #dataset-type-selector select {
+  padding: 0 4.3rem 0 0.85rem;
+}

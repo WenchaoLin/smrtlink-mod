@@ -1,0 +1,42 @@
+/**
+ * Copyright (c) 2015, Pacific Biosciences of California
+ *
+ * Created by Sal Sananfilippo <ssanfilippo@pacificbiosciences.com> on 3/28/16.
+ */
+
+pb-file-chooser {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+pb-file-chooser > div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+pb-file-chooser .tree-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+pb-file-chooser div.selected-value {
+    margin: 10px 0 0 0;
+}
+
+pb-file-chooser .selected-value {
+    margin: 10px 0 0 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 48px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+/* Override border */
+.tv-chooser.tv-root {
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.2);
+}

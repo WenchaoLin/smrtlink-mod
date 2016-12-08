@@ -1,0 +1,58 @@
+binding-calculation-editor {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+binding-calculation-editor .binding-calculation-editor__buttons {
+    text-align: center;
+    /*float: right;
+    height: 100%;*/
+}
+
+binding-calculation-editor .binding-calculation-editor__buttons .btn-lg {
+    height: 3.75rem;
+    margin: 1.875rem 1.875rem 2.5rem 1.875rem;
+    padding: 1.25rem 2.5rem;
+    width: 16.5625rem;
+}
+
+binding-calculation-editor div.btn-group ul.dropdown-menu {
+    display: inline;
+    border: solid thin red;
+}
+
+binding-calculation-editor table {
+    border-top: solid;
+    border-bottom: solid;
+}
+
+binding-calculation-editor tr {
+	height: 2.3rem;
+}
+
+binding-calculation-editor td {
+    padding:0 15px 0 15px;
+    border-left: solid;
+    border-right: solid;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+binding-calculation-editor .heading {
+	text-align: center;
+}
+
+binding-calculation-editor .odd {
+	background: #cccccc;
+}
+
+binding-calculation-editor input[type="text"] {
+	display: inline;
+}
+
+binding-calculation-editor .separator {
+    margin: 2.5rem;
+}

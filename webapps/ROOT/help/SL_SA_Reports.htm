@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Analysis Details and Reports</title>
+<link rel="StyleSheet" href="PacBio.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("SL_Home.htm", "", "&gt;", "Home", "SL_Home_1.htm");
+document.write("Analysis Details and Reports<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('SL_Home.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<h2 style="border-bottom-style: Solid; border-bottom-width: 1px; font-size: 14pt;"><span style="font-size: 14pt; "><font size="4" style="font-size:14pt;"><span style="font-family: Arial, sans-serif;">SMRT</span><span style="font-family: Arial, sans-serif; 
+	 font-size: 10pt; vertical-align: Super;"><font size="2" style="font-size:10pt;">®</font></span><span style="font-family: Arial, sans-serif;"> 
+ Link</span> 
+	 Help</font></span></h2>
+</div>
+<h1>Secondary Analysis Reports &#160;&lt;EDIT/VERIFY PER SW&gt;</h1>
+<p>&#160;Following is a list of reports displayed when a secondary analysis 
+ is completed. The reports that display depend on the secondary analysis 
+ application used.</p>
+<ul style="list-style: disc;">
+	<li>The data is created by <span style="font-family: Arial, sans-serif;">SMRT 
+	 Pipe</span> and rendered by SMRT Link.</li>
+</ul>
+<h2>General - Overview</h2>
+<ul style="list-style: disc;">
+	<li>Displays a summary of coverage, mapping and variant data for the 
+	 secondary analysis job.</li>
+	<li><span style="font-weight: bold;">To display the full report</span>: 
+	 Click within the small report image.</li>
+</ul>
+<h2>General - Filtering Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays pre- and post-filter read length and read quality. <span 
+	 style="font-weight: bold;">Filtering</span> removes reads that do 
+	 not meet the read quality and read length parameters set by the user.</li>
+	<li><span style="font-weight: bold;">Note</span><span>:</span> <span 
+	 style="font-weight: bold;">Read Quality</span> <span>is a trained 
+	 prediction of a read’s mapped accuracy based on its pulse and base 
+	 file characteristics (peak signal-to-noise ratio, average base QV, 
+	 interpulse distance, and so on).</span></li>
+	<li><a href="SL_SA_Reports_Terms.htm#General_-__Filtering_Report"><span>Report</span> 
+	 Terminology</a></li>
+</ul>
+<h2>General - Subread Filtering Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays the number of subreads versus subread length.</li>
+</ul>
+<h2>General - Barcoding Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays statistics on reads and bases associated with individual 
+	 barcodes.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Barcodingt_Report1"><span>Report</span> 
+	 Terminology</a></li>
+</ul>
+<h2>General - Reads of Insert Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays statistics on Reads of Insert.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#ReadofInsert_Report"><span>Report</span> 
+	 Terminology</a></li>
+</ul>
+<h2>Diagnostic - Adapters Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays the median distance between observed adapters per pre-filter 
+	 read.</li>
+	<li>Combined, <span style="font-weight: bold;">% Adapter Dimer (0-10bp)</span> 
+	 <span>and</span> <span style="font-weight: bold;">% Short Insert (11-100bp)</span> 
+	 represent adapter dimer contamination.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Diagnostics_-_Adapters_Report"><span>Report</span> 
+	 Terminology</a></li>
+</ul>
+<h2>Diagnostic - Loading Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays information about the state of the ZMWs used in the run.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Diagnostics_-Loading_Report"><span>Report</span> 
+	 Terminology</a></li>
+</ul>
+<h2>Diagnostic - Spike-in Control Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays the read length and accuracy of control versus sample 
+	 reads. If sample preparation was performed correctly, the two should 
+	 be similar.</li>
+	<li><span style="font-weight: bold;">Note</span><span>:</span> The 
+	 Spike-In control is specified in RS Remote, 
+	 when designing the run.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Spike-in_Control_Report"><span>Report</span> 
+	 Terminology</a></li>
+</ul>
+<h2 style="margin-left: 0px;">Resequencing - Mapping Report</h2>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Mapping</span> is local alignment 
+	 of a read or subread to a reference sequence.</li>
+	<li>Displays the total number of reads versus the number of mapped 
+	 reads.</li>
+	<li>Displays the read accuracy.</li>
+	<li>Displays reads versus the aligned length, in base pairs.</li>
+	<li>Displays single-movie metrics.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Resequencing_-_Mapping_Report"><span>Report</span> 
+	 Terminology</a></li>
+</ul>
+<h2>Resequencing - Coverage Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays depth of coverage across references, as well as depth 
+	 of coverage distribution.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Coverage_Report"><span>Report</span> 
+	 Terminology</a></li>
+</ul>
+<h2 style="margin-left: 0px;">Analysis - Variants Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays variants for each contig.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Analysis_-_Variants_Report"><span>Report</span> 
+	 Terminology</a></li>
+</ul>
+<h2 style="margin-left: 0px;">Analysis - Top Variants Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays the position, type and coverage of the top 100 variants, 
+	 sorted on confidence.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Analysis_-_Top_Variants_Report"><span>Report</span> 
+	 Terminology</a></li>
+</ul>
+<h2>Assembly - Pre-Assembly Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays statistics on the pre-assembly process.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#PreAssembler_Report11">Report 
+	 Terminology</a></li>
+</ul>
+<h2>Assembly - Polished Assembly Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays statistics on the contigs from the <span style="font-style: italic;"><i>de 
+	 novo</i></span> assembly that were corrected by Quiver.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Assembly_-_Polished_Assembly_Report1">Report 
+	 Terminology</a></li>
+</ul>
+<h2>Assembly - Iterations Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays the number of contigs over the number of assembly iterations.</li>
+	<li>Displays the number of new overlaps over the number of assembly 
+	 iterations.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Assembly_-_Iterations_Report"><span>Report</span> 
+	 Terminology</a></li>
+</ul>
+<h2>Assembly - Corrections Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays statistics on assembly corrections (insertions, deletions, 
+	 substitutions) across contigs.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Assembly_-Correction_Report111">Report 
+	 Terminology</a></li>
+</ul>
+<h2>Assembly - Top Corrections Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays statistics on the assembly corrections (insertions, deletions, 
+	 substitutions) with the highest confidence.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Assembly_-_Top_Corrections_Report11">Report 
+	 Terminology</a></li>
+</ul>
+<h2>Hybrid Assembly - Final Assembly Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays statistics on the initial and final scaffolds, contigs, 
+	 and gaps.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Hybrid_Assembly_-_Final_Report">Report 
+	 Terminology</a></li>
+</ul>
+<h2>Hybrid Assembly - Assembly Iterations Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays the number of scaffolds over the number of hybrid assembly 
+	 iterations.</li>
+	<li>Displays the number of linking reads over the number of hybrid 
+	 assembly iterations.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Hybrid_Assembly_-_Iterations_Report">Report 
+	 Terminology</a></li>
+</ul>
+<h2>Modifications - Modifications Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays base modification quality values over the number of bases.</li>
+	<li>Displays per-stand coverage over base modification quality values.</li>
+</ul>
+<h2>Modifications - Motifs Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays statistics for the <span>methyltransferase recognition 
+	 motifs</span> detected.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Motifs_Report1">Report Terminology</a></li>
+</ul>
+<h2>Amplicons - Input Metrics Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays statistics on the input amplicon sequences.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Amplicons_Input_Report111">Report 
+	 Terminology</a></li>
+</ul>
+<h2>Amplicons - Amplicon Consensus Summary Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays statistics on amplicon sequences.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Amplicons_Report11">Report Terminology</a></li>
+</ul>
+<h2>IsoSeq - Classify Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays statistics on the number of three prime, five prime, and 
+	 poly-A reads.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Classify_Report111">Report Terminology</a></li>
+</ul>
+<h2>IsoSeq - Cluster Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays statistics on <span style="font-style: italic;"><i>de novo</i></span> 
+	 consensus isoforms of transcripts.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Cluster_Report">Report Terminology</a></li>
+</ul>
+<h2>Site Acceptance Test Report</h2>
+<ul style="list-style: disc;">
+	<li>Displays site acceptance test metrics.</li>
+	<li><a href="SL_SA_Reports_Terms.htm#Site_Acceptance_Report1">Report 
+	 Terminology</a></li>
+</ul>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 10pt; border-top-style: Solid; border-top-width: 1px;"><span style="font-size: 10pt; "><font size="2" style="font-size:10pt;"><a 
+	 href="SL_Legal.htm">Legal Information</a> &#160;&#160;&#160;&#160;&#160;02-Oct-15</font></span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

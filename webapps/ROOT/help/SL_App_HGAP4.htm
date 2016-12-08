@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Assembly (HGAP4) Application</title>
+<link rel="StyleSheet" href="PacBio.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("SL_Home.htm", "", "&gt;", "Home", "SL_Home_1.htm");
+document.write("Assembly (HGAP4) Application<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('SL_Home.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<h2 style="border-bottom-style: Solid; border-bottom-width: 1px; font-size: 14pt;"><span style="font-size: 14pt; "><font size="4" style="font-size:14pt;"><span 
+	 style="font-family: Arial, sans-serif;">SMRT Analysis</span> Help</font></span></h2>
+</div>
+<h1>Assembly (HGAP 4) Application </h1>
+<p>Use this application <span style="font-weight: bold;">(H</span>ierarchical<span 
+	 style="font-weight: bold;"> G</span>enome<span style="font-weight: bold;"> 
+ A</span>ssembly<span style="font-weight: bold;"> P</span>rocess)<span 
+	 style="font-weight: bold;"> </span>to generate high quality <span 
+	 style="font-style: italic;"><i>de novo</i></span> assemblies of genomes, 
+ using PacBio data.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;">HGAP4 includes pre-assembly, <span 
+	 style="font-style: italic;"><i>de novo</i></span> assembly and assembly polishing 
+	 steps. </li>
+	<li style="margin-left: -20px;">HGAP4 uses Falcon for <span style="font-style: italic;"><i>de 
+	 novo</i></span> assembly and Arrow for polishing.</li>
+</ul>
+<p>&#160;</p>
+<table class="PacBioColor" cellspacing="0px" width="56.959%">
+	<col style="width: 31.904%;" />
+	<col style="width: 8.887%;" />
+	<col style="width: 59.209%;" />
+	<tr class="t1st">
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Required 
+		 Parameters</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">Default 
+		 Value</p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Description</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">Genome 
+		 Length</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">5,000,000</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif;">The 
+		 approximate number of base pairs expected in the genome. We choose 
+		 other settings automatically based on this value.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<table class="PacBioColor" cellspacing="0px" width="56.969%">
+	<col style="width: 31.899%;" />
+	<col style="width: 8.886%;" />
+	<col style="width: 59.214%;" />
+	<tr class="t1st">
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Advanced 
+		 Analysis Parameters</p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Default 
+		 Value</p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Description</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Minimum 
+		 Subread Length</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">0</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif;">The 
+		 minimum length of subreads to use in the assembly.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">Filters 
+		 to Add to the Data Set</p>
+		<p>&#160;</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">rq &gt;= 
+		 0.7</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif;">A 
+		 comma-separated list of additional Data Set filters to use.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<table class="PacBioColor" cellspacing="0px" width="57.036%">
+	<col style="width: 31.686%;" />
+	<col style="width: 8.287%;" />
+	<col style="width: 58.899%;" />
+	<tr class="t1st">
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Advanced 
+		 Analysis Parameters - Assembly</p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Default 
+		 Value</p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Description</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">FALCON 
+		 cfg Overrides</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">NONE</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif;">Allows 
+		 Support engineers to override the config file generated from other 
+		 options. This is a semicolon-separated list of KEY= VALUE pairs. 
+		 Newline characters are accepted but ignored.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Seed 
+		 Length Cutoff</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">-1</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif;">Only 
+		 reads as long as this value will be used as seeds in the draft 
+		 assembly.<span style="font-weight: bold;"> -1</span> means this 
+		 will be calculated automatically so that the total number of seed 
+		 bases equals (Genome Length x Seed Coverage).</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Seed 
+		 Coverage</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">30</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif;">A 
+		 target value for the total number of &quot;raw&quot; postprimary 
+		 reads, divided by the total number of seed reads. Valid values 
+		 are 20 to 100.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<table class="PacBioColor" cellspacing="0px" width="56.896%">
+	<col style="width: 31.392%;" />
+	<col style="width: 7.82%;" />
+	<col style="width: 57.903%;" />
+	<tr class="t1st">
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Advanced 
+		 Analysis Parameters - Alignment</p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Default 
+		 Value</p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Description</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">Minimum 
+		 Accuracy</font></span></td>
+		<td style="vertical-align: Top;"><p style="text-align: center;"><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt;"><font size="2" style="font-size:10pt;">70</font></span></p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">The 
+		 minimum required alignment accuracy, in percent.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Concordant 
+		 Alignment</font></span></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">OFF</p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Specify 
+		 whether or not to map subreads of a ZMW to the same genomic location.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Align 
+		 Unsplit Polymerase Reads</font></span></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif;">OFF</p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Do not 
+		 spit reads into subreads even if subread regions are available.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">Minimum 
+		 Length</font></span></td>
+		<td style="vertical-align: Top;"><p style="text-align: center;"><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt;"><font size="2" style="font-size:10pt;">50</font></span></p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">The 
+		 minimum required alignment length, in base pairs.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">Hit 
+		 Policy</font></span></td>
+		<td style="vertical-align: Top;"><p style="text-align: center;"><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt;"><font size="2" style="font-size:10pt;">randombest</font></span></p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Specify 
+		 how to treat multiple hits:</font></span> 
+		<ul style="list-style: disc;">
+			<li style="margin-left: -20px;"><span style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">random</span><span 
+			 style="font-family: Arial, sans-serif;">: Selects a random 
+			 hit. </span></li>
+			<li style="margin-left: -20px;"><span style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">all</span><span 
+			 style="font-family: Arial, sans-serif;">: Selects all hits. 
+			 </span></li>
+			<li style="margin-left: -20px;"><span style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">allbest</span><span 
+			 style="font-family: Arial, sans-serif;">: Selects all the 
+			 best score hits. </span></li>
+			<li style="margin-left: -20px;"><span style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">randombest</span><span 
+			 style="font-family: Arial, sans-serif;">: Selects a random 
+			 hit from all best score hits. </span></li>
+			<li style="margin-left: -20px;"><span style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">leftmost</span><span 
+			 style="font-family: Arial, sans-serif;">: Selects a hit which 
+			 has the best score and the smallest mapping coordinate in 
+			 any reference.</span></li>
+		</ul></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Algorithm 
+		 Options</font></span></td>
+		<td style="vertical-align: Top;">&#160;</td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">List 
+		 of space-separated arguments passed to BLASR. Default: </font></span><span 
+		 style="font-size: 10pt; font-family: 'Courier New', monospace;"><font size="2" style="font-size:10pt;">-minMatch 
+		 12 -bestn 10 -minPctIdentity 70.0</font></span></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<table class="PacBioColor" cellspacing="0px" width="56.965%">
+	<col style="width: 31.97%;" />
+	<col style="width: 8.905%;" />
+	<col style="width: 59.125%;" />
+	<tr class="t1st">
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Advanced 
+		 Analysis Parameters - Consensus</p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Default 
+		 Value</p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Description</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-size: 10pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">Use 
+		 Score</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">0</p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Specify 
+		 the score to use in the display.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Minimum 
+		 Confidence</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">40</p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">The 
+		 minimum confidence for a variant call to be output to the file</font></span><span 
+		 style="font-size: 10pt; font-family: 'Courier New', monospace;"><font size="2" style="font-size:10pt;"> 
+		 variants.gff</font></span><span style="font-family: Arial, sans-serif; 
+									 font-size: 10pt;"><font size="2" style="font-size:10pt;">.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-size: 10pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">Track 
+		 Description</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">NONE</p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Description 
+		 to display in the header.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-size: 10pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">Track 
+		 Name</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">variants</p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Name 
+		 to display in the header.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-size: 10pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">Diploid 
+		 Mode (Experimental)</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">OFF</p></td>
+		<td style="vertical-align: Top;"><span style="font-size: 10pt; 
+												 font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">Specify 
+		 whether or not Arrow operates in diploid mode. If selected, enable 
+		 detection of heterozygous variants. (If </font></span><span style="font-weight: bold; 
+		 font-size: 10pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">not</font></span><span 
+		 style="font-size: 10pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;"> selected, 
+		 Arrow operates in haploid mode.)</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">Purpose</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">variants</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif;">Specify 
+		 the run mode - Variants or Coverage.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Algorithm</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">Arrow</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">Plurality</span> is a very simple variant-calling 
+		 algorithm which does <span style="font-weight: bold;">not</span> 
+		 perform any local realignment. It is heavily biased by the alignment 
+		 produced by the mapper, and it is <span style="font-weight: bold;">insensitive</span> 
+		 at detecting indels.</p>
+		<p style="font-family: Arial, sans-serif;">&#160;</p>
+		<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Arrow 
+		 </span>is a more sophisticated algorithm that provides additional 
+		 information about each read, allowing more accurate consensus 
+		 calls. Arrow does <span style="font-weight: bold;">not</span> 
+		 use the alignment provided by the mapper except for determining 
+		 how to group reads together at the gross level. Arrow implicitly 
+		 performs its own realignment, so it is highly sensitive to all 
+		 variant types, including indels.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Minimum 
+		 Coverage</font></span></td>
+		<td style="vertical-align: Top;"><p style="text-align: center;"><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt;"><font size="2" style="font-size:10pt;">5</font></span></p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">The 
+		 minimum site coverage that must be achieved for variant calls 
+		 and consensus to be calculated for a site.</font></span></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<table class="PacBioColor" cellspacing="0px" width="56.969%">
+	<col style="width: 31.899%;" />
+	<col style="width: 8.886%;" />
+	<col style="width: 59.214%;" />
+	<tr class="t1st">
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Advanced 
+		 Analysis Parameters - Reports</p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Default 
+		 Value</p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Description</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Number 
+		 of Regions</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">1000</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif;">Specify 
+		 the number of genome regions in the summary statistics. (This 
+		 is used for guidance, and is not strict.)</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">Region 
+		 Size</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">0</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif;">If 
+		 specified, use a fixed region size.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">Force 
+		 the Number of Regions</font></span></td>
+		<td style="vertical-align: Top;"><p style="text-align: center;"><span 
+		 style="font-family: Arial, sans-serif;">OFF</span></p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">If </font></span><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">ON</font></span><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt;"><font size="2" style="font-size:10pt;">, try 
+		 to use this number of regions per reference. Otherwise, the Coverage 
+		 Summary Report will optimize the number of regions in the case 
+		 of many references. This is </font></span><span style="font-family: Arial, sans-serif; 
+													 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">not</font></span><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt;"><font size="2" style="font-size:10pt;"> compatible 
+		 with fixed region sizes.</font></span></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 10pt; border-top-style: Solid; border-top-width: 1px;"><span style="font-size: 10pt; "><font size="2" style="font-size:10pt;"><a 
+	 href="SL_Legal.htm">Legal Information</a> &#160;&#160;&#160;&#160;&#160;12-May-16</font></span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

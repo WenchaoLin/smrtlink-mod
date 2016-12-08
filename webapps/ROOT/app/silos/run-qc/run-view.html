@@ -1,0 +1,125 @@
+<div *ngIf="run">
+    <div *ngIf="run.terminationInfo" class="error big">{{run.terminationInfo}}</div>
+    <table class="run-header">
+        <tr>
+            <td class="left">
+                <table>
+                    <tr> <th>Run Date</th> <td>{{run.startedAt | datetimeformat}}</td> </tr>
+                    <tr> <th>Instrument</th> <td>{{run.instrumentName}}</td> </tr>
+                    <tr> <th>Instrument SN</th> <td>{{run.instrumentSerialNumber}}</td> </tr>
+                </table>
+            </td>
+            <td class="right">
+                <table>
+                    <tr> <th>Description</th> <td>{{run.runSummary}}</td> </tr>
+                    <tr> <th>Run Id</th> <td>{{run.context}}</td> </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div class="samples_table_header">
+        <table>
+            <thead>
+            <tr>
+                <th rowspan="2" class="toggle" (click)="onExpandCollapseClick($event)">
+                    <span class="glyphicon"
+                         [class.glyphicon-menu-right]="!expanded"
+                         [class.glyphicon-menu-down]="expanded">
+                    </span>
+                </th>
+                <th rowspan="2" class="wellno">Well</th>
+                <th rowspan="2" class="samplename">Name</th>
+                <th rowspan="2" class="status">Status</th>
+                <th rowspan="2" class="movietime">Movie Time (minutes)</th>
+                <th rowspan="2" class="totalbases">Total Bases (GB)</th>
+                <th colspan="2">Read Length</th>
+                <th colspan="3">Productivity</th>
+            </tr>
+            <tr>
+                <th class="readlength">Polymerase</th>
+                <th class="readlength">Insert</th>
+                <th class="productivity">P0</th>
+                <th class="productivity">P1</th>
+                <th class="productivity">P2</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <pb-accordion-pane *ngFor="#sample of run.samples" #pane title="{{sample | sampletooltip}}">
+        <header>
+            <table class="samples_table_row">
+                <tbody>
+                <tr>
+                    <td class="toggle"><span class="glyphicon"
+                                             [class.glyphicon-menu-right]="!pane.expanded"
+                                             [class.glyphicon-menu-down]="pane.expanded"></span></td>
+                    <td class="wellno">{{sample.well}}</td>
+                    <td class="samplename">{{sample.name}}</td>
+                    <td class="status {{sample.status | statuscategory}}">{{sample.status | prettytext}}</td>
+                    <td class="movietime">{{sample.movieMinutes | format}}</td>
+                    <td class="totalbases">
+                        <span *ngIf="sample.hasSubreadset && !sample.metricsAccessError">{{sample.totalGigabases | format:2}}</span>
+                        <span *ngIf="!sample.hasSubreadset && !sample.metricsAccessError" >---</span>
+                        <a *ngIf="sample.metricsAccessError" tooltip="{{sample.metricsAccessError}}" placement="bottom"><span *ngIf="true" class="fa fa-exclamation-triangle" aria-hidden="true" ></span></a>
+                    </td>
+                    <td class="readlength">
+                        <span *ngIf="sample.hasSubreadset && !sample.metricsAccessError" >{{sample.readStats | readstat:'length' | format}}</span>
+                        <span *ngIf="!sample.hasSubreadset && !sample.metricsAccessError" >---</span>
+                    </td>
+                    <td class="readlength">
+                        <span *ngIf="sample.hasSubreadset && !sample.metricsAccessError" >{{sample.insertReadStats | readstat:'length' | format}}</span>
+                        <span *ngIf="!sample.hasSubreadset && !sample.metricsAccessError" >---</span>
+                    </td>
+                    <td class="productivity">
+                        <span *ngIf="sample.hasSubreadset && !sample.metricsAccessError" >{{sample.productivity | percentproductivity:'p0' | format:1}}% <span class="prodcnt">({{sample.productivity | productivitycount:'p0' | format}})</span></span>
+                        <span *ngIf="!sample.hasSubreadset && !sample.metricsAccessError" >---</span>
+                    </td>
+                    <td class="productivity">
+                        <span *ngIf="sample.hasSubreadset && !sample.metricsAccessError" >{{sample.productivity | percentproductivity:'p1' | format:1}}% <span class="prodcnt">({{sample.productivity | productivitycount:'p1' | format}})</span></span>
+                        <span *ngIf="!sample.hasSubreadset && !sample.metricsAccessError" >---</span>
+                    </td>
+                    <td class="productivity">
+                        <span *ngIf="sample.hasSubreadset && !sample.metricsAccessError" >{{sample.productivity | percentproductivity:'p2' | format:1}}% <span class="prodcnt">({{sample.productivity | productivitycount:'p2' | format}})</span></span>
+                        <span *ngIf="!sample.hasSubreadset && !sample.metricsAccessError" >---</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </header>
+        <section>
+            <div *ngIf="!sample.hasSubreadset && (sample.status | isstatuscomplete)"><b>Not yet imported: </b>{{sample.subreadsetXmlPath}}</div>
+            <div *ngIf="sample.terminationInfo" class="error small">{{sample.terminationInfo}}</div>
+            <div *ngIf="sample.readLengthDist">
+                <div style="float: left; margin-right: 10px;">
+                    <h3 align="center">Polymerase Read Length</h3>
+                    <div style="float: left">
+                        <pb-chart [spec]="sample.readLengthDist | histogramspec:'Length'"></pb-chart>
+                    </div>
+                </div>
+                <div style="float: left; margin-right: 10px;">
+                    <h3 align="center">Insert Read Length</h3>
+                    <div style="float: left">
+                        <pb-chart [spec]="sample.insertReadLengthDist | histogramspec:'Length'"></pb-chart>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <div *ngIf="sample.readLengthPlotUrl">
+                <div *ngIf="sample.readLengthPlotUrl" style="float: left; margin-right: 10px;">
+                    <figure>
+                        <figcaption align="center">Polymerase Read Length</figcaption>
+                        <img src={{sample.readLengthPlotUrl}} alt="Polymerase read length plot" height="180">
+                    </figure>
+                </div>
+                <div *ngIf="sample.insertReadLengthPlotUrl" style="float: left; margin-right: 10px;">
+                    <figure>
+                        <figcaption align="center">Insert Read Length</figcaption>
+                        <img src={{sample.insertReadLengthPlotUrl}} alt="Polymerase read length plot" height="180">
+                    </figure>
+                </div>
+               <div style="clear:both;"></div>
+            </div>
+        </section>
+    </pb-accordion-pane>
+</div>
+

@@ -1,0 +1,21 @@
+<!-- @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc. -->
+
+<!-- Bootstrap CSS style breadcrumbs -->
+<ol class="breadcrumb">
+    <li *ngFor="#crumb of pbArgs.breadcrumbs"
+        [class.active]="!crumb.state">
+        <a *ngIf="crumb.state" href="{{crumb.state}}">{{crumb.label}}</a>
+        <span *ngIf="!crumb.state">{{crumb.label}}</span>
+    </li>
+</ol>
+
+<!-- Roche CSS style breadcrumbs
+<ol class="pb-breadcrumbbar">
+  <li *ng-for="#crumb of pbArgs.breadcrumbs"
+      [class.pb-visited]="crumb.visited"
+      [class.pb-visiting]="crumb.visiting"
+      [class.pb-visitless]="!crumb.visiting && !crumt.visited"
+    <a href="#!/default-server/cancer-atlas/{{crumb.state}}">{{crumb.label}}</a>
+  </li>
+</ol>
+-->

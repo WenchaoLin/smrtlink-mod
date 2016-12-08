@@ -1,0 +1,21 @@
+.pb-accordion {
+}
+
+.pb-accordion .panel-title {
+    display: table-cell;
+}
+
+.pb-accordion .panel-heading {
+    display: table;
+    vertical-align: middle;
+    float: none;
+    min-height: 43px;
+}
+
+.pb-accordion-chevron {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 10px;
+    cursor: pointer !important;
+}

@@ -1,0 +1,117 @@
+/**
+ * @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc.
+ * @author <a href="mailto:bskinner@pacificbiosciences.com">Brian Skinner</a>
+ */
+
+ol.pb-breadcrumbbar {
+    border-radius: 1rem;
+    /* overflow: hidden; */
+    padding-left: 1rem;
+    padding-top: 1rem;
+    -webkit-padding-start: 0;
+    padding-left: -10rem;
+}
+
+.pb-breadcrumbbar li:first-child {
+    margin-left: -16rem;
+}
+
+.pb-breadcrumbbar li {
+    display: inline-block;
+}
+
+.pb-breadcrumbbar a {
+    display: block;
+    float: left;
+    font-size: 1.4rem;
+    line-height: 3.6rem;
+    outline: none;
+    padding: 0 0.7rem 0 3rem;
+    position: relative;
+    text-decoration: none;
+}
+
+/* use these if you want a gradient in the breadcrumb */
+/*
+.pb-breadcrumbbar li.pb-visited a {
+    color: #405E80;
+    background: linear-gradient(to bottom, #9dc1e1 0%, white 50%, #9dc1e1 100%);
+}
+
+.pb-breadcrumbbar li.pb-visited a:after {
+     background: linear-gradient(135deg, #9dc1e1 0%, white 50%, #9dc1e1 100%);
+}
+*/
+.pb-breadcrumbbar li.pb-visited a,
+.pb-breadcrumbbar li.pb-visited a:after
+{
+    background: #d1dfeb;
+    color: #4d7191;
+}
+
+.pb-breadcrumbbar li.pb-visited a:hover,
+.pb-breadcrumbbar li.pb-visited a:hover:after
+{
+    background: #bad2e8;
+}
+
+.pb-breadcrumbbar li.pb-visiting a {
+    color: white;
+    text-decoration: none;
+    background: #457dad;
+}
+.pb-breadcrumbbar li.pb-visiting a:after {
+    background: #457dad;
+}
+.pb-breadcrumbbar li.pb-visitless a,
+.pb-breadcrumbbar li.pb-visitless a:hover {
+    background: #e3e3e3;
+    color: #999;
+    text-decoration: none;
+}
+.pb-breadcrumbbar li.pb-visitless a:after {
+    background: #e3e3e3;
+}
+
+.pb-breadcrumbbar li:first-child a {
+    /* use less padding for the first breadcrumb, because we don't need to make room for any preceding arrow */
+    padding-left: 1.2rem;
+    /* same as .pb-breadcrumbbar {border-radius} */
+    border-radius: 1rem 0 0 1rem;
+}
+.pb-breadcrumbbar li:first-child:before a {
+    left: 1.4rem;
+}
+
+/* make an arrow after each breadcrumb by using a rotated square */
+.pb-breadcrumbbar li a:after {
+    box-shadow: 0.3rem -0.3rem 0 0.3rem white; /* makes the white arrow */
+    border-radius: 0 0.5rem 0 5rem; /* makes a rounded point on the arrow */
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -1.8rem; /* half of `width` and `height` */
+    width: 3.6rem; /* same as .pb-breadcrumbbar a {line-height} */
+    height: 3.6rem;
+    /* scale the square down so that the rotated diagonal now equals the line-height of the breadcrumb */
+    transform: scale(0.707) rotate(45deg);
+    z-index: 1; /* make the arrow be above the next breadcrumb */
+}
+.pb-breadcrumbbar li:last-child a:after {
+    /* use this if you want an arrow after the last breadcrumb */
+    border-radius: 0.5rem 0.5rem 0 5rem;
+
+    /* use this if you do not want an arrow after the last breadcrumb
+    content: none;
+     */
+}
+
+.pb-breadcrumbbar li:last-child a {
+    /* use this if you want an arrow after the last breadcrumb */
+    padding-right: 0.8rem;
+
+    /* use this if you do not want an arrow after the last breadcrumb
+    border-radius: 0 0.7rem 0.7rem 0;
+    padding-right: 1.2rem;
+    */
+}

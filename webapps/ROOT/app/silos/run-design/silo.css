@@ -1,0 +1,19 @@
+run-design > .titlebar-layout__container > .container {
+    height: 100%;
+}
+
+run-design .silo-buttons {
+    float: right;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+run-design .silo-buttons button {
+    margin-left: 0.7rem;
+}
+
+run-design .silo-buttons .btn-danger {
+    margin-right: 1.4rem;
+}

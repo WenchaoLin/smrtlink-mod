@@ -1,0 +1,363 @@
+/*Created with Adobe RoboHelp 8.*/
+BODY {
+	font-family: Arial;
+	font-size: 10pt;
+}
+H1 {
+	font-weight: bold;
+	margin-top: 10pt;
+	margin-bottom: 10pt;
+	x-next-class: ;
+	x-next-type: P;
+	font-size: 12pt;
+}
+H2 {
+	font-weight: bold;
+	margin-top: 10pt;
+	margin-bottom: 10pt;
+	x-next-class: ;
+	x-next-type: P;
+	font-size: 11pt;
+}
+H3 {
+	font-weight: bold;
+	font-size: 14.0pt;
+}
+H4 {
+	font-weight: bold;
+	font-size: 12.0pt;
+}
+H5 {
+	font-weight: bold;
+	font-size: 10.0pt;
+}
+H6 {
+	font-weight: bold;
+	font-size: 8.0pt;
+}
+P {
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-size: 10pt;
+}
+A.expandspot {
+	color: #008000;
+	cursor: hand;
+	font-style: italic;
+	font-size: 11pt;
+	text-decoration: none;
+}
+SPAN.expandtext {
+	font-style: italic;
+	font-weight: normal;
+	color: #ff0000;
+	font-size: 10pt;
+}
+A.dropspot {
+	cursor: hand;
+	color: #008000;
+	font-style: italic;
+	font-size: 10pt;
+	text-decoration: none;
+}
+A.glossterm {
+	cursor: hand;
+	color: #000000;
+	font-style: italic;
+	font-size: 10pt;
+	text-decoration: none;
+}
+SPAN.glosstext {
+	font-weight: normal;
+	color: #008080;
+	font-size: 10pt;
+}
+OL,
+UL {
+	font-family: Arial;
+	margin-bottom: 3px;
+	margin-top: 3px;
+	font-size: 10pt;
+}
+A.breadcrumbs {
+	font-size: 10pt;
+}
+A:active {
+	font-size: 10pt;
+	color: #0000ff;text-decoration: underline;
+}
+A:hover {
+	font-size: 10pt;
+}
+A:link {
+	color: #0000ff;
+	font-size: 10pt;
+	text-decoration: underline;
+}
+A:visited {
+	font-size: 10pt;
+	color: #0000ff;text-decoration: underline;
+}
+A.popupspot {
+	font-size: 10pt;
+}
+rh-list.MultilevelIntegers {
+	x-lvl-2-format: "<x>.<x>.";
+	x-lvl-3-type: decimal;
+	x-lvl-3-format: "<x>.<x>.<x>.";
+	x-lvl-3-margin: 40px;
+	x-lvl-4-type: decimal;
+	x-lvl-4-format: "<x>.<x>.<x>.<x>.";
+	x-lvl-4-margin: 60px;
+	x-lvl-5-type: decimal;
+	x-lvl-5-format: "<x>.<x>.<x>.<x>.<x>.";
+	x-lvl-5-margin: 80px;
+	x-lvl-6-format: "<x>.<x>.<x>.<x>.<x>.<x>.";
+	x-lvl-6-margin: 100px;
+	x-lvl-7-format: "<x>.<x>.<x>.<x>.<x>.<x>.<x>.";
+	x-lvl-7-margin: 120px;
+	x-lvl-8-format: "<x>.<x>.<x>.<x>.<x>.<x>.<x>.<x>.";
+	x-lvl-8-margin: 140px;
+	x-lvl-9-format: "<x>.<x>.<x>.<x>.<x>.<x>.<x>.<x>.<x>.";
+	x-lvl-9-margin: 160px;
+	x-level-count: 9;
+	x-lvl-2-type: decimal;
+	x-lvl-2-margin: 20px;
+}
+p.breadcrumbs {
+	font-size: 10pt;
+}
+table.BlueHeaderRow {
+	padding: 0px;
+	x-border-spacing: 0px;
+	x-row-pat-1: 1;
+	x-row-pat-1-name: t1Row;
+	x-row-pat-count: 2;
+	x-row-pat-2: 1;
+	x-row-pat-2-name: t2Row;
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #4F81BD;
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #4F81BD;
+	x-1st-row: 1;
+	x-1st-row-name: t1st;
+}
+table.BlueHeaderRow td {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+table.BlueHeaderRow tr.t1Row td {
+	font-family: "Times New Roman";
+	font-size: 12pt;
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #4F81BD;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #4F81BD;
+}
+table.BlueHeaderRow tr.t2Row td {
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #4F81BD;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #4F81BD;
+}
+table.BlueHeaderRow tr.t1st td {
+	font-size: 12pt;
+	color: #ffffff;
+	font-weight: bold;
+	font-family: Arial;
+	background-color: #6672e5;
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #0000ff;
+}
+table.PacBioColor td {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+table.PacBioColor tr.t1Row td {
+	font-family: "Times New Roman";
+	font-size: 12pt;
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #c0c0c0;
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #c0c0c0;
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #c0c0c0;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #c0c0c0;
+}
+table.PacBioColor tr.t1st td {
+	font-size: 12pt;
+	color: #ffffff;
+	font-weight: bold;
+	font-family: Arial;
+	background-color: #5b707f;
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #c0c0c0;
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #c0c0c0;
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #c0c0c0;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #c0c0c0;
+}
+table.PacBioColor {
+	padding: 0px;
+	x-border-spacing: 0px;
+	x-row-pat-1: 1;
+	x-row-pat-1-name: t1Row;
+	x-1st-row: 1;
+	x-1st-row-name: t1st;
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #c0c0c0;
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #c0c0c0;
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #c0c0c0;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #c0c0c0;
+	x-row-pat-count: 1;
+}
+rh-list.DescriptionSteps {
+	x-lvl-1-format: "Description:";
+	x-lvl-2-format: "Step <x>:";
+	x-lvl-3-type: lower-alpha;
+	x-lvl-2-type: Mine;
+	x-lvl-2-margin: 35px;
+	x-lvl-2-p-tag: P;
+	x-lvl-1-margin: 10px;
+	x-lvl-1-text-indent: -10px;
+	x-lvl-1-p-tag: H2;
+	x-lvl-3-format: "Note <x>:";
+	x-lvl-3-margin: 90px;
+	x-lvl-3-p-tag: P;
+	x-lvl-4-format: "Substep <x>:";
+	x-lvl-4-type: decimal;
+	x-lvl-4-margin: 60px;
+	x-level-count: 5;
+	x-lvl-5-format: "Note <x>:";
+	x-lvl-5-margin: 80px;
+}
+rh-seq.Mine {
+	x-count: 10;
+	x-1: One;
+	x-2: Two;
+	x-3: Three;
+	x-4: Four;
+	x-5: Five;
+	x-6: Six;
+	x-7: Seven;
+	x-8: Eight;
+	x-9: Nine;
+	x-10: Ten;
+}
+rh-list.multiNumber {
+	x-level-count: 6;
+	x-lvl-1-format: "<x>.";
+	x-lvl-1-margin: 24px;
+	x-lvl-1-text-indent: -24px;
+	x-lvl-2-format: "<1>.<x>.";
+	x-lvl-2-margin: 60px;
+	x-lvl-2-text-indent: -36px;
+	x-lvl-3-format: "<1>.<2>.<3>.";
+	x-lvl-3-margin: 84px;
+	x-lvl-3-text-indent: -48px;
+	x-lvl-4-format: "<x>)";
+	x-lvl-4-margin: 96px;
+	x-lvl-4-text-indent: -36px;
+	x-lvl-5-format: "<x>}";
+	x-lvl-5-margin: 96px;
+	x-lvl-5-text-indent: -20px;
+	x-lvl-6-format: "[<x>]";
+	x-lvl-6-margin: 96px;
+	x-lvl-2-type: decimal;
+	x-lvl-3-type: decimal;
+	x-lvl-1-type: decimal;
+	x-lvl-4-type: upper-alpha;
+	x-lvl-5-type: upper-roman;
+	x-lvl-6-type: lower-alpha;
+}
+rh-list.BasicNumber {
+	x-lvl-1-format: "<x>&c";
+	x-lvl-2-type: lower-alpha;
+	x-lvl-2-format: "<x>&c";
+	x-lvl-1-p-tag: P;
+	x-lvl-2-margin: 20px;
+	x-lvl-2-p-tag: P;
+	x-lvl-3-type: lower-roman;
+	x-lvl-3-format: "<x>&c";
+	x-lvl-3-margin: 40px;
+	x-lvl-3-p-tag: P;
+	x-lvl-4-type: decimal;
+	x-lvl-4-format: "&o<x>&c";
+	x-lvl-4-margin: 60px;
+	x-lvl-4-p-tag: P;
+	x-lvl-5-format: "&o<x>&c";
+	x-lvl-5-margin: 80px;
+	x-lvl-5-p-tag: P;
+	x-lvl-6-type: lower-roman;
+	x-lvl-6-format: "&o<x>&c";
+	x-lvl-6-margin: 100px;
+	x-lvl-6-p-tag: P;
+	x-lvl-7-margin: 120px;
+	x-lvl-7-p-tag: P;
+	x-lvl-8-type: lower-alpha;
+	x-lvl-8-margin: 140px;
+	x-level-count: 9;
+	x-lvl-9-type: lower-roman;
+	x-lvl-9-margin: 160px;
+}
+rh-list.TraditionalOutline {
+	x-lvl-1-type: upper-roman;
+	x-lvl-1-p-tag: P;
+	x-lvl-2-type: upper-alpha;
+	x-lvl-2-margin: 20px;
+	x-lvl-2-p-tag: P;
+	x-lvl-3-type: decimal;
+	x-lvl-4-type: lower-alpha;
+	x-lvl-4-margin: 60px;
+	x-lvl-4-p-tag: P;
+	x-lvl-3-margin: 40px;
+	x-lvl-3-p-tag: P;
+	x-lvl-5-type: lower-roman;
+	x-lvl-5-margin: 80px;
+	x-lvl-5-p-tag: P;
+	x-lvl-6-type: upper-alpha;
+	x-lvl-6-format: "<x>&c";
+	x-lvl-6-margin: 100px;
+	x-lvl-6-p-tag: P;
+	x-lvl-7-format: "<x>&c";
+	x-lvl-7-margin: 120px;
+	x-lvl-7-p-tag: P;
+	x-lvl-8-type: lower-alpha;
+	x-lvl-8-format: "<x>&c";
+	x-lvl-8-margin: 140px;
+	x-lvl-8-p-tag: P;
+	x-lvl-9-type: upper-roman;
+	x-level-count: 9;
+	x-lvl-9-format: "<x>&c";
+	x-lvl-9-margin: 160px;
+	x-lvl-9-p-tag: P;
+}

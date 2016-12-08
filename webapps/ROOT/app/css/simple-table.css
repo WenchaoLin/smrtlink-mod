@@ -1,0 +1,32 @@
+/**
+ * @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc.
+ * @author <a href="mailto:dbarreto@pacificbiosciences.com">David Barreto</a>
+ */
+
+.simple-table {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.simple-table .buttons {
+    text-align: right;
+}
+
+.simple-table.home .buttons {
+    text-align: center;
+}
+
+.simple-table.home .buttons .btn-lg {
+    height: 3.75rem;
+    margin: 1.875rem 1.875rem 2.5rem 1.875rem;
+    padding: 1.25rem 2.5rem;
+    width: 16.5625rem;
+}
+
+.simple-table pb-catalog .ag-root {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+}

@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Run QC\" to=\"Hardware and software requirements\" num=\"34\"/></cki>";

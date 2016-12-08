@@ -1,0 +1,126 @@
+<div class="titlebar-layout__titlebar">
+    <div class="container titlebar-layout__titlebar-container">
+        <h1 class="titlebar-layout__titlebar-title">{{ TEXT.SILO.SAMPLE_SETUP + " > Edit / Print" }}</h1>
+    </div>
+</div>
+
+<div class="binding-calculation-editor__buttons">
+    <div class="container titlebar-layout__container">
+        <div class="sample-setup-index__buttons">
+            <button type="button" class="btn btn-lg"
+                    [pbImprint]="'+ New Sample'"
+                    (click)="newSample()">
+            </button>
+
+            <button type="button" class="btn btn-lg"
+                [pbImprint]="'+ Add Existing'"
+                (click)="addExistingBindingCalculation()">
+            </button>
+        </div>
+    </div>
+</div>
+
+<table>
+    <tr class="even heading">
+        <td></td>
+        <td *ngFor="#calculation of calculations; #i = index">Sample {{i + 1}}</td>
+    </tr>
+
+    <tr class="odd">
+        <td>Sample Name</td>
+        <td *ngFor="#calculation of calculations"><textarea [(ngModel)]="calculation.name"></textarea></td>
+    </tr>
+
+    <tr class="even">
+        <td>Concentration</td>
+        <td *ngFor="#calculation of calculations"><input type="text" [(ngModel)]="calculation.concentration_ng_per_uL" /> ng/uL</td>
+    </tr>
+
+    <tr class="odd">
+        <td>Available Volume</td>
+        <td *ngFor="#calculation of calculations"><input type="text" [(ngModel)]="calculation.availableVolume_uL" /> uL</td>
+    </tr>
+
+    <tr class="even">
+        <td>Insert Size</td>
+        <td *ngFor="#calculation of calculations"><input type="text" [(ngModel)]="calculation.insertSize_bp" /> bp</td>
+    </tr>
+
+    <tr class="odd">
+        <td>Chemistry</td>
+        <td *ngFor="#calculation of calculations">
+            <select [(ngModel)]="calculation.polymeraseChemistry" >
+                <option value="undefined">-- select --</option>
+                <option value="P4">P4</option>
+                <option value="P5">P5</option>
+                <option value="P6v2">P6v2</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr class="even">
+        <td>Size Selection</td>
+        <td *ngFor="#calculation of calculations">
+            <select [(ngModel)]="calculation.sizeSelection" >
+                <option value="undefined">-- select --</option>
+                <option value="false">No</option>
+                <option value="true">Yes</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr class="odd">
+        <td>Loading</td>
+        <td *ngFor="#calculation of calculations">
+            <select [(ngModel)]="calculation.loading" >
+                <option value="undefined">-- select --</option>
+                <option value="Diffusion">Diffusion</option>
+                <option value="MagBead">MagBead</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr class="even">
+        <td>DNA Control</td>
+        <td *ngFor="#calculation of calculations">
+            <select [(ngModel)]="calculation.dnaControlComplex" >
+                <option value="undefined">-- select --</option>
+                <option value="false">No</option>
+                <option value="true">Yes</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr class="odd">
+        <td>Cells to Bind</td>
+        <td *ngFor="#calculation of calculations"><input type="text" [(ngModel)]="calculation.numberOfSMRTCells" /> cells</td>
+    </tr>
+
+    <tr class="even">
+        <td>Warnings</td>
+        <td *ngFor="#calculation of calculations"></td>
+    </tr>
+
+    <tr class="odd">
+        <td>Actions</td>
+        <td *ngFor="#calculation of calculations">
+            <button (click)="copyCalculation(calculation)">Copy</button>
+            <button (click)="removeCalculation(calculation)">Remove</button></td>
+    </tr>
+</table>
+
+<div class="separator">Instructions for Annealing, Binding, and MagBead Loading</div>
+
+<table class="instructions">
+    <tr class="even"><td class="step">STEP</td><td class="checked"></td><td class="instruction-header">Instructions for Annealing Sequencing Primers to Sample</td></tr>
+    <tr class="odd"><td class="step"></td><td class="checked"></td><td class="instruction"></td></tr>
+    <tr class="even"><td class="step"></td><td class="checked"></td><td class="instruction-header">Conditioning Primer</td></tr>
+    <tr class="odd"><td class="step"></td><td class="checked"></td><td class="instruction">Dilute the Sequencing Primer in Elution Buffer</td></tr>
+    <tr class="even"><td class="step">1</td><td class="checked"><input type="checkbox"></td><td class="instruction">1 uL Sequencing Primer</td></tr>
+    <tr class="odd"><td class="step">2</td><td class="checked"><input type="checkbox"></td><td class="instruction">33 uL Total Volume</td></tr>
+    <tr class="even"><td class="step">3</td><td class="checked"><input type="checkbox"></td><td class="instruction">32 uL Elution Buffer</td></tr>
+    <tr class="odd"><td class="step">4</td><td class="checked"><input type="checkbox"></td><td class="instruction-header">Incubate at 80 C for 2 min then hold at 4 C. Conditioned primer may be stored at -20 C for use up to 30 days.</td></tr>
+    <tr class="even"><td class="step"></td><td class="checked"></td><td class="instruction"></td></tr>
+    <tr class="odd"><td class="step"></td><td class="checked"></td><td class="instruction-header">Annealing Sequencing Primer</td></tr>
+    <tr class="even"><td class="step"></td><td class="checked"></td><td class="instruction">Prepare each sample for annealing in a clean tube</td></tr>
+</table>

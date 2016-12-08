@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Long Amplicon Analysis (LAA2) Application</title>
+<link rel="StyleSheet" href="PacBio.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("SL_Home.htm", "", "&gt;", "Home", "SL_Home_1.htm");
+document.write("Long Amplicon Analysis (LAA2) Application<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('SL_Home.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<h2 style="border-bottom-style: Solid; border-bottom-width: 1px; font-size: 14pt;"><span style="font-size: 14pt; "><font size="4" style="font-size:14pt;"><span 
+	 style="font-family: Arial, sans-serif;">SMRT Analysis</span> Help</font></span></h2>
+</div>
+<h1>Long Amplicon Analysis (LAA 2) Application </h1>
+<p>Use this application to determine phased consensus sequences for pooled 
+ amplicon data.</p>
+<p>&#160;</p>
+<p>The LAA 2 application:</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;">Allows for accurate allelic phasing 
+	 and variant calling in large genomic intervals.</li>
+	<li style="margin-left: -20px;">Supports the analysis of novel haplotypes 
+	 in biomedical loci of interest, such as the HLA region in the human 
+	 genome.</li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal;">Can 
+	 pool more than 5 distinct amplicons. Reads are clustered into high-level 
+	 groups, then each group is phased and consensus is called using the 
+	 Arrow algorithm.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal;">If 
+	 the sample is <span style="font-weight: bold;">barcoded</span>, can 
+	 optionally partition reads by barcode.</p></li>
+</ul>
+<p style="font-weight: normal;">&#160;</p>
+<p style="font-weight: normal;">The application includes five main steps:</p>
+<ol style="list-style: decimal;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal;"><span 
+	 style="font-weight: bold;">Coarse clustering:</span> Group reads from 
+	 different amplicons into different clusters; detect read-read overlaps; 
+	 build an overlap graph, then cluster the overlap graph to break the 
+	 graph into the final clusters.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal;"><span 
+	 style="font-weight: bold;">Waterfall</span>: Align additional reads 
+	 against coarse consensuses from each cluster, adding them to the cluster 
+	 with the greatest similarity.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal;"><span 
+	 style="font-weight: bold;">Phasing</span>: Load the reads for each 
+	 cluster into the Arrow <span style="font-weight: normal;">consensus 
+	 software and find an initial consensus. Recursively split reads from 
+	 different haplotypes or other PCR products based on high scoring mutations 
+	 evaluated by Arrow.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal;"><span 
+	 style="font-weight: bold;">Consensus:</span> Generate a final consensus 
+	 for each haplotype or <span style="font-weight: normal;">PCR product 
+	 using Arrow.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal;"><span 
+	 style="font-weight: bold;">Post-Processing Filters</span>: Detect 
+	 and remove PCR artifacts. <span style="font-weight: normal;">Chimeric 
+	 sequences are identified using the UCHIME algorithm, and other PCR 
+	 artifacts are identified by overall consensus quality.</span></p></li>
+</ol>
+<p style="font-weight: normal;">&#160;</p>
+<table class="PacBioColor" cellspacing="0px" width="57.369%">
+	<col style="width: 25.195%;" />
+	<col style="width: 9.519%;" />
+	<col style="width: 65.286%;" />
+	<tr class="t1st">
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Required 
+		 Parameters</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">Default 
+		 Value</p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Description</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 22px;">
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">Full 
+		 Length Subreads</font></span></td>
+		<td style="vertical-align: Top;"><p style="text-align: center;"><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt;"><font size="2" style="font-size:10pt;">OFF</font></span></p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Specify 
+		 whether or not to require subreads to have both flanking barcodes.</font></span></td>
+	</tr>
+	<tr class="t1Row" style="height: 23px;">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Minimum 
+		 Barcode Score</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">0</p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">The 
+		 minimum average barcode score required for subreads.</font></span></td>
+	</tr>
+	<tr class="t1Row" style="height: 23px;">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Maximum 
+		 Length</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">0</p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">The 
+		 maximum length of subreads to use.</font></span></td>
+	</tr>
+	<tr class="t1Row" style="height: 23px;">
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">Maximum 
+		 Phasing Reads</font></span></td>
+		<td style="vertical-align: Top;"><p style="text-align: center;"><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt;"><font size="2" style="font-size:10pt;">500</font></span></p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">The 
+		 maximum number of input reads to phase per cluster.</font></span></td>
+	</tr>
+	<tr class="t1Row" style="height: 23px;">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Maximum 
+		 Number of Reads</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">2000</p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">The 
+		 maximum number of input reads to cluster per barcode.</font></span></td>
+	</tr>
+	<tr class="t1Row" style="height: 23px;">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Minimum 
+		 Length</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">3000</p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">The 
+		 minimum length of subreads to use.</font></span></td>
+	</tr>
+	<tr class="t1Row" style="height: 23px;">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Minimum 
+		 Read Score</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">0.75</p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">The 
+		 minimum read score of input reads.</font></span></td>
+	</tr>
+	<tr class="t1Row" style="height: 23px;">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Minimum 
+		 SNR</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">3.75</p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">The 
+		 minimum SNR of input reads.</font></span></td>
+	</tr>
+	<tr class="t1Row" style="height: 23px;">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Minimum 
+		 Split Reads</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">20</p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">The 
+		 minimum number of reads supporting a minor phase required for 
+		 a split.</font></span></td>
+	</tr>
+	<tr class="t1Row" style="height: 23px;">
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">No Clustering</p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center;"><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt;"><font size="2" style="font-size:10pt;">OFF</font></span></p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Specify 
+		 whether or not to deactivate the coarse clustering phase and go 
+		 directly to fine phasing.</font></span></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<table class="PacBioColor" cellspacing="0px" width="57.369%">
+	<col style="width: 25.195%;" />
+	<col style="width: 9.519%;" />
+	<col style="width: 65.286%;" />
+	<tr class="t1st">
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Advanced 
+		 Analysis Parameters - LAA</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">Default 
+		 Value</p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Description</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">Minimum 
+		 Split Score</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">500</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif;">The 
+		 minimum score supporting a minor phase required for a split.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">Minimum 
+		 Mutation Prevalence</font></span></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif;">0.09</p></td>
+		<td style="vertical-align: Top;"><span style="mso-ascii-theme-font: minor-latin; 
+												 mso-fareast-font-family: Calibri; 
+												 mso-fareast-theme-font: minor-latin; 
+												 mso-hansi-theme-font: minor-latin; 
+												 mso-bidi-font-family: 'Times New Roman'; 
+												 mso-bidi-theme-font: minor-bidi; 
+												 mso-ansi-language: EN-US; 
+												 mso-fareast-language: EN-US; 
+												 mso-bidi-language: AR-SA; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">The 
+		 Minimum number of supporting reads required to use a mutation 
+		 for phasing.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Trim 
+		 Ends</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">0</p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Specify 
+		 the number of bases to trim from the ends of consensus sequences.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">Minimum 
+		 Predicted Accuracy</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">0.95</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: normal;">The 
+		 minimum predicted consensus accuracy below which a consensus is 
+		 treated as noise. </p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Cluster 
+		 Inflation</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">2</p></td>
+		<td style="vertical-align: Top;"><span style="line-height: normal; 
+												 orphans: auto; font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Markov 
+		 Clustering inflation parameter</font></span><span style="font-family: Arial, sans-serif; 
+													 font-size: 10pt;"><font size="2" style="font-size:10pt;">.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-size: 10pt; 
+												 font-family: Arial, sans-serif; 
+												 font-weight: bold;"><font size="2" style="font-size:10pt;">Minimum 
+		 Mutation Q-Score</font></span></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif;">20</p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Minimum 
+		 supporting evidence required to use a mutation for phasing.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Maximum 
+		 Number of Reads to use in Clustering</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">500</p></td>
+		<td style="vertical-align: Top;"><span style="line-height: normal; 
+												 orphans: auto; font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Maximum 
+		 number of input reads to cluster per barcode</font></span><span style="font-family: Arial, sans-serif; 
+		 font-size: 10pt;"><font size="2" style="font-size:10pt;">.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Chimera 
+		 Score Threshold</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">1</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: normal;">The 
+		 minimum score to consider a sequence chimeric. </p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Cluster 
+		 Loop Weight</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;"><span 
+		 style="mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; 
+		 mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; 
+		 mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; 
+		 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">0.001</span> 
+		 </p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Markov 
+		 Clustering loop weight parameter.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">Minimum 
+		 Total Barcode Score</font></span></td>
+		<td style="vertical-align: Top;"><p style="text-align: center;"><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt;"><font size="2" style="font-size:10pt;">0</font></span></p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">The 
+		 minimum total barcode score to require of subreads.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">No 
+		 Phasing</font></span></td>
+		<td style="vertical-align: Top;"><p style="text-align: center;"><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt;"><font size="2" style="font-size:10pt;">OFF</font></span></p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Specify 
+		 whether or not to deactivate the fine phasing step and go directly 
+		 from clustering to consensus.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">Ignore 
+		 Ends</font></span></td>
+		<td style="vertical-align: Top;"><p style="text-align: center;"><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt;"><font size="2" style="font-size:10pt;">20</font></span></p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">When 
+		 phasing, </font></span><span style="font-weight: bold; font-family: Arial, sans-serif; 
+								 font-size: 10pt;"><font size="2" style="font-size:10pt;">ignore</font></span><span style="font-family: Arial, sans-serif; 
+		 font-size: 10pt;"><font size="2" style="font-size:10pt;"> variants within this number of bases from the 
+		 end.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">No 
+		 Chimera Filter</font></span></td>
+		<td style="vertical-align: Top;"><p style="text-align: center;"><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt;"><font size="2" style="font-size:10pt;">OFF</font></span></p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Specify 
+		 whether or not to deactivate the chimera filter and output </font></span><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">all</font></span><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt;"><font size="2" style="font-size:10pt;"> consensus 
+		 results.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">Minimum 
+		 Split Fraction</font></span></td>
+		<td style="vertical-align: Top;"><p style="text-align: center;"><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt;"><font size="2" style="font-size:10pt;">0.1</font></span></p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">The 
+		 minimum fraction of reads supporting a minor phase required for 
+		 a split.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">RNG 
+		 Seed</font></span></td>
+		<td style="vertical-align: Top;"><p style="text-align: center;"><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt;"><font size="2" style="font-size:10pt;">42</font></span></p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Modulates 
+		 the reservoir filtering of seeds.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">Take 
+		 N</font></span></td>
+		<td style="vertical-align: Top;"><p style="text-align: center;"><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt;"><font size="2" style="font-size:10pt;">0</font></span></p></td>
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Report 
+		 only the top N consensus sequences for each barcode. To </font></span><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">disable</font></span><span 
+		 style="font-family: Arial, sans-serif; font-size: 10pt;"><font size="2" style="font-size:10pt;">, use 
+		 a number less than 1.</font></span></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 10pt; border-top-style: Solid; border-top-width: 1px;"><span style="font-size: 10pt; "><font size="2" style="font-size:10pt;"><a 
+	 href="SL_Legal.htm">Legal Information</a> &#160;&#160;&#160;&#160;&#160;12-May-16</font></span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

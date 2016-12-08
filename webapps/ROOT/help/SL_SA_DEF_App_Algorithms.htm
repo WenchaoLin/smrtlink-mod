@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Algorithms provided by Pacific Biosciences</title>
+<link rel="StyleSheet" href="PacBio.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("SL_Home.htm", "", "&gt;", "Home", "SL_Home_1.htm");
+document.write("Algorithms provided by Pacific Biosciences<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('SL_Home.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<h2 style="border-bottom-style: Solid; border-bottom-width: 1px; font-size: 14pt;"><span style="font-size: 14pt; "><font size="4" style="font-size:14pt;"><span 
+	 style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;">SMRT</span><span style="font-family: Arial, sans-serif; 
+	 font-size: 10pt; vertical-align: Super;"><font size="2" style="font-size:10pt;">®</font></span><span style="font-family: Arial, sans-serif;"> 
+ Analysis</span></span> 
+	 Help</font></span></h2>
+</div>
+<h1>Secondary Analysis Algorithms Provided by Pacific Biosciences</h1>
+<p>Following are descriptions of the secondary analysis algorithms provided 
+ by Pacific Biosciences.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">&#160;</p>
+<p style="font-weight: bold;">BLASR</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;">Maps reads to genomes by finding the 
+	 highest scoring local alignment or set of local alignments between 
+	 the read and the genome. The initial set of candidate alignments is 
+	 found by querying a rapidly searched pre-computed index of the reference 
+	 genome, and then refining until only high scoring alignments are retained. 
+	 The base assignment in alignments is optimized and scored using all 
+	 available quality information, such as insertion and deletion quality 
+	 values.</li>
+	<li style="margin-left: -20px;">Because alignment approximates an exhaustive 
+	 search, alignment significance is computed by comparing optimal alignment 
+	 score to the distribution of all other significant alignment scores.</li>
+</ul>
+<p style="font-weight: bold;">&#160;</p>
+<p style="font-weight: bold;"><span style="font-weight: bold;">Genomic 
+ Consensus (Quiver)</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;">Identifies haploid SNPs and single-base 
+	 indels by comparing a multiple sequence alignment of mapped reads 
+	 against a reference sequence.</li>
+	<li style="margin-left: -20px;">Variant calls are made using a simple 
+	 plurality algorithm.</li>
+</ul>
+<p style="font-weight: bold;">&#160;</p>
+<p style="font-family: Arial, sans-serif; mso-fareast-font-family: Calibri; 
+	 font-weight: bold; mso-fareast-theme-font: minor-latin;"><span style="font-family: Arial, sans-serif; 
+	 mso-fareast-font-family: Calibri; font-weight: bold; mso-fareast-theme-font: minor-latin;"><span 
+	 style="mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+	 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">Long Amplicon 
+ Analysis</span></span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;">Calls 
+	 phased consensus sequences from pooled amplicon sequence data. Up 
+	 to 20 distinct amplicons can pooled.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;">Reads 
+	 are clustered into high-level groups, then each group is phased and 
+	 consensus is called using the Quiver algorithm.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;">If 
+	 the sample is barcoded, separate calls are made for each barcode.</p></li>
+</ul>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 10pt; border-top-style: Solid; border-top-width: 1px;"><span style="font-size: 10pt; "><font size="2" style="font-size:10pt;"><a 
+	 href="SL_Legal.htm">Legal Information</a> &#160;&#160;&#160;&#160;&#160;15-Jan-16</font></span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

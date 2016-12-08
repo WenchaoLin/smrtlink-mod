@@ -1,0 +1,11 @@
+"use strict";
+/**
+ * @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc.
+ * @author <a href="mailto:bskinner@pacificbiosciences.com">Brian Skinner</a>
+ * @deprecated
+ */
+exports.ICON = {
+    CARET: "icon-caret"
+};
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9zdHJpbmdzL2ljb24udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBOzs7O0dBSUc7QUFDVSxZQUFJLEdBQUc7SUFDaEIsS0FBSyxFQUFFLFlBQVk7Q0FDdEIsQ0FBQyIsImZpbGUiOiJhcHAvc3RyaW5ncy9pY29uLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBAY29weXJpZ2h0IENvcHlyaWdodCAoYykgMjAxNSwgUGFjaWZpYyBCaW9zY2llbmNlcyBvZiBDYWxpZm9ybmlhLCBJbmMuXG4gKiBAYXV0aG9yIDxhIGhyZWY9XCJtYWlsdG86YnNraW5uZXJAcGFjaWZpY2Jpb3NjaWVuY2VzLmNvbVwiPkJyaWFuIFNraW5uZXI8L2E+XG4gKiBAZGVwcmVjYXRlZFxuICovXG5leHBvcnQgY29uc3QgSUNPTiA9IHtcbiAgICBDQVJFVDogXCJpY29uLWNhcmV0XCJcbn07XG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=

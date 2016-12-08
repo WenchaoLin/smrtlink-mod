@@ -1,0 +1,19 @@
+<span class="icon-node" (click)="onClick($event) ">
+  <i class="fa"
+     [class.fa-refresh]="node.expanded && node.isLoading"
+     [class.fa-spin]="node.expanded && node.isLoading"
+     [class.fa-folder-open]="node.expanded && !node.isLoading"
+     [class.fa-folder]="!node.expanded">
+  </i>
+  <span *ngIf="checkable"><input type="checkbox" [checked]="node.checked" (click)="onCheckboxClick(node, $event)"></span>
+  <span><ng-content></ng-content></span>
+</span>
+<div *ngIf="node.expanded">
+    <pb-tree-view [is-root]="false"
+                  [nodes]="node.nodes"
+                  [leaves]="node.leaves"
+                  (node-collapsed)="onBubbleNodeCollapsed($event)"
+                  (node-expanded)="onBubbleNodeExpanded($event)"
+                  (leaf-clicked)="onBubbleLeafClicked($event)">
+    </pb-tree-view>
+</div>

@@ -1,0 +1,48 @@
+<div class="run-design-index__buttons">
+
+    <button type="button" class="btn btn-lg"
+            [pbImprint]="TEXT.NEW_RUN_DESIGN"
+            [routerLink]="['../NewRun']">
+    </button>
+
+    <button type="button" class="btn btn-lg"
+            [pbImprint]="TEXT.IMPORT_RUN_DESIGN"
+            (click)="importRunDefinition($event)">
+    </button>
+
+</div>
+
+<div hidden #inputContainer></div>
+
+<pb-catalog [pbArgs]="catalogArgs" (linkCellClick)="onLinkCellClick($event)"></pb-catalog>
+
+<pb-modal-dialog #errorDialog>
+    <div class="error-dialog-content">
+        <h2>Import of "{{importRunFile}}" Failed</h2>
+        <br>
+        <p *ngIf="importRunErrorMessage"><b>{{importRunErrorMessage}}</b></p>
+        <ul *ngIf="importRunError && importRunError.missingColumns">
+            <li *ngFor="#column of importRunError.missingColumns">{{column}}</li>
+        </ul>
+        <div class="scroll" *ngIf="importRunError && importRunError.messages">
+            <table>
+                <colgroup>
+                    <col width="180">
+                    <col width="40">
+                </colgroup>
+                <thead>
+                <tr><th>Column</th><th>Row</th><th>Error</th></tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="#message of importRunError.messages">
+                    <td>{{message.header}}</td><td>{{message.row}}</td><td>{{message.message}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="buttons">
+        <button type="button" class="btn"
+                (click)="errorDialog.hide()">Ok</button>
+    </div>
+</pb-modal-dialog>

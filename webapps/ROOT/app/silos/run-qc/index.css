@@ -1,0 +1,21 @@
+/**
+ * @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc.
+ * @author <a href="mailto:bskinner@pacificbiosciences.com">Brian Skinner</a>
+ */
+
+run-qc-index {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+run-qc-index pb-catalog {
+    height: calc(100% - 8.125rem);
+}
+
+run-qc-index pb-catalog .ag-root {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+}

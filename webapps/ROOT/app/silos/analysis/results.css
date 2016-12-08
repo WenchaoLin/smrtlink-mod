@@ -1,0 +1,161 @@
+/**
+ * @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc.
+ * @author <a href="mailto:bskinner@pacificbiosciences.com">Brian Skinner</a>
+ */
+
+results {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+results .state-container {
+    float: right;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+results button.smrt-view {
+    text-transform: none !important;
+}
+
+results .job-state {
+    float: right;
+    font-size: 1.1875rem;
+    font-weight: bold;
+    height: 100%;
+    line-height: 1.875rem;
+    text-transform: uppercase;
+}
+
+results .job-state-created,
+results .job-state-running,
+results .job-state-submitted,
+results .job-state-successful {
+    color: darkgreen;
+}
+
+results .job-state-terminated,
+results .job-state-failed {
+    color: red;
+}
+
+results > .titlebar-layout__container {
+    overflow: auto;
+}
+
+results .sidebar-layout__sidebar {
+    flex-basis: 18.125rem;
+    padding-right: 20px;
+}
+
+results .sidebar-layout__sidebar summary {
+    background-color: #e3e6e8;
+    color: #0c2848;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+    margin-top: 0.4rem;
+}
+
+results .sidebar-layout__sidebar li > a {
+    color: #666;
+    font-size: 0.9375rem;
+    margin-top: 0.4rem;
+    text-align: right;
+}
+
+results .sidebar-layout__sidebar li > a,
+results .sidebar-layout__sidebar li > a:hover,
+/* The following three rules override Bootstrap's excessively specific
+ * styles */
+results .sidebar-layout__sidebar li.active > a,
+results .sidebar-layout__sidebar li.active > a:hover,
+results .sidebar-layout__sidebar li.active > a:focus {
+    background-color: rgba(227, 231, 237, 0.33);
+}
+
+results .sidebar-layout__sidebar li > a:hover,
+/* The following three rules override Bootstrap's excessively specific
+ * styles */
+results .sidebar-layout__sidebar li.active > a,
+results .sidebar-layout__sidebar li.active > a:hover,
+results .sidebar-layout__sidebar li.active > a:focus {
+    color: #0c2848;
+    font-weight: bold;
+}
+
+results .sidebar-layout__sidebar li > a:hover {
+    cursor: pointer;
+}
+
+results .smrt-report figure figcaption {
+    font-size: xx-large;
+    text-align: center;
+}
+
+results .smrt-report a {
+    cursor: pointer;
+}
+
+results .smrt-report table {
+    margin-top: 1rem;
+    font-size: large;
+}
+
+results .smrt-report h1 {
+    margin-top: 1rem;
+    font-size: large;
+}
+
+results .smrt-report h2 {
+    margin-top: 1rem;
+    font-size: x-large;
+}
+
+results .smrt-report table th,
+results .smrt-report table td {
+    padding: 0.4rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+results hr {
+    height: 0.2rem;
+    background-color: #cecece;
+}
+
+results .smrt-report table tr td table {
+    margin-top: 8rem;
+}
+
+results .smrt-report table th:first-child,
+results .smrt-report table td:first-child {
+    padding-right: 2rem;
+    text-align: right;
+}
+
+results .smrt-report table td:last-child {
+    color: #666;
+}
+
+results .smrt-thumbnails a {
+    cursor: pointer;
+}
+
+results .smrt-thumbnails figure {
+    float: left;
+    background-color: #ddd !important;
+    border-radius: 2%;
+    margin: 1rem;
+}
+
+results .smrt-thumbnails figure figcaption {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}

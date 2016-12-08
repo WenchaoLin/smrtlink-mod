@@ -1,0 +1,30 @@
+<!-- @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc. -->
+<div class="titlebar-layout__titlebar">
+    <div class="container titlebar-layout__titlebar-container">
+        <h1 class="titlebar-layout__titlebar-title">About</h1>
+    </div>
+</div>
+
+<div class="titlebar-layout__container">
+    <div class="container">
+        <h1>Sequel Software Component Versions</h1>
+
+        <div *ngIf="vm.loading">Loading&hellip;</div>
+        <table style="width: 100%; font-size: large;" *ngIf="!vm.loading">
+            <tr *ngFor="#component of vm.components">
+                <th style="text-align: right; padding: 1rem; color: lightslategray; vertical-align: top;">{{component.name}}</th>
+                <td style="padding: 1rem;">{{component.version}}
+                    <span *ngIf="component.details" style="color: lightslategray;"><br>{{component.details}}</span>
+                </td>
+            </tr>
+            <tr *ngIf="vm.errorMessage">
+                <th style="text-align: right; padding: 1rem; color: red; vertical-align: top;">Error connecting to server</th>
+                <td style="padding: 1rem;">
+                    <textarea
+                        style="background-color: #ffe8ee!important; font-size: large; font-family: monospace; width: 40rem; height: 16rem;"
+                        rows="16" columns="40">{{vm.errorMessage}}</textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

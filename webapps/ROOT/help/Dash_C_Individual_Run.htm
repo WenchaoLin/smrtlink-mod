@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Individual Run Page</title>
+<link rel="stylesheet" href="PacBio.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("SMRT Link\nRun QC\nIndividual Run Page");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("SL_Home.htm", "", "&gt;", "Home", "SL_Home_1.htm");
+document.write("<a href=\"SL_CS_DataMan_Top.htm\">SMRT Link<\/a> &gt; <a href=\"Dash_Top.htm\">Run QC<\/a> &gt; Individual Run Page<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('SL_Home.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<h2 style="border-bottom-style: Solid; border-bottom-width: 1px; font-size: 14pt;"><span style="font-size: 14pt; "><font size="4" style="font-size:14pt;"><span 
+	 style="font-family: Arial, sans-serif;">Run QC</span> Help</font></span></h2>
+</div>
+<h1>Individual Run Page</h1>
+<p>This page displays information about one <span style="font-weight: bold;">specific</span> 
+ run. You access this page from the <a href="Dash_C_Runs.htm">Runs</a> 
+ page by:</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Double-clicking</span> 
+	 a run in the <span style="font-weight: bold;">Run/Cells/Uptime Bar</span> 
+	 <span style="font-weight: bold;">or</span></li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Clicking 
+	 a run link</span>.</li>
+</ul>
+<p>&#160;</p>
+<p><span style="font-weight: bold;">Notes</span>:</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;">To <span style="font-weight: bold;">sort</span> 
+	 a table by a field, click the up arrow or down arrow next to the field 
+	 name: <img src="Sort_Control.png" alt="" style="border: none;" border="0" /></li>
+	<li style="margin-left: -20px;">&#160;All times displayed are in <span 
+	 style="font-weight: bold;">GMT (Greenwich Mean Time)</span>, and match 
+	 the time in the log files.</li>
+</ul>
+<h2>Run Summary</h2>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Instrument</span>: 
+	 The name of the instrument.</li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Started:</span> 
+	 The time when the run was started.</li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Completed</span>: 
+	 The time when the run was completed.</li>
+	<li style="margin-left: -20px;"><b><span style="mso-pagination: none; 
+											 tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+											 mso-layout-grid-align: none; 
+											 text-autospace: none;">Status:</span> 
+	 <span style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+			 mso-layout-grid-align: none; text-autospace: none; font-weight: normal;">The 
+	 current status of the run. This can be one of the following:</span> 
+	 </b><span style="mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; 
+				 font-weight: bold;">Running</span><span style="mso-bidi-font-family: 'Times New Roman'; 
+														 mso-bidi-theme-font: minor-bidi;">,</span> 
+	 <span style="mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; 
+			 font-weight: bold;">Completed</span><span style="mso-bidi-font-family: 'Times New Roman'; 
+														 mso-bidi-theme-font: minor-bidi;">,</span> 
+	 <span style="mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; 
+			 font-weight: bold;">Failed</span><span style="mso-bidi-font-family: 'Times New Roman'; 
+													 mso-bidi-theme-font: minor-bidi;">,</span> 
+	 <span style="mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; 
+			 font-weight: bold;">Terminated</span><span style="mso-bidi-font-family: 'Times New Roman'; 
+														 mso-bidi-theme-font: minor-bidi;">, 
+	 or</span> <span style="mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; 
+					 font-weight: bold;">?</span> <span style="mso-bidi-font-family: 'Times New Roman'; 
+														 mso-bidi-theme-font: minor-bidi;">(status 
+	 unknown).</span></li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Sequencing 
+	 Kit</span>: <span style="mso-fareast-font-family: 'Times New Roman'; 
+						 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+						 mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+						 font-family: Arial, sans-serif;">The name of the 
+	 sequencing kit used, including the lot and expiration date. If</span> 
+	 <span style="mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; 
+			 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+			 font-family: Arial, sans-serif; font-weight: bold;">two</span> 
+	 <span style="mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; 
+			 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+			 font-family: Arial, sans-serif;">plates are used for the run, 
+	 the lot and expiration are listed for</span> <span style="mso-fareast-font-family: 'Times New Roman'; 
+														 mso-bidi-font-family: 'Times New Roman'; 
+														 mso-ansi-language: EN-US; 
+														 mso-fareast-language: EN-US; 
+														 mso-bidi-language: AR-SA; 
+														 font-family: Arial, sans-serif; 
+														 font-weight: bold;">each</span><span 
+	 style="mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+	 font-family: Arial, sans-serif;">.</span></li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Run 
+	 Description</span>: <span style="mso-fareast-font-family: 'Times New Roman'; 
+								 mso-bidi-font-family: 'Times New Roman'; 
+								 mso-ansi-language: EN-US; mso-fareast-language: EN-US; 
+								 mso-bidi-language: AR-SA; font-family: Arial, sans-serif;">The 
+	 description, as defined when creating the run.</span></li>
+</ul>
+<h2>Sample Run Setup Table</h2>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Well</span>: 
+	 The ID of an individual well used for this sample.</li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Sample 
+	 Name</span>: The sample name, as defined when creating the run.</li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Template 
+	 Prep Kit</span>: The version used for this run. (Move the mouse over 
+	 the field to see the lot number and expiration date.)</li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Binding 
+	 Kit</span>: The version used for this run. (Move the mouse over the 
+	 field to see the lot number and expiration date.)</li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">DNA 
+	 Control</span>: <span style="font-size: 10.0pt; font-family: Arial, sans-serif; 
+							 mso-fareast-font-family: 'Times New Roman'; 
+							 mso-ansi-language: EN-US; mso-fareast-language: EN-US; 
+							 mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">The DNA Control 
+	 Complex used</font></span><b><span style="-webkit-text-size-adjust: auto; 
+								 -webkit-text-stroke-width: 0px; font-weight: normal;">.</span></b></li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Loading</span><span>:</span> 
+	 <span style="font-weight: bold;">&lt;????&gt;</span></li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Insert 
+	 Size (bases)</span>: <span style="mso-fareast-font-family: 'Times New Roman'; 
+								 mso-bidi-font-family: 'Times New Roman'; 
+								 mso-ansi-language: EN-US; mso-fareast-language: EN-US; 
+								 mso-bidi-language: AR-SA; font-family: Arial, sans-serif;">The 
+	 insert size selected when creating the run. These size ranges match 
+	 those shown in the</span> <span style="mso-fareast-font-family: 'Times New Roman'; 
+									 mso-bidi-font-family: 'Times New Roman'; 
+									 mso-ansi-language: EN-US; mso-fareast-language: EN-US; 
+									 mso-bidi-language: AR-SA; font-family: Arial, sans-serif; 
+									 font-weight: bold;">Template Preparation 
+	 and Sequencing Guide</span><span style="mso-fareast-font-family: 'Times New Roman'; 
+										 mso-bidi-font-family: 'Times New Roman'; 
+										 mso-ansi-language: EN-US; mso-fareast-language: EN-US; 
+										 mso-bidi-language: AR-SA; font-family: Arial, sans-serif;">.</span></li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Stage 
+	 Start</span>: Whether or not Stage Start was used. With Stage Start 
+	 active, the <span>sequencing reaction starts at the</span> <span style="font-weight: bold;">Optical</span> 
+	 <span>stage, just before data acquisition begins.</span> This captures 
+	 sequence data at the 5' end of the SMRTbell<span style="mso-fareast-font-family: 'Times New Roman'; 
+														 mso-ansi-language: EN-US; 
+														 mso-fareast-language: EN-US; 
+														 mso-bidi-language: AR-SA;">™</span> 
+	 template that would otherwise be skipped.</li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Comments</span>: 
+	 Entered when creating the run.</li>
+</ul>
+<h2>Sample Results Table</h2>
+<p><span style="font-weight: bold;">Note</span>: Move the mouse over a 
+ row to see information about the cell tray used.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px; font-family: Arial, sans-serif;"><b><span 
+	 style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+	 mso-layout-grid-align: none; text-autospace: none;">SMRT Cell:</span> 
+	 <span style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+			 mso-layout-grid-align: none; text-autospace: none; font-weight: normal;">The 
+	 number of the SMRT Cell associated with the well.</span></b></li>
+	<li style="margin-left: -20px; font-family: Arial, sans-serif;"><b><span 
+	 style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+	 mso-layout-grid-align: none; text-autospace: none;">Well:</span> <span 
+	 style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+	 mso-layout-grid-align: none; text-autospace: none; font-weight: normal;">The 
+	 well number associated with this SMRT Cell.</span></b></li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Sample 
+	 Name</span>: The sample name, as defined when creating the run.</li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Started 
+	 @</span>: <b style="font-family: Arial, sans-serif;"><span style="mso-fareast-font-family: 'Times New Roman'; 
+	 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+	 mso-fareast-language: EN-US; mso-bidi-language: AR-SA; font-family: Arial, sans-serif; 
+	 font-weight: normal;">The time that the</span> <span style="mso-fareast-font-family: 'Times New Roman'; 
+															 mso-bidi-font-family: 'Times New Roman'; 
+															 mso-ansi-language: EN-US; 
+															 mso-fareast-language: EN-US; 
+															 mso-bidi-language: AR-SA; 
+															 font-family: Arial, sans-serif; 
+															 font-weight: normal;">data 
+	 acquisition started on this SMRT Cell</span></b><span style="font-family: Arial, sans-serif;">.</span></li>
+	<li style="margin-left: -20px;"><b><span style="mso-pagination: none; 
+											 tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+											 mso-layout-grid-align: none; 
+											 text-autospace: none;">Status:</span> 
+	 <span style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+			 mso-layout-grid-align: none; text-autospace: none; font-weight: normal;">The 
+	 current collection status for the SMRT Cell. This can be one of the 
+	 following:</span> <span style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+							 mso-layout-grid-align: none; text-autospace: none;">Collecting/Collected, 
+	 Collection Failed/Aborted, Analyzing, Analysis Failed/Aborted,Transferring/</span><span 
+	 style="font-weight: bold; mso-bidi-font-family: 'Times New Roman'; 
+	 mso-bidi-theme-font: minor-bidi;">Transferred, Transfer Failed/Aborted</span></b><span 
+	 style="font-weight: bold; mso-bidi-font-family: 'Times New Roman'; 
+	 mso-bidi-theme-font: minor-bidi;">. &#160;Note:</span> <span style="mso-bidi-font-family: 'Times New Roman'; 
+	 mso-bidi-theme-font: minor-bidi;">A status that includes a question 
+	 mark (?) indicates that the status is</span> <span style="mso-bidi-font-family: 'Times New Roman'; 
+														 mso-bidi-theme-font: minor-bidi; 
+														 font-weight: bold;">older</span> 
+	 <span style="mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi;">than 
+	 1 day.</span></li>
+	<li style="margin-left: -20px; font-family: Arial, sans-serif;"><b><span 
+	 style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+	 mso-layout-grid-align: none; text-autospace: none;">Movie Length (mins):</span> 
+	 <span style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+			 mso-layout-grid-align: none; text-autospace: none; font-weight: normal;">The 
+	 length of the movie associated with this SMRT Cell.</span></b></li>
+	<li style="margin-left: -20px; font-family: Arial, sans-serif;"><b><span 
+	 style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+	 mso-layout-grid-align: none; text-autospace: none; font-weight: bold;">Total 
+	 Bases (GB)</span><span style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+							 mso-layout-grid-align: none; text-autospace: none; 
+							 font-weight: normal;">: Calculated by multiplying 
+	 the number of</span> <span style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+								 mso-layout-grid-align: none; text-autospace: none; 
+								 font-weight: bold;">productive</span> 
+	 <span style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+			 mso-layout-grid-align: none; text-autospace: none; font-weight: normal;">(P1) 
+	 ZMWs by the mean polymerase read length;</span></b> <span class="apple-style-span">displayed 
+	 in Gigabases</span><span>.</span></li>
+	<li style="margin-left: -20px; font-family: Arial, sans-serif;"><span 
+	 style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+	 mso-fareast-language: EN-US; mso-bidi-language: AR-SA; font-weight: bold;">P</span><span 
+	 style="font-weight: bold;">olymerase Reads</span><span>:</span> <span 
+	 style="font-size: 10.0pt; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">Polymerase 
+	 reads</font></span> <span style="font-size: 10.0pt; mso-fareast-font-family: Calibri; 
+						 mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; 
+						 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">are 
+	 trimmed to the high quality region and</font></span> <span style="font-size: 10.0pt; 
+														 mso-fareast-font-family: Calibri; 
+														 mso-fareast-theme-font: minor-latin; 
+														 mso-ansi-language: EN-US; 
+														 mso-fareast-language: EN-US; 
+														 mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">include 
+	 bases from adaptors, as well as potentially multiple passes around 
+	 a circular template</font></span><span>.</span></li>
+	<li style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Length</span><span>:</span> 
+	 <span style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+			 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+			 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">The 
+	 mean trimmed read length of all polymerase reads. The value includes 
+	 bases from adaptors as well as multiple passes around a circular template.</span></li>
+	<li style="font-family: Arial, sans-serif;"><span style="mso-fareast-font-family: Calibri; 
+														 mso-fareast-theme-font: minor-latin; 
+														 mso-bidi-font-family: 'Times New Roman'; 
+														 mso-ansi-language: EN-US; 
+														 mso-fareast-language: EN-US; 
+														 mso-bidi-language: AR-SA; 
+														 font-weight: bold;">Quality</span><span 
+	 style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+	 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">:</span> The 
+	 mean single-pass read quality of all polymerase reads.</li>
+	<li style="margin-left: -20px; font-family: Arial, sans-serif; font-size: 10pt;"><p 
+		 class="MsoNormal" style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+		 mso-layout-grid-align: none; text-autospace: none;"><b>Reads of 
+	 Insert</b></p></li>
+	<li style="font-family: Arial, sans-serif;"><p class="MsoNormal" style="mso-pagination: none; 
+													 tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+													 mso-layout-grid-align: none; 
+													 text-autospace: none;"><b>Length:</b> 
+	 <span style="mso-fareast-font-family: 'Times New Roman';">The average 
+	 length of the Read of Insert, which is a representative read&#160;of 
+	 a DNA molecule from a single ZMW; that is, the sequence of a DNA molecule 
+	 read from a single ZMW.&#160;On circularized SMRTbell</span><span 
+	 style="mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+	 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">™</span> <span 
+	 style="mso-fareast-font-family: 'Times New Roman';">&#160;templates 
+	 that are shorter than the read length, a Read of Insert length distribution 
+	 will closely resemble the insert size distribution.</span></p></li>
+	<li style="font-family: Arial, sans-serif;"><p class="MsoNormal" style="mso-pagination: none; 
+													 tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+													 mso-layout-grid-align: none; 
+													 text-autospace: none;"><b>Quality:</b> 
+	 <span style="mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; 
+			 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">The 
+	 estimated average quality of the Read of Insert.</span></p></li>
+	<li style="margin-left: -20px; font-family: Arial, sans-serif;"><p 
+		 class="MsoNormal" style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+		 mso-layout-grid-align: none; text-autospace: none; font-family: Arial, sans-serif;"><b>Control 
+	 Reads</b></p></li>
+	<li style="font-family: Arial, sans-serif;"><p class="MsoNormal" style="mso-pagination: none; 
+													 tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+													 mso-layout-grid-align: none; 
+													 text-autospace: none; 
+													 font-family: Arial, sans-serif;"><b>#:</b> 
+	 The total number of control reads that passed filtering.</p></li>
+	<li style="font-family: Arial, sans-serif;"><p class="MsoNormal" style="mso-pagination: none; 
+													 tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+													 mso-layout-grid-align: none; 
+													 text-autospace: none; 
+													 font-family: Arial, sans-serif;"><b>Length:</b> 
+	 The mean mapped read length of the polymerase reads from the control 
+	 sample.</p></li>
+	<li style="font-family: Arial, sans-serif;"><p class="MsoNormal" style="mso-pagination: none; 
+													 tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+													 mso-layout-grid-align: none; 
+													 text-autospace: none;"><b>Quality:</b> 
+	 The mean single-pass accuracy of the mapped polymerase reads from 
+	 the control sample.</p></li>
+	<li style="margin-left: -20px; font-family: Arial, sans-serif;"><p 
+		 class="MsoNormal" style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+		 mso-layout-grid-align: none; text-autospace: none; font-family: Arial, sans-serif;"><b>Template</b></p></li>
+	<li style="font-family: Arial, sans-serif;"><p class="MsoNormal" style="mso-pagination: none; 
+													 tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+													 mso-layout-grid-align: none; 
+													 text-autospace: none; 
+													 font-family: Arial, sans-serif;"><b>Adapter 
+	 Dimer:</b> The % of pre-filter ZMWs which have observed inserts of 
+	 0-10bp. These are likely <span style="font-weight: bold;">adapter 
+	 dimers</span>.</p></li>
+	<li style="font-family: Arial, sans-serif;"><p class="MsoNormal" style="mso-pagination: none; 
+													 tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+													 mso-layout-grid-align: none; 
+													 text-autospace: none;"><b>Short 
+	 Insert</b><span style="font-weight: bold;">:</span> The % of pre-filter 
+	 ZMWs which have observed inserts of 11-100bp. These are likely short 
+	 fragment contamination.</p></li>
+	<li style="margin-left: -20px; font-family: Arial, sans-serif;"><p 
+		 class="MsoNormal" style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+		 mso-layout-grid-align: none; text-autospace: none; font-family: Arial, sans-serif;"><b>Productivity</b></p></li>
+	<li style="font-family: Arial, sans-serif;"><p class="MsoNormal" style="mso-pagination: none; 
+													 tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+													 mso-layout-grid-align: none; 
+													 text-autospace: none; 
+													 font-family: Arial, sans-serif;"><b>Empty 
+	 (P0): <span style="font-weight: normal;">The number</span> <span style="font-weight: normal;">and 
+	 percentage</span></b> of ZMWs that are <span style="font-weight: bold;">empty</span>, 
+	 with no polymerase.</p></li>
+	<li style="font-family: Arial, sans-serif;"><p class="MsoNormal" style="mso-pagination: none; 
+													 tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+													 mso-layout-grid-align: none; 
+													 text-autospace: none; 
+													 font-family: Arial, sans-serif;"><b>Productive 
+	 (P1): <span style="font-weight: normal;">The number</span> <span style="font-weight: normal;">and 
+	 percentage</span></b> of ZMWs that are <span style="font-weight: bold;">productive</span> 
+	 and sequencing.</p></li>
+	<li style="font-family: Arial, sans-serif;"><p class="MsoNormal" style="mso-pagination: none; 
+													 tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+													 mso-layout-grid-align: none; 
+													 text-autospace: none; 
+													 font-family: Arial, sans-serif;"><b>Other 
+	 (P2): <span style="mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; 
+				 mso-ansi-language: EN-US; mso-fareast-language: EN-US; 
+				 mso-bidi-language: AR-SA; font-weight: normal;">The n</span></b><span 
+	 style="mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; 
+	 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">umber 
+	 and percentage of ZMWs that are</span> <span style="mso-fareast-font-family: 'Times New Roman'; 
+													 mso-bidi-font-family: 'Times New Roman'; 
+													 mso-ansi-language: EN-US; 
+													 mso-fareast-language: EN-US; 
+													 mso-bidi-language: AR-SA; 
+													 font-weight: bold;">not</span> 
+	 <span style="mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; 
+			 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">P0 
+	 (empty) or P1 (productive). This may occur for a variety of reasons 
+	 and the sequence data is not usable.</span></p></li>
+	<li style="margin-left: -20px; font-family: Arial, sans-serif;"><p 
+		 class="MsoNormal" style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+		 mso-layout-grid-align: none; text-autospace: none;"><b>Local Base 
+	 Rate:</b> <span style="font-family: Georgia, serif; mso-fareast-font-family: 'Times New Roman';">&#160;</span><span 
+	 style="mso-fareast-font-family: 'Times New Roman';">The average polymerization 
+	 rate. This</span> <span style="mso-fareast-font-family: 'Times New Roman'; 
+							 font-weight: bold;">only</span> <span style="mso-fareast-font-family: 'Times New Roman';">measures 
+	 the rate during periods when a single active polymerase is gathering 
+	 data from a ZMW; for example, it ignores pausing or delays due to 
+	 multiply-loaded wells.</span></p></li>
+</ul>
+<h2 class="MsoNormal">Histograms</h2>
+<p>Histograms display for <span style="font-weight: bold;">each</span> 
+ <b><span style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+			 mso-layout-grid-align: none; text-autospace: none; font-weight: normal;">SMRT</span><span 
+	 style="vertical-align: Super; font-size: 8pt; font-weight: normal;"><font size="1" style="font-size:8pt;">®</font></span> 
+ <span style="font-weight: normal; mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+		 mso-layout-grid-align: none; text-autospace: none;">Cell</span> 
+ <span style="mso-pagination: none; tab-stops: .5in 1.0in 1.5in 2.0in 2.5in 3.0in 3.5in 4.0in 4.5in 5.0in 5.5in 6.0in; 
+		 mso-layout-grid-align: none; text-autospace: none; font-weight: normal;">where 
+ data was successfully transferred. These </span></b>include:</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;">Reads of Insert (length and quality)</li>
+	<li style="margin-left: -20px;">Polymerase reads (length and quality)</li>
+	<li style="margin-left: -20px;">Loading evaluation: Unfiltered reads 
+	 vs polymerase reads (in kilobases), fraction of the bases in HQ regions.</li>
+</ul>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 10pt; border-top-style: Solid; border-top-width: 1px;"><span style="font-size: 10pt; "><font size="2" style="font-size:10pt;"><a 
+	 href="SL_Legal.htm">Legal Information</a>&#160;&#160;&#160;&#160;&#160;15-Mar-16</font></span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

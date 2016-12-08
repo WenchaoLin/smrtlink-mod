@@ -1,0 +1,159 @@
+run-view div.error {
+    color: red;
+}
+
+run-view div.error.big {
+    font-size: large;
+    margin-bottom: 0.625rem;
+}
+
+run-view div.error.small {
+    font-size: small;
+}
+
+run-view table.run-header {
+    margin-bottom: 0.625rem;
+    font-size: large;
+}
+
+run-view table.run-header td.left {
+    width: 40%;
+}
+
+run-view table.run-header td.right {
+    width: 60%;
+}
+
+run-view table.run-header td {
+    vertical-align: top;
+}
+
+run-view table.run-header table th,
+run-view table.run-header table td {
+    padding: 0.4rem;
+    vertical-align: top;
+}
+
+run-view table.run-header table td {
+    text-align: left;
+}
+
+run-view table.run-header table tr td {
+    margin-top: 8rem;
+}
+
+run-view table.run-header table th {
+    padding-right: 2rem;
+    text-align: right;
+}
+
+run-view pb-accordion {
+    margin-bottom: 40px;
+}
+
+run-view .pb-accordion-pane__header {
+    padding: 5px 0px;
+    border: 1px solid #cccccc;
+    background: transparent;
+}
+
+run-view pb-accordion-pane .pb-accordion-pane__header.invalid,
+run-view pb-accordion-pane.exclusive .pb-accordion-pane__header.invalid {
+    background: #cf2828;
+    box-shadow: 0 0 0.375rem #ce8483;
+}
+run-view .pb-accordion-pane__content {
+    background: transparent;
+}
+run-view .pb-accordion-pane__body {
+    padding: 12px 38px;
+}
+run-view .pb-accordion-pane__footer {
+    padding: 5px 12px;
+    text-align: center;
+}
+
+run-view pb-accordion-pane[expanded].exclusive .pb-accordion-pane__header,
+run-view pb-accordion-pane[expanded] .pb-accordion-pane__header {
+    background-color: rgba(0,0,0,0.1);
+}
+
+run-view table {
+    width:100%;
+}
+
+run-view .toggle {
+    width:25px;
+}
+
+run-view .wellno {
+    width:60px;
+}
+
+run-view .samplename {
+}
+
+run-view .status {
+    width:120px;
+}
+
+run-view td.status.green {
+    color: darkgreen;
+}
+
+run-view td.status.red {
+    color: red;
+}
+
+run-view td.status.orange {
+    color: orange;
+}
+
+run-view td.status.blue {
+    color: blue;
+}
+
+run-view .movietime {
+    width:80px;
+}
+
+run-view .totalbases {
+    width:80px;
+}
+
+run-view .readlength {
+    width:80px;
+}
+
+run-view .productivity {
+    width:100px;
+}
+
+run-view span.prodcnt {
+    color: gray;
+    font-size: smaller;
+}
+
+run-view .samples_table_row td {
+    color: #5b6770;
+    font-size: 0.8125rem;
+    line-height: 20px;
+    text-align: center;
+}
+
+run-view .samples_table_header {
+    background-color: #5b6770;
+}
+
+run-view .samples_table_header th {
+    color: #fff;
+    border-right: 1px solid #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    line-height: 25px;
+    text-align: center;
+}
+
+run-view .fa-exclamation-triangle {
+    color: red;
+}

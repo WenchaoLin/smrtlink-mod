@@ -1,0 +1,80 @@
+/**
+ * @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc.
+ * @author <a href="mailto:bskinner@pacificbiosciences.com">Brian Skinner</a>
+ */
+
+run-design-index {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+run-design-index .run-design-index__buttons {
+    text-align: center;
+    /*float: right;
+    height: 100%;*/
+}
+
+run-design-index .run-design-index__buttons .btn-lg {
+    height: 3.75rem;
+    margin: 1.875rem 1.875rem 2.5rem 1.875rem;
+    padding: 1.25rem 2.5rem;
+    width: 16.5625rem;
+}
+
+run-design-index pb-catalog {
+    height: calc(100% - 8.125rem);
+}
+
+run-design-index pb-catalog .ag-root {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+}
+
+/**
+ * NOTE: All widths and heights for rows and cells are part of
+ * the JavaScript because ag-grid uses those numbers to do calculations
+ * and overriding the style attributes with !important would throw
+ * off the calculations.
+ */
+
+run-design-index .error-dialog-content > h2 {
+    color:darkred;
+}
+
+run-design-index .error-dialog-content > div.scroll {
+    width:800px;
+    max-height:600px;
+    overflow-y:auto;
+}
+
+run-design-index .error-dialog-content table {
+    width:100%;
+}
+
+run-design-index .error-dialog-content table,
+run-design-index .error-dialog-content th,
+run-design-index .error-dialog-content td {
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+}
+run-design-index .error-dialog-content th,
+run-design-index .error-dialog-content td {
+    padding: 5px;
+    text-align: left;
+}
+run-design-index .error-dialog-content tr:nth-child(even) {
+    background-color: #eee;
+}
+run-design-index .error-dialog-content tr:nth-child(odd) {
+    background-color:#fff;
+}
+run-design-index .error-dialog-content th	{
+    background-color: #5b6770;
+    color: white;
+}
+run-design-index .error-dialog-content td:nth-child(2) {
+    text-align: center;
+}

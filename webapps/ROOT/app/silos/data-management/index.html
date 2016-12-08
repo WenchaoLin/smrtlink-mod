@@ -1,0 +1,50 @@
+<div class="titlebar-layout__titlebar">
+    <div class="container titlebar-layout__titlebar-container">
+        <h1 class="titlebar-layout__titlebar-title">{{ TEXT.SILO.DATA_MANAGEMENT }}</h1>
+    </div>
+</div>
+
+<div class="container titlebar-layout__container">
+    
+    <div class="buttons">
+        <button type="button"
+                class="btn btn-lg"
+                [routerLink]="['../SelectDatasets']"
+                [pbImprint]="STAMP.CREATE_DATASET">
+        </button>
+        <button class="btn btn-lg"
+                style="display: none;"
+                [pbImprint]="STAMP.IMPORT_DATASET"
+                (click)="dialog.show()">
+        </button>
+    </div>
+    
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="dataset-type">{{ TEXT.DATASET_TYPE }} </label>
+            <select id="dataset-type" class="form-control" [ngFormControl]="datasetTypeControl">
+                <option *ngFor="#datasetType of datasetTypes" [value]="stringify(datasetType)">{{ datasetType.title }}</option>
+            </select>
+        </div>
+    </form>
+    
+    <pb-catalog #catalog [pbArgs]="catalogArgs" (linkCellClick)="onLinkCellClick($event)">
+    </pb-catalog>
+    
+</div>
+
+<pb-file-chooser-modal #dialog
+                       okButtonIconClass="fa-upload"
+                       okButtonText="Import"
+                       rootPath="/pbi"
+                       [file-filter-fn]="fileFilterFn"
+                       (file-chosen)="fileChosen($event)"></pb-file-chooser-modal>
+
+<pb-modal-dialog>
+    <div class="content">
+        Error: {{errorMessage}}
+    </div>
+    <div class="buttons">
+        <button type="button" class="btn" (click)="closeModal()">Ok</button>
+    </div>
+</pb-modal-dialog>

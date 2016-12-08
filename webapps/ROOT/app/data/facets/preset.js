@@ -1,0 +1,15 @@
+/**
+ * @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc.
+ * @author <a href="mailto:bskinner@pacificbiosciences.com">Brian Skinner</a>
+ */
+"use strict";
+var facet_1 = require("../facets/facet");
+var preset_1 = require("../frames/preset");
+exports.PRESET_FACET = new facet_1.Facet({
+    frame: preset_1.PRESET_FRAME,
+    defaultColumns: ["id"],
+    additionalColumns: ["templateId"],
+    displayProperties: ["id", "templateId", "options", "taskOptions"]
+});
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9kYXRhL2ZhY2V0cy9wcmVzZXQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7OztHQUdHOztBQUVILHNCQUFvQixpQkFBaUIsQ0FBQyxDQUFBO0FBQ3RDLHVCQUEyQixrQkFBa0IsQ0FBQyxDQUFBO0FBRWpDLG9CQUFZLEdBQUcsSUFBSSxhQUFLLENBQUM7SUFDbEMsS0FBSyxFQUFFLHFCQUFZO0lBQ25CLGNBQWMsRUFBRSxDQUFDLElBQUksQ0FBQztJQUN0QixpQkFBaUIsRUFBRSxDQUFDLFlBQVksQ0FBQztJQUNqQyxpQkFBaUIsRUFBRSxDQUFDLElBQUksRUFBRSxZQUFZLEVBQUUsU0FBUyxFQUFFLGFBQWEsQ0FBQztDQUNwRSxDQUFDLENBQUMiLCJmaWxlIjoiYXBwL2RhdGEvZmFjZXRzL3ByZXNldC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQGNvcHlyaWdodCBDb3B5cmlnaHQgKGMpIDIwMTUsIFBhY2lmaWMgQmlvc2NpZW5jZXMgb2YgQ2FsaWZvcm5pYSwgSW5jLlxuICogQGF1dGhvciA8YSBocmVmPVwibWFpbHRvOmJza2lubmVyQHBhY2lmaWNiaW9zY2llbmNlcy5jb21cIj5CcmlhbiBTa2lubmVyPC9hPlxuICovXG5cbmltcG9ydCB7RmFjZXR9IGZyb20gXCIuLi9mYWNldHMvZmFjZXRcIjtcbmltcG9ydCB7UFJFU0VUX0ZSQU1FfSBmcm9tIFwiLi4vZnJhbWVzL3ByZXNldFwiO1xuXG5leHBvcnQgY29uc3QgUFJFU0VUX0ZBQ0VUID0gbmV3IEZhY2V0KHtcbiAgICBmcmFtZTogUFJFU0VUX0ZSQU1FLFxuICAgIGRlZmF1bHRDb2x1bW5zOiBbXCJpZFwiXSxcbiAgICBhZGRpdGlvbmFsQ29sdW1uczogW1widGVtcGxhdGVJZFwiXSxcbiAgICBkaXNwbGF5UHJvcGVydGllczogW1wiaWRcIiwgXCJ0ZW1wbGF0ZUlkXCIsIFwib3B0aW9uc1wiLCBcInRhc2tPcHRpb25zXCJdXG59KTtcbiJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==

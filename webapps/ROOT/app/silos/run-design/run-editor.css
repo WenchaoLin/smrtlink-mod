@@ -1,0 +1,19 @@
+form {
+    height: 100%;
+}
+
+.sidebar-layout__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.outset-container__header {
+    flex: 0 0 2.5rem;
+}
+
+.outset-container__control-container {
+    margin-left: -0.9375rem;
+    margin-right: -0.9375rem;
+    overflow: auto;
+    padding: 0.625rem 0.9375rem;
+}

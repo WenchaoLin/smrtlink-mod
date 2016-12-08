@@ -1,0 +1,16 @@
+<div class="pb-accordion panel panel-default">
+    <div class="panel-heading col-xs-12">
+      <div class="panel-title">
+          <div *ngIf="!customHeader">{{title}}</div>
+          <div *ngIf="customHeader" ><ng-content select=".pb-header"></ng-content></div>
+      </div>
+      <div (click)="toggle()" class="pb-accordion-chevron" [innerHTML]="expanded ? '&#9660;' : '&#9654;'"></div>
+    </div>
+    <div [hidden]="!expanded" class="panel-body">
+      <ng-content select=".pb-body"></ng-content>
+    </div>
+    <div [hidden]="(!showFooterWhenCollapsed) ? !expanded : false" class="panel-footer">
+        <div *ngIf="!customFooter">{{footer}}</div>
+        <div *ngIf="customFooter"><ng-content select=".pb-footer"></ng-content></div>
+    </div>
+</div>

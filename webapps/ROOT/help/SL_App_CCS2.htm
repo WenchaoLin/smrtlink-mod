@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Circular Consensus Sequencing (CCS 2) Application</title>
+<link rel="StyleSheet" href="PacBio.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("SL_Home.htm", "", "&gt;", "Home", "SL_Home_1.htm");
+document.write("Circular Consensus Sequencing (CCS 2) Application<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('SL_Home.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<h2 style="border-bottom-style: Solid; border-bottom-width: 1px; font-size: 14pt;"><span style="font-size: 14pt; "><font size="4" style="font-size:14pt;">SMRT 
+	 Analysis Help</font></span></h2>
+</div>
+<h1>Circular Consensus Sequencing &#160;(CCS 2) Application </h1>
+<p>Use this application to identify consensus sequences for single molecules.</p>
+<p>&#160;</p>
+<table class="PacBioColor" cellspacing="0px" width="56.972%">
+	<col style="width: 31.966%;" />
+	<col style="width: 8.905%;" />
+	<col style="width: 59.129%;" />
+	<tr class="t1st">
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Required 
+		 Parameters</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">Default 
+		 Value</p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Description</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-size: 10pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">Minimum 
+		 Number of Passes</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">3</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif;">The 
+		 minimum number of <span style="font-weight: bold;">full</span> 
+		 passes for a ZMW to be emitted. Full passes <span style="font-weight: bold;">must</span> 
+		 have an adapter hit before and after the insert sequence and so 
+		 does not include any partial passes at the start and end of the 
+		 sequencing reaction.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-size: 10pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">Minimum 
+		 Predicted Accuracy</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">0.9</p></td>
+		<td style="vertical-align: Top;"><span style="font-size: 10pt; 
+												 font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">The 
+		 </font></span><span style="font-size: 10pt; font-weight: bold; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">minimum</font></span><span 
+		 style="font-size: 10pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;"> predicted 
+		 accuracy of a read, ranging from 0 to 1. (0.99 indicates that 
+		 only reads expected to be 99% accurate are emitted.)</font></span></td>
+	</tr>
+</table>
+<p style="font-weight: normal;">&#160;</p>
+<table class="PacBioColor" cellspacing="0px" width="56.776%">
+	<col style="width: 32.077%;" />
+	<col style="width: 8.936%;" />
+	<col style="width: 58.988%;" />
+	<tr class="t1st">
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Advanced 
+		 Analysis Parameters - CCS</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">Default 
+		 Value</p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Description</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-size: 10pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">Minimum 
+		 Z Score</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">-5</p></td>
+		<td style="vertical-align: Top;"><span style="font-size: 10pt; 
+												 font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">The 
+		 minimum Z-Score for a subread to be included in the consensus 
+		 generating process.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><p style="font-weight: bold; font-family: Arial, sans-serif;">Maximum 
+		 Subread Length</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">7000</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif;">The 
+		 maximum length for the median size of insert reads to generate 
+		 a consensus sequence. If the targeted template is known to be 
+		 a particular size range, this can filter out alternative DNA templates.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><p style="font-weight: bold; font-family: Arial, sans-serif;">By 
+		 Strand CCS</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">OFF</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif;">For 
+		 each ZMW, generate two CCS sequences - one for each strand.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><p style="font-weight: bold; font-family: Arial, sans-serif;">Minimum 
+		 Subread Length</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">10</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif;">The 
+		 minimum length for the median size of insert reads to generate 
+		 a consensus sequence. If the targeted template is known to be 
+		 a particular size range, this can filter out alternative DNA templates.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-size: 10pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">Minimum 
+		 Read Score</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">0.65</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif;">The 
+		 minimum read score of input subreads.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; 
+												 font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;">Maximum 
+		 Dropped Fraction</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">0.34</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif;">The 
+		 maximum fraction of subreads that can be dropped before giving 
+		 up.</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-size: 10pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">Minimum 
+		 SNR</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">3.75</p></td>
+		<td style="vertical-align: Top;"><span style="font-size: 10pt; 
+												 font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">The 
+		 minimum required signal-to-noise ratio (SNR) for any of the four 
+		 channels. Data with SNR &lt; 3.75 is typically considered lower 
+		 quality.</font></span></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-size: 10pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">No 
+		 Polish CCS</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">OFF</p></td>
+		<td style="vertical-align: Top;"><span style="font-size: 10pt; 
+												 font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">Specify 
+		 whether or not to polish CCS reads using Arrow.</font></span></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 10pt; border-top-style: Solid; border-top-width: 1px;"><span style="font-size: 10pt; "><font size="2" style="font-size:10pt;"><a 
+	 href="SL_Legal.htm">Legal Information</a> &#160;&#160;&#160;&#160;&#160;12-May-16</font></span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

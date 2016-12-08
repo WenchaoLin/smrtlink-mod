@@ -1,0 +1,18 @@
+/**
+ * Copyright (c) 2015, Pacific Biosciences of California
+ *
+ * Created by Sal Sanfilippo <ssanfilippo@pacificbiosciences.com> on 3/28/16.
+ */
+
+pb-tree-leaf {
+}
+
+span.icon-leaf {
+    font-size: 16px;
+    cursor:pointer;
+}
+
+span.icon-leaf i {
+    margin-right: 5px;
+    color: rgba(251, 198, 123, 0.61);
+}

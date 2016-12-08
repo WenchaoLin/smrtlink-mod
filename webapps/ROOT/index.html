@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SMRT Link</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta name="description" content="SMRT Link">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="static/images/favicon.ico?v=3.1.1.182868" type="image/x-icon?v=3.1.1.182868">
+    <link rel="shortcut icon" href="static/images/favicon.ico?v=3.1.1.182868" type="image/x-icon">
+
+    <link rel="stylesheet" href="app/css/main.css?v=3.1.1.182868">
+
+    <script>
+        if (window.navigator.userAgent.indexOf('Chrome/') === -1) {
+            window.alert('Sorry, SMRT Link 1.0 only runs in Chrome right now');
+            window.location = 'https://www.google.com/chrome/browser/';
+        }
+    </script>
+    <script>
+        if (typeof window.fetch === "undefined") {
+            window.alert('Sorry, SMRT Link 1.0 requries a less outdated version of Chrome. Please install Chrome 43 or newer.');
+            window.location = 'https://www.google.com/chrome/browser/';
+        }
+    </script>
+</head>
+<body>
+    <!-- inject:js -->
+    <script src="lib/es6-shim.js?v=3.1.1.182868"></script>
+    <script src="lib/extensions.js?v=3.1.1.182868"></script>
+    <script src="lib/system.src.js?v=3.1.1.182868"></script>
+    <script src="system.config.js?v=3.1.1.182868"></script>
+    <script src="lib/zone.js?v=3.1.1.182868"></script>
+    <script src="lib/long-stack-trace-zone.js?v=3.1.1.182868"></script>
+    <script src="lib/Reflect.js?v=3.1.1.182868"></script>
+    <script src="lib/Rx.js?v=3.1.1.182868"></script>
+    <script src="lib/angular2.dev.js?v=3.1.1.182868"></script>
+    <script src="lib/router.dev.js?v=3.1.1.182868"></script>
+    <script src="lib/http.dev.js?v=3.1.1.182868"></script>
+    <script src="lib/ag-grid/angular-grid.js?v=3.1.1.182868"></script>
+    <script src="api-server.config.json.js?v=3.1.1.182868"></script>
+    <script src="lib/papaparse.min.js?v=3.1.1.182868"></script>
+    <!-- endinject -->
+    <script>
+        System.import("app/main")
+              .catch(function(err) { console.log(err); });
+    </script>
+    <pb-app>Loading...</pb-app>
+</body>
+</html>

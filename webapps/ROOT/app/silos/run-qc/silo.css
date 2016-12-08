@@ -1,0 +1,50 @@
+run-qc > .titlebar-layout__container > .container {
+    height: 100%;
+}
+
+run-qc .silo-buttons {
+    float: right;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+run-qc .silo-buttons button {
+    margin-left: 0.7rem;
+}
+
+run-qc .status-container {
+    float: right;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+run-qc .run-status {
+    float: right;
+    font-size: 1.1875rem;
+    font-weight: bold;
+    height: 100%;
+    line-height: 1.875rem;
+    text-transform: uppercase;
+}
+
+run-qc .run-status-complete {
+    color: darkgreen;
+}
+
+run-qc .run-status-terminated {
+    color: red;
+}
+
+run-qc .run-status-aborted {
+    color: orange;
+}
+
+run-qc .run-status-running {
+    color: blue;
+}
+
+

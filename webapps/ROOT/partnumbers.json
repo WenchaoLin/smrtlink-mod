@@ -1,0 +1,506 @@
+{
+    "version": "3.0.0005",
+    "typeMap": {
+        "WFA": "Workflow Automation",
+        "BDK": "Binding Kit",
+        "TPK": "Template Prep Kit",
+        "SQK": "Sequencing Kit",
+        "CPK": "Cell Pack",
+        "OSE": "OS Enzyme",
+        "CMO": "Cell Mineral Oil"
+    },
+    "parts": [
+        {
+            "Name": "Workflow_ManualCellPrep",
+            "Description": "Manual automation workflow",
+            "Tags": "Automation, WFA",
+            "Version": "3.0",
+            "PartNumber": "WFA-300-000-001",
+            "IsRestricted": false,
+            "IsObsolete": false
+        },
+        {
+            "Name": "Workflow_CellQc",
+            "Description": "Cell quality control automation workflow",
+            "Tags": "Automation, WFA",
+            "Version": "3.0",
+            "PartNumber": "WFA-300-000-002",
+            "IsRestricted": true,
+            "IsObsolete": false
+        },
+        {
+            "Name": "Workflow_Magbead",
+            "Description": "Magbead loading automation workflow",
+            "Tags": "Automation, WFA",
+            "Version": "3.0",
+            "PartNumber": "WFA-300-000-003",
+            "IsRestricted": false,
+            "IsObsolete": false
+        },
+        {
+            "Name": "Workflow_Diffusion",
+            "Description": "Diffusion loading automation workflow",
+            "Tags": "Automation, WFA",
+            "Version": "3.0",
+            "PartNumber": "WFA-300-000-004",
+            "IsRestricted": false,
+            "IsObsolete": false
+        },
+        {
+            "Name": "Sequel™ Binding Kit 1.0",
+            "Description": "The Sequel Binding Kit 1.0 contains reagent supplies to bind prepared DNA template libraries to the Sequel Polymerase 1.0 in preparation for sequencing on the Sequel System. The result is a DNA polymerase/template complex. Sequel Binding Kit 1.0 should be used only with Sequel Sequencing Kit 1.0. Reagent quantities support 24 binding reactions.",
+            "Tags": "Binding Kit, BDK",
+            "Version": "1.0",
+            "PartNumber": "BDK-100-619-300",
+            "IsObsolete": false
+        },
+        {
+            "Name": "Sequel™ Binding Kit 1.1",
+            "Description": "The Sequel Binding Kit 1.1 contains reagent supplies to bind prepared DNA template libraries to the Sequel Polymerase 1.0 in preparation for sequencing on the Sequel System. The result is a DNA polymerase/template complex. Sequel Binding Kit 1.0 should be used only with Sequel Sequencing Kit 1.0. Reagent quantities support 24 binding reactions.",
+            "Tags": "Binding Kit, BDK",
+            "Version": "1.0",
+            "PartNumber": "BDK-100-867-500",
+            "IsObsolete": false
+        },
+        {
+            "Name": "Sequel™ Binding Kit 1.1",
+            "Description": "The Sequel Binding Kit 1.1 contains reagent supplies to bind prepared DNA template libraries to the Sequel Polymerase 1.0 in preparation for sequencing on the Sequel System. The result is a DNA polymerase/template complex. Sequel Binding Kit 1.0 should be used only with Sequel Sequencing Kit 1.0. Reagent quantities support 24 binding reactions.",
+            "Tags": "Binding Kit, BDK",
+            "Version": "1.0",
+            "PartNumber": "BDK-100-867-400",
+            "IsObsolete": false
+        },
+        {
+            "Name": "Sequel™ Binding Kit 2.0",
+            "Description": "The Sequel Binding Kit 2.0 contains reagent supplies to bind prepared DNA template libraries to the Sequel Polymerase 1.0 in preparation for sequencing on the Sequel System. The result is a DNA polymerase/template complex. Sequel Binding Kit 1.0 should be used only with Sequel Sequencing Kit 1.0. Reagent quantities support 24 binding reactions.",
+            "Tags": "Binding Kit, BDK",
+            "Version": "1.0",
+            "PartNumber": "BDK-100-864-400",
+            "IsObsolete": false
+        },
+        {
+            "Name": "Sequel™ Binding Kit 2.0",
+            "Description": "The Sequel Binding Kit 2.0 contains reagent supplies to bind prepared DNA template libraries to the Sequel Polymerase 1.0 in preparation for sequencing on the Sequel System. The result is a DNA polymerase/template complex. Sequel Binding Kit 1.0 should be used only with Sequel Sequencing Kit 1.0. Reagent quantities support 24 binding reactions.",
+            "Tags": "Binding Kit, BDK",
+            "Version": "1.0",
+            "PartNumber": "BDK-100-862-200",
+            "IsObsolete": false
+        },
+        {
+            "Name": "Sequel™ Binding Kit 2.1",
+            "Description": "The Sequel Binding Kit 2.1 contains reagent supplies to bind prepared DNA template libraries to the Sequel Polymerase 1.0 in preparation for sequencing on the Sequel System. The result is a DNA polymerase/template complex. Sequel Binding Kit 1.0 should be used only with Sequel Sequencing Kit 1.0. Reagent quantities support 24 binding reactions.",
+            "Tags": "Binding Kit, BDK",
+            "Version": "1.0",
+            "PartNumber": "BDK-100-864-600",
+            "IsObsolete": false
+        },
+        {
+            "Name": "Sequel™ Binding Kit 2.1",
+            "Description": "The Sequel Binding Kit 2.1 contains reagent supplies to bind prepared DNA template libraries to the Sequel Polymerase 1.0 in preparation for sequencing on the Sequel System. The result is a DNA polymerase/template complex. Sequel Binding Kit 1.0 should be used only with Sequel Sequencing Kit 1.0. Reagent quantities support 24 binding reactions.",
+            "Tags": "Binding Kit, BDK",
+            "Version": "1.0",
+            "PartNumber": "BDK-100-864-500",
+            "IsObsolete": false
+        },
+        {
+            "Name": "SMRTbell™ Template Prep Kit",
+            "Description": "The SMRTbell™ Template Prep Kit contains reagent supplies to perform SMRTbell library preparations of primer-annealed SMRTbell libraries for insert sizes ranging from 500 bp to over 20 kb.",
+            "Tags": "Template Prep Kit, TPK",
+            "Version": "1.0",
+            "PartNumber": "TPK-100-259-100",
+            "MinInsertSize": 500,
+            "MaxInsertSize": 20000,
+            "IsObsolete": false,
+            "LeftAdaptorSequence": "ATCTCTCTCAACAACAACAACGGAGGAGGAGGAAAAGAGAGAGAT",
+            "LeftPrimerSequence": "aacggaggaggagga",
+            "RightAdaptorSequence": "ATCTCTCTCAACAACAACAACGGAGGAGGAGGAAAAGAGAGAGAT",
+            "RightPrimerSequence": "aacggaggaggagga"
+        },
+        {
+            "Name": "SMRTbell™ Asym Template Prep 1.0",
+            "Description": "Auxilliary kit for generating asymmetric templates, used in conjunction with template prep kit 1.0",
+            "Tags": "Template Prep Kit, TPK",
+            "Version": "1.0",
+            "PartNumber": "TPK-100-902-400",
+            "MinInsertSize": 500,
+            "MaxInsertSize": 20000,
+            "IsObsolete": false,
+            "LeftAdaptorSequence": "ATCTCTCTCAATTTTTTTTTTTTTTTTTTTTTTTAAGAGAGAGAT",
+            "LeftPrimerSequence": "aacggaggaggagga",
+            "RightAdaptorSequence": "ATCTCTCTCAACAACAACAACGGAGGAGGAGGAAAAGAGAGAGAT",
+            "RightPrimerSequence": "aacggaggaggagga"
+        },
+        {
+            "Name": "SMRTbell™ HT Template Prep Kit",
+            "Description": "The SMRTbell HT Template Prep Kit contains reagent supplies to perform 96 automated SMRTbell non-size-selected library preparations of primer-annealed SMRTbell libraries for insert sizes ranging from 500 bp to over 20 kb. Reagents come in 4 x 24 reaction sets.",
+            "Tags": "Template Prep Kit, TPK",
+            "Version": "1.0",
+            "PartNumber": "TPK-100-286-300",
+            "MinInsertSize": 500,
+            "MaxInsertSize": 20000,
+            "IsObsolete": false,
+            "LeftAdaptorSequence": "ATCTCTCTCAACAACAACAACGGAGGAGGAGGAAAAGAGAGAGAT",
+            "LeftPrimerSequence": "aacggaggaggagga",
+            "RightAdaptorSequence": "ATCTCTCTCAACAACAACAACGGAGGAGGAGGAAAAGAGAGAGAT",
+            "RightPrimerSequence": "aacggaggaggagga"
+        },
+        {
+            "Name": "SMRTbell™ Barcoded Adapter Prep-96",
+            "Description": "The SMRTbell Barcoded Adapter Complete Prep Kit- 96 contains both SMRTbell Barcoded Adapter Prep Kit and Barcoded Adapter Plate - 96. Reagent quantities support 96 complete Barcoded Adapter End Repair and Ligation reactions. Use with SMRTbell Damage Repair Kit to complete template preparation and yield primer-annealed SMRTbell libraries.",
+            "Tags": "Template Prep Kit, TPK",
+            "Version": "1.0",
+            "PartNumber": "TPK-100-514-900",
+            "MinInsertSize": 500,
+            "MaxInsertSize": 20000,
+            "IsObsolete": false,
+            "LeftAdaptorSequence": "ATCTCTCTCAACAACAACAACGGAGGAGGAGGAAAAGAGAGAGAT",
+            "LeftPrimerSequence": "aacggaggaggagga",
+            "RightAdaptorSequence": "ATCTCTCTCAACAACAACAACGGAGGAGGAGGAAAAGAGAGAGAT",
+            "RightPrimerSequence": "aacggaggaggagga"
+        },
+        {
+            "Name": "Sequel™ Sequencing Plate 1.0",
+            "Description": "The DNA Sequencing Kit contains a sequencing reagent plate with chemistry for single molecule real-time sequencing on the PacBio RS. Reagent quantities support 8 sequencing reactions to be used in conjunction with SMRT® Cell 4Pac(s).  (8 Cells max/Each Row supplies reagents for 1 Sequel SMRT Cell)",
+            "Tags": "Sequencing Kit, SQK",
+            "Version": "1.0",
+            "PartNumber": "SQK-100-620-000",
+            "IsObsolete": true,
+            "MaxCollections": 8
+        },
+        {
+            "Name": "Sequel™ Sequencing Plate 1.1",
+            "Description": "The DNA Sequencing Kit contains a sequencing reagent plate with chemistry for single molecule real-time sequencing on the PacBio RS. Reagent quantities support 8 sequencing reactions to be used in conjunction with SMRT® Cell 4Pac(s).  (8 Cells max/Each Row supplies reagents for 1 Sequel SMRT Cell)",
+            "Tags": "Sequencing Kit, SQK",
+            "Version": "1.0",
+            "PartNumber": "SQK-100-867-300",
+            "IsObsolete": true,
+            "MaxCollections": 8
+        },
+        {
+            "Name": "Sequel™ Sequencing Plate 1.1",
+            "Description": "The DNA Sequencing Kit contains a sequencing reagent plate with chemistry for single molecule real-time sequencing on the PacBio RS. Reagent quantities support 8 sequencing reactions to be used in conjunction with SMRT® Cell 4Pac(s).  (8 Cells max/Each Row supplies reagents for 1 Sequel SMRT Cell)",
+            "Tags": "Sequencing Kit, SQK",
+            "Version": "1.0",
+            "PartNumber": "SQK-100-861-700",
+            "IsObsolete": true,
+            "MaxCollections": 8
+        },
+        {
+            "Name": "Sequel™ Sequencing Plate 1.2",
+            "Description": "The DNA Sequencing Kit contains a sequencing reagent plate with chemistry for single molecule real-time sequencing on the PacBio RS. Reagent quantities support 8 sequencing reactions to be used in conjunction with SMRT® Cell 4Pac(s).  (8 Cells max/Each Row supplies reagents for 1 Sequel SMRT Cell)",
+            "Tags": "Sequencing Kit, SQK",
+            "Version": "1.0",
+            "PartNumber": "SQK-100-902-100",
+            "IsObsolete": false,
+            "MaxCollections": 8
+        },
+        {
+            "Name": "Sequel™ DNA Internal Control 1.0",
+            "Description": "The Sequel DNA Internal Control 1.0 contains a fixed template of 2 kb length bound to Sequel Binding Kit 1.0 for use as an internal sequencing control. Reagent quantities provide spike-in controls for a minimum of 24 samples.",
+            "Tags": "Control Kit, CCK",
+            "Version": "1.0",
+            "PartNumber": "CCK-100-619-900",
+            "IsObsolete": false
+        },
+        {
+            "Name": "Sequel™ SMRT®Cell Control Complex 1.0",
+            "Description": "The Sequel SMRT Cell Control Complex 1.0 contains Lambda library DNA template sheared to a peak size of 2 kb and bound to Sequel Binding Kit 1.0. It acts as a complete Sequel SMRT Cell control.",
+            "Version": "1.0",
+            "PartNumber": "CCK-100-620-100",
+            "IsObsolete": false
+        },
+        {
+            "Name": "SMRT®Cell 1M (4/Pack)",
+            "Description": "The Sequel SMRT Cell 1M (4/Pack) are nanofabricated consumables each patterned with 1,000,000 wells called zero-mode waveguides (ZMWs). They are packaged together in a streamlined 4 SMRT Cell format (4/tray). One SMRT Cell is utilized in each sequencing reaction, and experiments can be run in single or in batch mode, giving your projects a greater level of flexibility.",
+            "Tags": "Cell Pack, CPK",
+            "Version": "1.0",
+            "PartNumber": "CPK-100-513-100",
+            "IsObsolete": false,
+            "SupportsCellReuse": false
+        },
+        {
+            "Name": "SMRT®Cell 1M, Partial External",
+            "Description": "Individual partial Pack containing 1 - 3 SMRT®Cells each containing 1 million ZMWs",
+            "Tags": "Cell Pack, CPK",
+            "Version": "1.0",
+            "PartNumber": "CPK-100-513-200",
+            "IsObsolete": false,
+            "SupportsCellReuse": false
+        },
+        {
+            "Name": "SMRT®Cell 1M, Full Internal",
+            "Description": "Individual 4 Pack containing 4 SMRT®Cells each containing 1 million ZMWs",
+            "Tags": "Cell Pack, CPK",
+            "Version": "1.0",
+            "PartNumber": "CPK-100-512-700",
+            "IsObsolete": false,
+            "SupportsCellReuse": false,
+            "IsRestricted": true
+        },
+        {
+            "Name": "SMRT®Cell 1M, Partial Internal",
+            "Description": "Individual 4 Pack containing 4 SMRT®Cells each containing 1 million ZMWs",
+            "Tags": "Cell Pack, CPK",
+            "Version": "1.0",
+            "PartNumber": "CPK-100-512-800",
+            "IsObsolete": false,
+            "SupportsCellReuse": false,
+            "IsRestricted": true
+        },
+        {
+            "Name": "SMRT®Cell 1M, Functional Test",
+            "Description": "",
+            "Tags": "Cell Pack, CPK",
+            "Version": "1.0",
+            "PartNumber": "CPK-100-514-000",
+            "IsObsolete": false,
+            "SupportsCellReuse": false
+        },
+        {
+            "Name": "SMRT®Cell 1M, Mechanical",
+            "Description": "",
+            "Tags": "Cell Pack, CPK",
+            "Version": "1.0",
+            "PartNumber": "CPK-100-692-600",
+            "IsObsolete": false,
+            "SupportsCellReuse": false
+        },
+        {
+            "Name": "Sequel™ OS Enzyme",
+            "Description": "OS Enzyme is currently packaged with the Sequel Sequencing Kit 1.0.",
+            "Tags": "OS Enzyme, OSE",
+            "Version": "1.0",
+            "PartNumber": "OSE-100-619-700",
+            "IsObsolete": false,
+            "MaxCollections": 8
+        },
+        {
+            "Name": "Sequel™ SMRT®Cell Oil",
+            "Description": "SMRT®Cell Oil packaged in 2 mL tubes.",
+            "Tags": "Cell Mineral Oil, CMO",
+            "Version": "1.0",
+            "PartNumber": "CMO-100-619-600",
+            "IsObsolete": false,
+            "MaxCollections": 8
+        }
+    ],
+    "incompatibleParts": [
+        {
+            "Name": "Incompatibility 1",
+            "Description": "Manual automation workflow is incompatible with Sequel Binding Kit v1",
+            "Version": "3.0",
+            "PartA": "WFA-300-000-001",
+            "PartB": "BDK-100-619-300"
+        },
+        {
+            "Name": "CellQc Reagent Incompatibility v1",
+            "Description": "CellQc is incompatible with Sequel Reagent Plate v1",
+            "Version": "3.0",
+            "PartA": "WFA-300-000-002",
+            "PartB": "SQK-100-620-000"
+        },
+        {
+            "Name": "CellQc Reagent Incompatibility v1.1 1",
+            "Description": "CellQc is incompatible with Sequel Reagent Plate v1",
+            "Version": "3.0",
+            "PartA": "WFA-300-000-002",
+            "PartB": "SQK-100-867-300"
+        },
+        {
+            "Name": "CellQc Reagent Incompatibility v1.1 2",
+            "Description": "CellQc is incompatible with Sequel Reagent Plate v1",
+            "Version": "3.0",
+            "PartA": "WFA-300-000-002",
+            "PartB": "SQK-100-861-700"
+        },
+        {
+            "Name": "CellQc Reagent Incompatibility v2.0 1",
+            "Description": "CellQc is incompatible with Sequel Reagent Plate v1",
+            "Version": "3.0",
+            "PartA": "WFA-300-000-002",
+            "PartB": "SQK-100-864-100"
+        },
+        {
+            "Name": "CellQc Reagent Incompatibility v2.0 2",
+            "Description": "CellQc is incompatible with Sequel Reagent Plate v1",
+            "Version": "3.0",
+            "PartA": "WFA-300-000-002",
+            "PartB": "SQK-100-861-800"
+        },
+        {
+            "Name": "CellQc Reagent Incompatibility v2.1 1",
+            "Description": "CellQc is incompatible with Sequel Reagent Plate v1",
+            "Version": "3.0",
+            "PartA": "WFA-300-000-002",
+            "PartB": "SQK-100-864-200"
+        },
+        {
+            "Name": "CellQc Reagent Incompatibility v2.1 2",
+            "Description": "CellQc is incompatible with Sequel Reagent Plate v1",
+            "Version": "3.0",
+            "PartA": "WFA-300-000-002",
+            "PartB": "SQK-100-861-900"
+        },
+        {
+            "Name": "CellQc OS Enzyme Incompatibility",
+            "Description": "CellQc is incompatible with Sequel OS Enzyme",
+            "Version": "3.0",
+            "PartA": "WFA-300-000-002",
+            "PartB": "OSE-100-619-700"
+        },
+        {
+            "Name": "CellQc Oil Incompatibility",
+            "Description": "CellQc is incompatible with Sequel Mineral Oil",
+            "Version": "3.0",
+            "PartA": "WFA-300-000-002",
+            "PartB": "CMO-100-619-600"
+        },
+        {
+            "Name": "Incompatibility 2",
+            "Description": "...",
+            "Version": "3.0",
+            "PartA": "CPK-100-514-000",
+            "PartB": "WFA-300-000-001"
+        },
+        {
+            "Name": "SQK v1/v1.1 Incompatibility 1",
+            "Description": "Sequencing Kit Incompatibility v1 and v1.1",
+            "Version": "3.0",
+            "PartA": "SQK-100-620-000",
+            "PartB": "SQK-100-867-300"
+        },
+        {
+            "Name": "SQK v1/v1.1 Incompatibility 2",
+            "Description": "Sequencing Kit Incompatibility v1 and v1.1",
+            "Version": "3.0",
+            "PartA": "SQK-100-620-000",
+            "PartB": "SQK-100-861-700"
+        },
+        {
+            "Name": "BDK v1/v1.1 Incompatibility 1",
+            "Description": "Binding Kit Incompatibility v1 and v1.1",
+            "Version": "3.0",
+            "PartA": "BDK-100-619-300",
+            "PartB": "BDK-100-867-500"
+        },
+        {
+            "Name": "BDK v1/v1.1 Incompatibility 2",
+            "Description": "Binding Kit Incompatibility v1 and v1.1",
+            "Version": "3.0",
+            "PartA": "BDK-100-619-300",
+            "PartB": "BDK-100-867-400"
+        },
+        {
+            "Name": "BDK v1/v2.0 Incompatibility 1",
+            "Description": "Binding Kit Incompatibility v1 and v2.0",
+            "Version": "3.0",
+            "PartA": "BDK-100-619-300",
+            "PartB": "BDK-100-864-400"
+        },
+        {
+            "Name": "BDK v1/v2.0 Incompatibility 2",
+            "Description": "Binding Kit Incompatibility v1 and v2.0",
+            "Version": "3.0",
+            "PartA": "BDK-100-619-300",
+            "PartB": "BDK-100-862-200"
+        },
+        {
+            "Name": "BDK v1/v2.1 Incompatibility 1",
+            "Description": "Binding Kit Incompatibility v1 and v2.1",
+            "Version": "3.0",
+            "PartA": "BDK-100-619-300",
+            "PartB": "BDK-100-864-600"
+        },
+        {
+            "Name": "BDK v1/v2.1 Incompatibility 2",
+            "Description": "Binding Kit Incompatibility v1 and v2.1",
+            "Version": "3.0",
+            "PartA": "BDK-100-619-300",
+            "PartB": "BDK-100-864-500"
+        },
+        {
+            "Name": "BDK v1.1/v2.0 Incompatibility 1",
+            "Description": "Sequencing Kit Incompatibility v1.1 and v2.0",
+            "Version": "3.0",
+            "PartA": "BDK-100-867-500",
+            "PartB": "BDK-100-864-400"
+        },
+        {
+            "Name": "BDK v1.1/v2.0 Incompatibility 2",
+            "Description": "Sequencing Kit Incompatibility v1.1 and v2.0",
+            "Version": "3.0",
+            "PartA": "BDK-100-867-500",
+            "PartB": "BDK-100-862-200"
+        },
+        {
+            "Name": "BDK v1.1/v2.0 Incompatibility 3",
+            "Description": "Sequencing Kit Incompatibility v1.1 and v2.0",
+            "Version": "3.0",
+            "PartA": "BDK-100-867-400",
+            "PartB": "BDK-100-864-400"
+        },
+        {
+            "Name": "BDK v1.1/v2.0 Incompatibility 4",
+            "Description": "Sequencing Kit Incompatibility v1.1 and v2.0",
+            "Version": "3.0",
+            "PartA": "BDK-100-867-400",
+            "PartB": "BDK-100-862-200"
+        },
+        {
+            "Name": "BDK v1.1/v2.1 Incompatibility 1",
+            "Description": "Sequencing Kit Incompatibility v1.1 and v2.1",
+            "Version": "3.0",
+            "PartA": "BDK-100-867-500",
+            "PartB": "BDK-100-864-600"
+        },
+        {
+            "Name": "BDK v1.1/v2.1 Incompatibility 2",
+            "Description": "Sequencing Kit Incompatibility v1.1 and v2.1",
+            "Version": "3.0",
+            "PartA": "BDK-100-867-500",
+            "PartB": "BDK-100-864-500"
+        },
+        {
+            "Name": "BDK v1.1/v2.1 Incompatibility 3",
+            "Description": "Sequencing Kit Incompatibility v1.1 and v2.1",
+            "Version": "3.0",
+            "PartA": "BDK-100-867-400",
+            "PartB": "BDK-100-864-600"
+        },
+        {
+            "Name": "BDK v1.1/v2.1 Incompatibility 4",
+            "Description": "Sequencing Kit Incompatibility v1.1 and v2.1",
+            "Version": "3.0",
+            "PartA": "BDK-100-867-400",
+            "PartB": "BDK-100-864-500"
+        },
+        {
+            "Name": "BDK v2.0/v2.1 Incompatibility 1",
+            "Description": "Sequencing Kit Incompatibility v2.0 and v2.1",
+            "Version": "3.0",
+            "PartA": "BDK-100-864-400",
+            "PartB": "BDK-100-864-600"
+        },
+        {
+            "Name": "BDK v2.0/v2.1 Incompatibility 2",
+            "Description": "Sequencing Kit Incompatibility v2.0 and v2.1",
+            "Version": "3.0",
+            "PartA": "BDK-100-864-400",
+            "PartB": "BDK-100-864-500"
+        },
+        {
+            "Name": "BDK v2.0/v2.1 Incompatibility 3",
+            "Description": "Sequencing Kit Incompatibility v2.0 and v2.1",
+            "Version": "3.0",
+            "PartA": "BDK-100-862-200",
+            "PartB": "BDK-100-864-600"
+        },
+        {
+            "Name": "BDK v2.0/v2.1 Incompatibility 4",
+            "Description": "Sequencing Kit Incompatibility v2.0 and v2.1",
+            "Version": "3.0",
+            "PartA": "BDK-100-862-200",
+            "PartB": "BDK-100-864-500"
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+[
+    {
+        "Name": "Manual",
+        "Description": "Manual and QC workflow constrains",
+        "SupportsCellReuse": true,
+        "SupportsStageStart": true,
+        "MaxCollectionsPerCell": 4,
+        "MinMovieLength": 1,
+        "MaxMovieLength": 360,
+        "MinInsertSize": 500,
+        "MaxInsertSize": 30000,
+        "Automations": [
+            "WFA-300-000-001",
+            "WFA-300-000-002"
+        ]
+    },
+    {
+        "Name": "Magbead",
+        "Description": "Magbead workflow constrains",
+        "SupportsCellReuse": true,
+        "SupportsStageStart": true,
+        "MaxCollectionsPerCell": 4,
+        "MinMovieLength": 1,
+        "MaxMovieLength": 360,
+        "MinInsertSize": 2000,
+        "MaxInsertSize": 20000,
+        "Automations": [
+            "WFA-300-000-003"
+        ]
+    },
+    {
+        "Name": "Diffusion",
+        "Description": "Diffusion workflow constrains",
+        "SupportsCellReuse": true,
+        "SupportsStageStart": true,
+        "MaxCollectionsPerCell": 4,
+        "MinMovieLength": 1,
+        "MaxMovieLength": 360,
+        "MinInsertSize": 500,
+        "MaxInsertSize": 2000,
+        "Automations": [
+            "WFA-300-000-004"
+        ]
+    },
+    {
+        "Name": "All",
+        "Description": "Sequel workflow constrains",
+        "SupportsCellReuse": false,
+        "SupportsStageStart": true,
+        "MaxCollectionsPerCell": 1,
+        "MinMovieLength": 1,
+        "MaxMovieLength": 360,
+        "MinInsertSize": 500,
+        "MaxInsertSize": 40000,
+        "Automations": [
+            "WFA-300-000-001",
+            "WFA-300-000-002",
+            "WFA-300-000-003",
+            "WFA-300-000-004"
+        ]
+    }
+]

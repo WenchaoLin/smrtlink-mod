@@ -1,0 +1,35 @@
+pb-info {
+    display: inline-block;
+}
+
+.pb-info__icon {
+    display: inline-block;
+    font: normal normal normal 1rem/1rem FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.pb-info__icon:before{
+    content:"\f05a"; /* Info circle */
+}
+
+.pb-info__info {
+    background: #253746;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    color: #a4a9ae;
+    display: block;
+    padding: 0.625rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.pb-info__info_offscreen {
+    left: -99999px;
+    top: -99999px;
+}
+
+.pb-info__info_hidden {
+    display: none;
+}

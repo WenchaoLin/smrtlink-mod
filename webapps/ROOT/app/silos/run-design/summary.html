@@ -1,0 +1,41 @@
+<div class="sidebar-layout__container">
+    <div class="sidebar-layout__sidebar outset-container">
+        <div class="outset-container__header">Run Information</div>
+        <div class="outset-container__control-container">
+            <div class="outset-container__control-group">
+                <label>Run Name</label>
+                <div class="info-value">{{ run?.runName }}</div>
+            </div>
+            <div class="outset-container__control-group">
+                <label>Run Comments</label>
+                <div class="info-value">{{ run?.runComments }}</div>
+            </div>
+            <div class="outset-container__control-group">
+                <label>Experiment Name</label>
+                <div class="info-value">{{ run?.experimentName }}</div>
+            </div>
+            <div class="outset-container__control-group">
+                <label>Experiment Id</label>
+                <div class="info-value">{{ run?.experimentId }}</div>
+            </div>
+        </div>
+        <div class="outset-container__header">Run Reagents / Consumables</div>
+        <div class="outset-container__control-container">
+            <ul>
+                <li>{{cellsRequired}} SMRT {{ "Cell" | pluralize: cellsRequired }}</li>
+                <li>{{reagentPlatesRequired}} {{ "plate" | pluralize: reagentPlatesRequired }} Sequencing reagent</li>
+                <li>{{reagentPlatesRequired}} {{ "tube" | pluralize: reagentPlatesRequired }} OS enzyme</li>
+                <li>{{reagentPlatesRequired}} {{ "tube" | pluralize: reagentPlatesRequired }} mineral oil</li>
+                <li>3 boxes of tips</li>
+                <li>1 mixing plate</li>
+                <li>1 sample plate</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sidebar-layout__content outset-container">
+        <div class="outset-container__header">Sample Information</div>
+        <div class="outset-container__control-container">
+            <pb-catalog [pbArgs]="sampleCatalogArgs"></pb-catalog>
+        </div>
+    </div>
+</div>

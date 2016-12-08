@@ -1,0 +1,17 @@
+<div>
+    <ul>
+        <li *ngFor="#node of nodes">
+            <pb-tree-node class="icon-node"
+                       [node]="node"
+                       (collapsed)="onNodeCollapsed($event)"
+                       (expanded)="onNodeExpanded($event)">{{node}}
+            </pb-tree-node>
+        </li>
+        <li *ngFor="#leaf of leaves; #i = index">
+            <pb-tree-leaf class="icon-leaf"
+                       [leaf]="leaf"
+                       (selected)="onLeafClicked($event)">{{leaf}}
+            </pb-tree-leaf>
+        </li>
+    </ul>
+</div>

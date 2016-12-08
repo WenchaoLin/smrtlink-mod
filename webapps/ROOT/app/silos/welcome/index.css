@@ -1,0 +1,32 @@
+welcome {
+    display: block;
+    position: relative;
+}
+
+welcome .container {
+    padding: 12px;
+}
+
+welcome .lobby-container {
+    position: relative;
+    overflow: hidden;
+}
+
+welcome .lobby-container:before {
+    content: "";
+    position: absolute;
+    width: 140%;
+    height: 140%;
+}
+
+welcome pb-lobby {
+    height: 24rem;
+}
+
+welcome pb-lobby h2 {
+    font-weight: 50;
+}
+
+welcome pb-lobby.run-qc .title {
+    flex: 0 0 auto;
+}

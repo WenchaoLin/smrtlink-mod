@@ -1,0 +1,64 @@
+/**
+ * @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc.
+ * @author <a href="mailto:bskinner@pacificbiosciences.com">Brian Skinner</a>
+ */
+"use strict";
+var frame_1 = require("../frames/frame");
+var api_1 = require("../io/api");
+exports.JOB_FRAME = new frame_1.Frame({
+    endpoint: api_1.API.nJobs,
+    properties: {
+        name: {
+            title: "Name",
+            description: "",
+            type: "string",
+            idField: "id"
+        },
+        id: {
+            title: "Id",
+            description: "",
+            type: "number"
+        },
+        uuid: {
+            title: "UUID",
+            description: "",
+            type: "string"
+        },
+        jobTypeId: {
+            title: "Job Type Id",
+            description: "",
+            type: "string"
+        },
+        state: {
+            title: "State",
+            description: "",
+            type: "string",
+            enum: ["CREATED", "RUNNING", "SUCCESSFUL", "KILLED"]
+        },
+        pipelineId: {
+            title: "Pipeline Id",
+            description: "",
+            type: "object",
+            jsonSettings: true
+        },
+        updatedAt: {
+            title: "Date Modified",
+            description: "",
+            type: "string",
+            format: "date-time"
+        },
+        createdAt: {
+            title: "Date Created",
+            description: "",
+            type: "string",
+            format: "date-time"
+        },
+        createdBy: {
+            title: "Created By",
+            description: "",
+            type: "string"
+        }
+    }
+});
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9kYXRhL2ZyYW1lcy9qb2IudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7OztHQUdHOztBQUVILHNCQUFvQixpQkFBaUIsQ0FBQyxDQUFBO0FBQ3RDLG9CQUFrQixXQUFXLENBQUMsQ0FBQTtBQUVqQixpQkFBUyxHQUFHLElBQUksYUFBSyxDQUFDO0lBQy9CLFFBQVEsRUFBRSxTQUFHLENBQUMsS0FBSztJQUNuQixVQUFVLEVBQUU7UUFDUixJQUFJLEVBQUU7WUFDRixLQUFLLEVBQUUsTUFBTTtZQUNiLFdBQVcsRUFBRSxFQUFFO1lBQ2YsSUFBSSxFQUFFLFFBQVE7WUFDZCxPQUFPLEVBQUUsSUFBSTtTQUNoQjtRQUNELEVBQUUsRUFBRTtZQUNBLEtBQUssRUFBRSxJQUFJO1lBQ1gsV0FBVyxFQUFFLEVBQUU7WUFDZixJQUFJLEVBQUUsUUFBUTtTQUNqQjtRQUNELElBQUksRUFBRTtZQUNGLEtBQUssRUFBRSxNQUFNO1lBQ2IsV0FBVyxFQUFFLEVBQUU7WUFDZixJQUFJLEVBQUUsUUFBUTtTQUNqQjtRQUNELFNBQVMsRUFBRTtZQUNQLEtBQUssRUFBRSxhQUFhO1lBQ3BCLFdBQVcsRUFBRSxFQUFFO1lBQ2YsSUFBSSxFQUFFLFFBQVE7U0FDakI7UUFDRCxLQUFLLEVBQUU7WUFDSCxLQUFLLEVBQUUsT0FBTztZQUNkLFdBQVcsRUFBRSxFQUFFO1lBQ2YsSUFBSSxFQUFFLFFBQVE7WUFDZCxJQUFJLEVBQUUsQ0FBQyxTQUFTLEVBQUUsU0FBUyxFQUFFLFlBQVksRUFBRSxRQUFRLENBQUM7U0FDdkQ7UUFDRCxVQUFVLEVBQUU7WUFDUixLQUFLLEVBQUUsYUFBYTtZQUNwQixXQUFXLEVBQUUsRUFBRTtZQUNmLElBQUksRUFBRSxRQUFRO1lBQ2QsWUFBWSxFQUFFLElBQUk7U0FDckI7UUFDRCxTQUFTLEVBQUU7WUFDUCxLQUFLLEVBQUUsZUFBZTtZQUN0QixXQUFXLEVBQUUsRUFBRTtZQUNmLElBQUksRUFBRSxRQUFRO1lBQ2QsTUFBTSxFQUFFLFdBQVc7U0FDdEI7UUFDRCxTQUFTLEVBQUU7WUFDUCxLQUFLLEVBQUUsY0FBYztZQUNyQixXQUFXLEVBQUUsRUFBRTtZQUNmLElBQUksRUFBRSxRQUFRO1lBQ2QsTUFBTSxFQUFFLFdBQVc7U0FDdEI7UUFDRCxTQUFTLEVBQUU7WUFDUCxLQUFLLEVBQUUsWUFBWTtZQUNuQixXQUFXLEVBQUUsRUFBRTtZQUNmLElBQUksRUFBRSxRQUFRO1NBQ2pCO0tBQ0o7Q0FDSixDQUFDLENBQUMiLCJmaWxlIjoiYXBwL2RhdGEvZnJhbWVzL2pvYi5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQGNvcHlyaWdodCBDb3B5cmlnaHQgKGMpIDIwMTUsIFBhY2lmaWMgQmlvc2NpZW5jZXMgb2YgQ2FsaWZvcm5pYSwgSW5jLlxuICogQGF1dGhvciA8YSBocmVmPVwibWFpbHRvOmJza2lubmVyQHBhY2lmaWNiaW9zY2llbmNlcy5jb21cIj5CcmlhbiBTa2lubmVyPC9hPlxuICovXG5cbmltcG9ydCB7RnJhbWV9IGZyb20gXCIuLi9mcmFtZXMvZnJhbWVcIjtcbmltcG9ydCB7QVBJfSBmcm9tIFwiLi4vaW8vYXBpXCI7XG5cbmV4cG9ydCBjb25zdCBKT0JfRlJBTUUgPSBuZXcgRnJhbWUoe1xuICAgIGVuZHBvaW50OiBBUEkubkpvYnMsXG4gICAgcHJvcGVydGllczoge1xuICAgICAgICBuYW1lOiB7XG4gICAgICAgICAgICB0aXRsZTogXCJOYW1lXCIsXG4gICAgICAgICAgICBkZXNjcmlwdGlvbjogXCJcIixcbiAgICAgICAgICAgIHR5cGU6IFwic3RyaW5nXCIsXG4gICAgICAgICAgICBpZEZpZWxkOiBcImlkXCJcbiAgICAgICAgfSxcbiAgICAgICAgaWQ6IHtcbiAgICAgICAgICAgIHRpdGxlOiBcIklkXCIsXG4gICAgICAgICAgICBkZXNjcmlwdGlvbjogXCJcIixcbiAgICAgICAgICAgIHR5cGU6IFwibnVtYmVyXCJcbiAgICAgICAgfSxcbiAgICAgICAgdXVpZDoge1xuICAgICAgICAgICAgdGl0bGU6IFwiVVVJRFwiLFxuICAgICAgICAgICAgZGVzY3JpcHRpb246IFwiXCIsXG4gICAgICAgICAgICB0eXBlOiBcInN0cmluZ1wiXG4gICAgICAgIH0sXG4gICAgICAgIGpvYlR5cGVJZDoge1xuICAgICAgICAgICAgdGl0bGU6IFwiSm9iIFR5cGUgSWRcIixcbiAgICAgICAgICAgIGRlc2NyaXB0aW9uOiBcIlwiLFxuICAgICAgICAgICAgdHlwZTogXCJzdHJpbmdcIlxuICAgICAgICB9LFxuICAgICAgICBzdGF0ZToge1xuICAgICAgICAgICAgdGl0bGU6IFwiU3RhdGVcIixcbiAgICAgICAgICAgIGRlc2NyaXB0aW9uOiBcIlwiLFxuICAgICAgICAgICAgdHlwZTogXCJzdHJpbmdcIixcbiAgICAgICAgICAgIGVudW06IFtcIkNSRUFURURcIiwgXCJSVU5OSU5HXCIsIFwiU1VDQ0VTU0ZVTFwiLCBcIktJTExFRFwiXVxuICAgICAgICB9LFxuICAgICAgICBwaXBlbGluZUlkOiB7XG4gICAgICAgICAgICB0aXRsZTogXCJQaXBlbGluZSBJZFwiLFxuICAgICAgICAgICAgZGVzY3JpcHRpb246IFwiXCIsXG4gICAgICAgICAgICB0eXBlOiBcIm9iamVjdFwiLFxuICAgICAgICAgICAganNvblNldHRpbmdzOiB0cnVlXG4gICAgICAgIH0sXG4gICAgICAgIHVwZGF0ZWRBdDoge1xuICAgICAgICAgICAgdGl0bGU6IFwiRGF0ZSBNb2RpZmllZFwiLFxuICAgICAgICAgICAgZGVzY3JpcHRpb246IFwiXCIsXG4gICAgICAgICAgICB0eXBlOiBcInN0cmluZ1wiLFxuICAgICAgICAgICAgZm9ybWF0OiBcImRhdGUtdGltZVwiXG4gICAgICAgIH0sXG4gICAgICAgIGNyZWF0ZWRBdDoge1xuICAgICAgICAgICAgdGl0bGU6IFwiRGF0ZSBDcmVhdGVkXCIsXG4gICAgICAgICAgICBkZXNjcmlwdGlvbjogXCJcIixcbiAgICAgICAgICAgIHR5cGU6IFwic3RyaW5nXCIsXG4gICAgICAgICAgICBmb3JtYXQ6IFwiZGF0ZS10aW1lXCJcbiAgICAgICAgfSxcbiAgICAgICAgY3JlYXRlZEJ5OiB7XG4gICAgICAgICAgICB0aXRsZTogXCJDcmVhdGVkIEJ5XCIsXG4gICAgICAgICAgICBkZXNjcmlwdGlvbjogXCJcIixcbiAgICAgICAgICAgIHR5cGU6IFwic3RyaW5nXCJcbiAgICAgICAgfVxuICAgIH1cbn0pO1xuXG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=

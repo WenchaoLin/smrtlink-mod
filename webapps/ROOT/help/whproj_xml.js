@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version='1.0' encoding='utf-8' ?>  <project homepage=\"SL_Home_1.htm\" langid=\"1033\" datapath=\"whxdata\" toc=\"whtoc.xml\" index=\"whidx.xml\" brs=\"whbrs.xml\" >  </project>";

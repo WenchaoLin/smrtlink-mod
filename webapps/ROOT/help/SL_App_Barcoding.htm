@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Barcoding Application</title>
+<link rel="StyleSheet" href="PacBio.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("SL_Home.htm", "", "&gt;", "Home", "SL_Home_1.htm");
+document.write("Barcoding Application<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('SL_Home.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<h2 style="border-bottom-style: Solid; border-bottom-width: 1px; font-size: 14pt;"><span style="font-size: 14pt; "><font size="4" style="font-size:14pt;"><span 
+	 style="font-family: Arial, sans-serif;">SMRT Analysis</span> Help</font></span></h2>
+</div>
+<h1>Barcoding Application</h1>
+<p>Use this application to analyze multiplexed samples.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;">Barcoded SMRTbell™ template are SMRTbell™ 
+	 templates with two barcoded adapters, located on both ends of an insert.</li>
+	<li style="margin-left: -20px;"><p>With <span style="font-weight: bold;">symmetric</span> 
+	 barcodes, each barcode sequence identifies a single bin for demultiplexing 
+	 reads. With <span style="font-weight: bold;">paired</span> barcodes, 
+	 each unique pair of barcodes should be listed as two sequentially-named 
+	 FASTA sequences. </p></li>
+	<li style="margin-left: -20px;"><p>Uses a FASTA-format file to identify 
+	 ideal barcode sequences. </p></li>
+</ul>
+<p>&#160;</p>
+<p><span style="font-weight: bold;">Barcodes (Required)</span>: </p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;">Specify a <span style="font-weight: bold;">barcode 
+	 sequence file</span> to separate the reads.</li>
+</ul>
+<p>&#160;</p>
+<table class="PacBioColor" cellspacing="0px" width="56.969%">
+	<col style="width: 31.899%;" />
+	<col style="width: 8.886%;" />
+	<col style="width: 59.214%;" />
+	<tr class="t1st">
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Advanced 
+		 Analysis Parameters</p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Default 
+		 Value</p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center; 
+											 font-family: Arial, sans-serif; 
+											 font-size: 10pt;">Description</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td style="vertical-align: Top;"><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif; 
+												 font-size: 10pt;"><font size="2" style="font-size:10pt;">Option 
+		 Score Mode</font></span></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif; 
+											 text-align: center;">symmetric</p></td>
+		<td style="vertical-align: Top;"><p style="font-family: Arial, sans-serif;">The 
+		 type of barcode sequence to use. <span style="font-weight: bold;">asymmetric</span>: 
+		 Barcode sequences that are <span style="font-weight: bold;">different</span> 
+		 on either end of an insert present in a SMRTbell™ template.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 10pt; border-top-style: Solid; border-top-width: 1px;"><span style="font-size: 10pt; "><font size="2" style="font-size:10pt;"><a 
+	 href="SL_Legal.htm">Legal Information</a> &#160;&#160;&#160;&#160;&#160;12-May-16</font></span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

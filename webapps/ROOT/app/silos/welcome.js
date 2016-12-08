@@ -1,0 +1,5 @@
+"use strict";
+var index_1 = require("./welcome/index");
+exports.Welcome = index_1.WelcomeIndex;
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9zaWxvcy93ZWxjb21lLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSxzQkFBc0MsaUJBQWlCLENBQUM7QUFBaEQsdUNBQWdEIiwiZmlsZSI6ImFwcC9zaWxvcy93ZWxjb21lLmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IHtXZWxjb21lSW5kZXggYXMgV2VsY29tZX0gZnJvbSBcIi4vd2VsY29tZS9pbmRleFwiO1xuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9

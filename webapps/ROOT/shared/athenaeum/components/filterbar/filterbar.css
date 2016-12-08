@@ -1,0 +1,21 @@
+/**
+ * @copyright Copyright (c) 2015, Pacific Biosciences of California, Inc.
+ * @author <a href="mailto:bskinner@pacificbiosciences.com">Brian Skinner</a>
+ */
+
+pb-filterbar {
+  display: inline-block;
+  position: relative;
+}
+
+/**
+ * Since angular2 uses <template> nodes for its placeholders for ng-if,
+ * the <template> nodes are matched as the first node in the selector for
+ * btn-group. To combat that, the first visual node in the template has
+ * btn-group-first added to its class attribute and !important is used
+ * to override bootstrap's VERY specific selector
+ */
+pb-filterbar > .btn-group > .btn-group-first {
+  border-top-left-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+}

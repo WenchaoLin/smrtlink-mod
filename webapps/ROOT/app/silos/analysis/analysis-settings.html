@@ -1,0 +1,197 @@
+<div class="titlebar-layout__titlebar">
+    <div class="container titlebar-layout__titlebar-container">
+        <h1 class="titlebar-layout__titlebar-title">{{TEXT.CREATE_NEW_ANALYSIS}} - {{TEXT.SETTINGS}}</h1>
+        <div class="titlebar-layout__titlebar-buttons">
+            <button class="btn btn-warning btn-lg smrt-home-button"
+                    (click)="doCancel()"
+                    [pbImprint]="STAMP.CANCEL"></button>
+
+            <button class="btn btn-primary btn-lg smrt-home-button"
+                    (click)="doStart(errorDialog)"
+                    [disabled]="!canStart()"
+                    [pbImprint]="STAMP.START"></button>
+        </div>
+    </div>
+</div>
+
+<div class="titlebar-layout__container">
+    <form [ngFormModel]="vm.form" class="container" (submit)="noop(vm.form.value)">
+        <div class="left-pane">
+            <!-- Analyasis Job Name -->
+            <div class="form-group">
+                <label class="control-label">Name *</label>
+                <input type="text"
+                    id="pb-testable-input-name"
+                    class="form-control"
+                    autofocus="autofocus"
+                    ngControl="name">
+            </div>
+
+            <!-- Pre-selected Data Set -->
+            <div class="form-group" *ngIf="vm.show.preselectedDataSet">
+                <label class="control-label">Data Set</label>
+                <input type="text"
+                    id="pb-testable-input-dataset"
+                    class="form-control"
+                    disabled
+                    [value]="vm.preselectedDataSetName">
+            </div>
+
+          <label class="control-label">Collections in {{vm.preselectedDataSetName}}</label>
+          <pb-catalog #catalog *ngIf="vm.show.preselectedDataSet" [pbArgs]="vm.collectionCatalog.args"></pb-catalog>
+        </div>
+        <div class="right-pane">
+            <!-- Pipeline picker -->
+            <div class="form-group analysis-application">
+                <label>Analysis Application *</label>
+                <pb-menu-button *ngIf="vm.pipelineOptions" class="pipeline select" [(value)]="selectedPipeline" (valueChange)="onSelectedPipelineChanged($event)">
+                    <label>{{selectedPipeline?.name}}</label>
+                    <pb-menu>
+                        <pb-menu-item *ngFor="#option of vm.pipelineOptions" [value]="option">
+                            <label>{{ option.name }}</label>
+                        </pb-menu-item>
+                    </pb-menu>
+                </pb-menu-button>
+            </div>
+
+            <!-- Dataset pickers  -->
+            <div id="pb-testable-dataset-pickers">
+                <div class="form-group" *ngFor="#datasetCatalog of vm.datasetCatalogs">
+                    <label>{{datasetCatalog.name}} *</label>
+                    <div class="input-group">
+                        <input type="text"
+                               class="form-control"
+                               readonly
+                               tabindex="-1"
+                               [value]="datasetCatalog.selectionName"
+                               (click)="modal.show()">
+                        <span class="input-group-btn">
+                            <button #btn type="button" class="btn"
+                                    (click)="modal.show()">
+                                <span class="glyphicon glyphicon glyphicon-list"></span>
+                            </button>
+                        </span>
+                    </div>
+                    <pb-modal-dialog #modal class="dataset-modal"
+                            (hiddenChange)="onDatasetModalHiddenChange($event, datasetCatalog, btn)">
+                        <h1>{{datasetCatalog.name}}</h1>
+                        <div class="content">
+                            <pb-catalog #catalog [pbArgs]="datasetCatalog.args" (rowSelect)="datasetCatalog.selectedData = $event"></pb-catalog>
+                        </div>
+                        <div class="buttons">
+                            <button type="button" class="btn" (click)="modal.hide()">Cancel</button>
+                            <button type="button" class="btn"
+                                [disabled]="!datasetCatalog.selectedData"
+                                (click)="onDatasetItemSelected(datasetCatalog, modal)">Select</button>
+                        </div>
+                    </pb-modal-dialog>
+                </div>
+            </div>
+
+            <!-- Presets picker -->
+            <div class="form-group" *ngIf="vm.show.presets && vm.includeForms">
+                <label>Presets</label>
+                <pb-menu-button #presetPicker class="select" (valueChange)="onSelectedPresetChanged($event)">
+                    <label>{{ presetPicker.value?.id }}</label>
+                    <pb-menu>
+<!-- TODO (bforbes)(2015-11-17): There should be a choice of "None" to go
+back to the original pipeline, however at this time presets are
+up in the air as to how they should function. This option should be
+revisited once presets are figured out.
+                        <pb-menu-item [value]="selectedPipeline">
+                            <label>None</label>
+                        </pb-menu-item>
+-->
+                        <pb-menu-item *ngFor="#preset of vm.presetOptions" [value]="preset">
+                            <label>{{ preset.id }}</label>
+                        </pb-menu-item>
+                    </pb-menu>
+                </pb-menu-button>
+            </div>
+
+            <fieldset *ngFor="#group of vm.basicParameters" ngControlGroup="basicOptions">
+                <legend>{{group.name}}</legend>
+                <template ngFor [ngForOf]="group.fields" #parameter="$implicit">
+                    <div class="form-group" [ngSwitch]="parameter.inputType">
+                        <label>{{parameter.title}} <pb-info [info]="parameter.description"></pb-info></label>
+                        <pb-square-toggle *ngSwitchWhen="'checkbox'"
+                            [ngControl]="parameter.id">
+                            <div class="pb-on">on</div>
+                            <div class="pb-off">off</div>
+                        </pb-square-toggle>
+                        <textarea *ngSwitchWhen="'textarea'"
+                            class="form-control"
+                            [attr.rows]="parameter.rows"
+                            [ngControl]="parameter.id"></textarea>
+                        <input *ngSwitchDefault
+                            type="{{parameter.inputType}}"
+                            class="form-control"
+                            [step]="parameter.step"
+                            [ngControl]="parameter.id">
+                    </div>
+                </template>
+            </fieldset>
+
+            <template [ngIf]="vm.show.advancedOptions">
+                <button type="button" class="btn"
+                        (click)="advancedParametersModal.show()">Advanced Analysis Parameters</button>
+                <pb-modal-dialog #advancedParametersModal
+                                 class="advanced-modal"
+                                 (hiddenChange)="onAdvancedModalHiddenChange($event, advancedParametersContent)">
+                    <h1>Advanced Analysis Parameters</h1>
+                    <div #advancedParametersContent class="content" ngControlGroup="advancedOptions">
+                        <fieldset *ngFor="#group of vm.advancedParameters">
+                            <legend>{{group.name}}</legend>
+                            <template ngFor [ngForOf]="group.fields" #parameter="$implicit">
+                                <div class="form-group" [ngSwitch]="parameter.inputType">
+                                    <label>{{parameter.title}} <pb-info [info]="parameter.description"></pb-info></label>
+                                    <pb-square-toggle *ngSwitchWhen="'checkbox'"
+                                        [ngControl]="parameter.id">
+                                        <div class="pb-on">on</div>
+                                        <div class="pb-off">off</div>
+                                    </pb-square-toggle>
+                                    <textarea *ngSwitchWhen="'textarea'"
+                                        class="form-control"
+                                        [attr.rows]="parameter.rows"
+                                        [ngControl]="parameter.id"></textarea>
+                                    <input *ngSwitchDefault
+                                        type="{{parameter.inputType}}"
+                                        class="form-control"
+                                        [step]="parameter.step"
+                                        [ngControl]="parameter.id">
+                                </div>
+                                <!--
+                                    <div *ngIf="vm.advancedForm.find(parameter.id).hasError('required')"
+                                            class="bg-warning">{{parameter.title}} is required</div>
+                                    <div>&nbsp;</div>
+                                    -->
+                                <!--
+                                    <show-error *ngIf="schemaItem.validators.length>0"
+                                                [control]="schemaItem.name"
+                                                [errors]="schemaItem.validators"></show-error>
+                                    -->
+                            </template>
+                        </fieldset>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="btn"
+                            (click)="advancedParametersModal.hide()">Cancel</button>
+                        <button type="button" class="btn"
+                            [disabled]="!vm.advancedOptionsGroup.valid"
+                            (click)="onAcceptAdvancedParameters(advancedParametersModal)">Ok</button>
+                    </div>
+                </pb-modal-dialog>
+            </template>
+        </div>
+    </form>
+</div>
+
+<pb-modal-dialog #errorDialog>
+  <div class="content">
+    Error: {{vm.errorMessage}}
+  </div>
+  <div class="buttons">
+    <button type="button" class="btn"
+            (click)="errorDialog.hide()">Ok</button>
+  </div>
+</pb-modal-dialog>

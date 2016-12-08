@@ -1,0 +1,7 @@
+<div class="pb-accordion-pane__header-container" (click)="onHeaderClick($event)">
+    <ng-content select="header"></ng-content>
+</div>
+<div class="pb-accordion-pane__content" #content>
+    <ng-content select="section"></ng-content>
+    <ng-content select="footer"></ng-content>
+</div>
