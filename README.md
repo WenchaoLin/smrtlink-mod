@@ -31,18 +31,15 @@ Systems.
 ![image](ui.png)
 
 
+## To Do
 
+Make more change.
 
 ## Getting Support
 
 [__PacBio Developer's Network Website__](http://pacbiodevnet.com)
 
 Visit PacBio DevNet for the most up-to-date downloads, documentation and more.
-
-
-[__PacBio Customer Portal__](http://www.pacbioportal.com)
-
-Support for PacBio customers is available through the  Customer Portal.
 
 
 [__SMRT Link GitHub wiki__](https://github.com/PacificBiosciences/SMRT-Link/wiki)
